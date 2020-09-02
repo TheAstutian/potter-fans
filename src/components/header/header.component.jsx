@@ -1,8 +1,19 @@
 import React from 'react';
 
 const Header = () =>(
-    <div>
-        <h1>Potterfans</h1>
+    <div className='header-container'>
+        <div className='header-icon'>
+
+        </div> 
+
+        
+        <div className='header-navs'>
+            <li>Movies</li>
+            <li>Books</li>
+            <li>Visit Hogwarts</li>
+            <li>Spell Book</li>
+            <li>Sorting Hat</li>
+        </div>
 
     </div>
 )
