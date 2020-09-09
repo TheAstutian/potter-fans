@@ -1,9 +1,20 @@
 import React from 'react'; 
 
-const SpellsPage = () => (
-    <div>
+class SpellsPage extends React.Component {
+    constructor () {
+        super();
+        this.state = {
+
+        }
+    }
+
+    render() {
+        return (
+            <div>
         Abracadabra!
-    </div>
-)
+            </div>
+        )
+    }
+}
 
 export default SpellsPage; 
