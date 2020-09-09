@@ -2,11 +2,10 @@ import React from 'react';
 
 const Header = () =>(
     <div className='header-container'>
-        <div className='header-icon'>
-
+        <div className='header-font'>
+        <h1>Potter fans</h1>
         </div> 
 
-        
         <div className='header-navs'>
             <li>Movies</li>
             <li>Books</li>

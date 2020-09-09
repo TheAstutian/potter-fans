@@ -1,5 +1,8 @@
 import React from 'react';
 
+import Banner from '../../components/Banner/banner.component';
+
+
 import './homepage.css'; 
 
 class Homepage extends React.Component {
@@ -13,11 +16,21 @@ class Homepage extends React.Component {
     render(){
         return (
             <div>
-               
-                Welcome to the PotterFans, an online resource and  spot for all things related to J.K. Rowling's Wizarding World. 
-                <span> Whether you're looking for info on Harry Potter characters, the book series or just wanna have fun, this is the place to be. </span>
+               <Banner />                
+                <span>This website is dedicated to harry potter fans- J. K. Rowling</span> 
+                <div>
+                    Visit Hogwarts
+                </div>
+                <div>
+                    Books
+                </div>
+                <div>
+                    Movies
+                </div>
+                <div>
+                    Pandora's box of spells
+                </div>
                 
-                <span>This website is dedicated to harry potter fans</span> Enjoy
             </div>
         )
     }
