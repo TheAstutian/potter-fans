@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const Header = () =>(
     <div className='header-container'>
@@ -7,11 +8,11 @@ const Header = () =>(
         </div> 
 
         <div className='header-navs'>
-            <li>Movies</li>
-            <li>Books</li>
-            <li>Visit Hogwarts</li>
-            <li>Spell Book</li>
-            <li>Sorting Hat</li>
+            <Link to='/movies'><li>Movies</li></Link>
+            <Link to='/books'><li>Books</li></Link>
+            <Link to='hogwarts'><li>Visit Hogwarts</li></Link>
+            <Link to='spells'><li>Spell Book</li></Link>
+            <Link to='sorting'><li>Sorting Hat</li></Link>
         </div>
 
     </div>
