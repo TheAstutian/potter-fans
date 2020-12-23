@@ -11,7 +11,7 @@ class Hogwarts extends React.Component {
     render () {
         return (
          <div>
-        Hogwarts School of Wizardry 
+             <h1>Hogwarts School of Wizardry </h1>
          </div>
         )
     }
