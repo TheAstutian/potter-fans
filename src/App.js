@@ -8,7 +8,7 @@ import Footer from './components/footer/footer.component';
 import './App.css';
 import SpellsPage from './pages/spells/spellspage.component';
 import BookPage from './pages/books/bookpage.component';
-import Hogwarts from './pages/hogwarts/hotwarts.component';
+import Hogwarts from './pages/hogwarts/hogwarts.component';
 import MoviePage from './pages/movies/moviespage.component';
 import SortingHat from './pages/sortinghat/sortinghat.component';
 
