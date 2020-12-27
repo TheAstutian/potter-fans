@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import FaceCollection from '../../components/FaceCollection/facecollection.component';
 
 class Hogwarts extends Component {
     constructor () {
@@ -8,20 +9,13 @@ class Hogwarts extends Component {
         }
     }
 
-    async componentDidMount() {
-        const proxyurl = "https://cors-anywhere.herokuapp.com/";
-        const url='https://hp-api.herokuapp.com/api/characters';
-        const response=  await fetch(url);
-        const data =  await response.json();
-        console.log(data);
-        
-    }
+   
 
     render () {
         return (
          <div>
              <h1>Hogwarts School of Wizardry </h1>
-
+                <FaceCollection />
 
          </div>
         )
