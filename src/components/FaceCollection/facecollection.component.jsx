@@ -25,7 +25,8 @@ class FaceCollection extends React.Component{
         <div>
             {this.state.characters.map((element,i)=>{
                 return <Face key={i}
-                        name={characters[i].name}        
+                        name={characters[i].name}
+                        species={characters[i].species}        
                 />
 
             })}
