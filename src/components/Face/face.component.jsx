@@ -1,10 +1,14 @@
 import React from 'react';
 import './face.style.scss';
 
-const Face = ({name, species }) =>(
+const Face = ({name, ancestry, img, key,house,wand}) =>(
     <div className='face-container'>
-        <p>{name}</p>
-        <p>species: {species}</p>
+        <span>{name}</span>
+        <img alt={key} src={img} />
+        <p>{house}</p>
+        <p>{ancestry}</p>
+        <p>Wand: {wand.toUpperCase()}</p>
+        
         
     </div>
 );

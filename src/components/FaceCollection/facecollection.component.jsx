@@ -1,5 +1,6 @@
 import React from 'react';
 import Face from '../Face/face.component';
+import './facecollection.style.scss'
 
 class FaceCollection extends React.Component{
     constructor () {
@@ -22,11 +23,15 @@ class FaceCollection extends React.Component{
     render(){
         const {characters} = this.state;
        return(
-        <div>
+        <div className='facecollection-container'>
             {this.state.characters.map((element,i)=>{
                 return <Face key={i}
                         name={characters[i].name}
-                        species={characters[i].species}        
+                        species={characters[i].species}
+                        img={characters[i].image} 
+                        ancestry={characters[i].ancestry}    
+                        house={characters[i].house}
+                        wand={characters[i].wand.core}   
                 />
 
             })}
