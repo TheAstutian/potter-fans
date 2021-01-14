@@ -3,23 +3,23 @@ import React from 'react';
 import Banner from '../../components/Banner/banner.component';
 
 
-import './homepage.css'; 
+import './homepage.style.scss'; 
 
 
 const Homepage = () => (
             <div>
                <Banner />                
                 <span>This website is dedicated to harry potter fans- J. K. Rowling</span> 
-                <div>
+                <div className="section">
                     Visit Hogwarts
                 </div>
-                <div>
+                <div className="section">
                     Books
                 </div>
-                <div>
+                <div className="section">
                     Movies
                 </div>
-                <div>
+                <div className="section">
                     Pandora's box of spells
 
                     
