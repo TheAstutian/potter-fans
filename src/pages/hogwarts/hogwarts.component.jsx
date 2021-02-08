@@ -13,8 +13,12 @@ class Hogwarts extends Component {
 
     render () {
         return (
-         <div>
-             <h1>Hogwarts School of Wizardry </h1>
+         <div className='hogwarts-container'>
+             <span>Hogwarts</span>
+             <p>Welcome to Hogwarts, School of Wizardry</p>
+                <div>
+
+                </div>
                 <FaceCollection />
 
          </div>

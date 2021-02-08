@@ -11,7 +11,6 @@ class FaceCollection extends React.Component{
     }
 
     async componentDidMount() {
-        const proxyurl = "https://cors-anywhere.herokuapp.com/";
         const url='https://hp-api.herokuapp.com/api/characters';
         const response=  await fetch(url);
         const data =  await response.json();
@@ -24,6 +23,8 @@ class FaceCollection extends React.Component{
         const {characters} = this.state;
        return(
         <div className='facecollection-container'>
+
+            
             {this.state.characters.map((element,i)=>{
                 return <Face key={i}
                         name={characters[i].name}
