@@ -11,7 +11,7 @@ class FaceCollection extends React.Component{
     }
 
     async componentDidMount() {
-        const url='https://hp-api.herokuapp.com/api/characters';
+        const url='https://hp-api.herokuapp.com/api/characters/staff';
         const response=  await fetch(url);
         const data =  await response.json();
         console.log(data)
