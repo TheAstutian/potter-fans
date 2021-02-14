@@ -1,0 +1,30 @@
+
+        button{
+            padding: 0.9em 1.5em;
+                border: 0.01em solid white;
+                border-radius: 0.3em;
+                box-sizing: border-box;
+                text-decoration: none;
+                font-family: 'OpenSans-Light';
+                font-weight: bold;
+                font-size: 0.9em;
+                color: grey;
+                text-align: center;
+                transition: all 0.2s; 
+                background-color: white; 
+                cursor: pointer;
+                
+                margin: 0 auto;
+                a{
+                    color: grey;
+                   
+                }
+            }
+            button:hover{
+                background-color: grey;
+                
+                a{
+                    color: white;
+                   
+                }
+        }

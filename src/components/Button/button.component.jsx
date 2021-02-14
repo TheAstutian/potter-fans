@@ -1,8 +1,9 @@
 import React from 'react';
+import './button.style.scss';
 
-const Button = () => (
+const Button = ({children, ...otherProps}) => (
     <div>
-        <button>button </button>
+        <button>{children} </button>
     </div>
 )
 
