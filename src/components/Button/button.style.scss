@@ -1,7 +1,7 @@
 
         button{
             padding: 0.9em 1.5em;
-                border: 0.01em solid white;
+                border: 0.01em solid crimson;
                 border-radius: 0.3em;
                 box-sizing: border-box;
                 text-decoration: none;
@@ -16,15 +16,15 @@
                 
                 margin: 0 auto;
                 a{
-                    color: grey;
+                    color: crimson;
                    
                 }
             }
             button:hover{
-                background-color: grey;
+                background-color: white;
                 
                 a{
-                    color: white;
+                    color: crimson;
                    
                 }
         }

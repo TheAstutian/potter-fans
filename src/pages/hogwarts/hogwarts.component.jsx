@@ -1,18 +1,7 @@
 import React, {Component} from 'react';
 import FaceCollection from '../../components/FaceCollection/facecollection.component';
 
-class Hogwarts extends Component {
-    constructor () {
-        super ();
-        this.state = {
-
-        }
-    }
-
-   
-
-    render () {
-        return (
+const Hogwarts = () => (
          <div className='hogwarts-container'>
              <span>Hogwarts</span>
              <p>Welcome to Hogwarts, School of Wizardry</p>
@@ -23,7 +12,5 @@ class Hogwarts extends Component {
 
          </div>
         )
-    }
-}
-
+   
 export default Hogwarts; 

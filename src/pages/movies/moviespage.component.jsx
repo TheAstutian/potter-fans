@@ -1,20 +1,9 @@
 import React from 'react';
 
-class MoviePage extends React.Component {
-    constructor () {
-        super();
-        this.state = {
-
-        }
-    }
-
-    render () {
-        return (
+const MoviePage =() => (
             <div>
             Harry Potter Movies
         </div>
         )
-    }
-}
-
+    
 export default MoviePage; 

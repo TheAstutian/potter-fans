@@ -15,13 +15,13 @@ const Homepage = () => (
                     Visit Hogwarts
                     <span>What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?</span>
                 </div>
-                <div className="section">
+                <div className="pf-books section">
                     Books
                 </div>
-                <div className="section">
+                <div className="pf-movies section">
                     Movies
                 </div>
-                <div className="section">
+                <div className="pf-spells section">
                     Pandora's box of spells
 
                     
