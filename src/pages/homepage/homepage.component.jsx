@@ -7,17 +7,8 @@ import './homepage.style.scss';
 import {Container} from 'react-bootstrap';
 
 
-class Homepage extends Component {
-
-    constructor(){
-        this.state={
-            characters:[]
-        }
-    }
-
-    render(){
-        return(
-                    <div>
+const Homepage = () => (
+                    
                         <Container className='container'>
                        <Banner />                
                         <span>This website is dedicated to harry potter fans- J. K. Rowling</span> 
@@ -38,11 +29,8 @@ class Homepage extends Component {
                         </div>
                         
                     </Container>
-                    </div>
-        )        
-    }
-}
-
+                    
+        )  
 
 
 export default Homepage; 
