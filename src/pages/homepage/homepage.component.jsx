@@ -27,6 +27,9 @@ const Homepage = () => (
         
                             
                         </div>
+                        <div>
+                            <p>The latest <a href='https://www.jkrowling.com/'>About J. K. Rowlings </a></p>
+                        </div>
                         
                     </Container>
                     
