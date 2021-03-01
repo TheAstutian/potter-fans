@@ -8,6 +8,7 @@ const Hogwarts = () => (
                 <div>
 
                 </div>
+                <h2>These are the staff of Hogwarts</h2>
                 <FaceCollection />
 
          </div>
