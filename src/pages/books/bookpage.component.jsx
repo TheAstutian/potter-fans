@@ -2,7 +2,7 @@ import React from 'react';
 
 const BookPage = () => (
          <div>
-        Harry Potter Books
+                 <h2>Harry Potter Books</h2>
         </div>  
         )
    
