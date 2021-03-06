@@ -11,7 +11,7 @@ class SpellsPage extends React.Component {
     render() {
         return (
             <div>
-        Abracadabra!
+        <h1>Abracadabra!</h1>
             </div>
         )
     }
