@@ -7,3 +7,7 @@ const API_URL_2 = 'https://hp-api.herokuapp.com/ characters, students, house, st
 
 https://www.potterapi.com/v1/characters?key=Y$2a$10$GzKuSI6dT5dC1NuVyeI8eugv./Vo4BMBLOCTS4d1Gfjge.4mwp5Gi
 https://dev.to/peritract/harry-potter-and-the-accessing-of-apis-1i0i
+
+HP Websites: https://harrypotter.fandom.com/wiki/List_of_Harry_Potter_fan_websites
+
+http://hogwarts-school.net/sortinghat/index.php?page=hogwarts_roster FOr Hotwarts school
