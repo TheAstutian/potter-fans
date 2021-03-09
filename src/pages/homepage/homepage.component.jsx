@@ -31,11 +31,9 @@ const Homepage = () => (
                             Movies
                         </div>
                         <div className="pf-spells section">
-                            Pandora's box of spells
-        
-                            
+                            Pandora's box of spells                            
                         </div>
-                        <div>
+                        <div className="jk-rowling section">
                             <p>The latest <a href='https://www.jkrowling.com/'>About J. K. Rowlings </a></p>
                         </div>
                         
