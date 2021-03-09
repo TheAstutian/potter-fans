@@ -4,17 +4,18 @@ import Banner from '../../components/Banner/banner.component';
 
 
 import './homepage.style.scss'; 
-import {Container} from 'react-bootstrap';
+
 
 
 const Homepage = () => (
                     
-                        <Container className='container'>
+                        <div className='container'>
                        <Banner />                
                         <span>Random popular harry potter quote</span> 
-                        <div className="pf-hogwarts section">
-                            <div className="banner-image" style ={{
-                                backgroundImage: `url(${'https://images.unsplash.com/photo-1569040029205-a03a8b455808?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1115&q=80'})`
+                        
+                        
+                            <div className=" section pf-hogwarts" style ={{
+                                backgroundImage: `url(${'https://images.unsplash.com/photo-1596762779387-9c681b5e2818?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80'})`
                                 }}>
                                     Oya naaa 
                                     
@@ -22,7 +23,7 @@ const Homepage = () => (
                             </div>
                            
                            
-                        </div>
+                        
                         <div className="pf-books section">
                             Books books books books 
                         </div>
@@ -38,7 +39,7 @@ const Homepage = () => (
                             <p>The latest <a href='https://www.jkrowling.com/'>About J. K. Rowlings </a></p>
                         </div>
                         
-                    </Container>
+                    </div>
                     
         )  
 

@@ -1,13 +1,16 @@
+
+
 .header-container{
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding-bottom: 50px;
+    
+
     .header-font {
-        color: blue;
-        h1{
-            color: white;
-            font-size: 3em;
+        
+        a {
+            color: darkorchid;
+            
         }
     }
     .header-navs{
@@ -15,5 +18,9 @@
         justify-content: space-around;
         margin-left: 150px;
         margin-right: 150px;
+
+        a {
+            color: darkorchid;
+        }
     }
 }
