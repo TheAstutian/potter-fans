@@ -46,11 +46,17 @@ const Footer = () => (
 
                         </div>
                         <div className="link-entry">
-                            <span>Fan art</span>
+                            <span>Fan Fiction</span>
                             <ul>
                               <li><a href=""></a></li>
                                 <li></li>
                                 <li></li>
+                                Games and quizzes
+
+                                https://newfastuff.com/courtyard-broomball/
+                                https://quizventure.com/harry-potter-spell-quiz/
+                                https://apps.apple.com/us/app/spells-quiz-for-harry-potter/id1299564850
+                                 
                             </ul>
 
                         </div>
