@@ -56,7 +56,9 @@ const Footer = () => (
                                 https://newfastuff.com/courtyard-broomball/
                                 https://quizventure.com/harry-potter-spell-quiz/
                                 https://apps.apple.com/us/app/spells-quiz-for-harry-potter/id1299564850
-                                 
+                                http://hogwarts-school.net/sortinghat/index.php?page=hogwarts_roster - hogwarts school. Plenty of image and ideas here
+
+
                             </ul>
 
                         </div>

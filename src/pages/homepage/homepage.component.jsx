@@ -11,7 +11,9 @@ const Homepage = () => (
                     
                         <div className='container'>
                        <Banner />                
-                        <span>Random popular harry potter quote</span> 
+                       <div className=''>
+                            <span>Explore the world of Wizardry!</span> 
+                        </div> 
                         
                         
                             <div className=" section pf-hogwarts" style ={{
