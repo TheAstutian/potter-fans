@@ -9,20 +9,30 @@ background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
 background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 
 .experiment{
+    padding-top: 50px;
+    padding-bottom: 50px;
     span{
         color: white;
         font-size: 3em;
         font-weight: lighter;
+        
+        
     }
 }
     .section {
         height: 500px;
         background-color: #000011;
-        margin: 150px;
-        border: 3px solid green;
+        margin-left: 150px;
+        margin-right: 150px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: 1px solid white;
+        
     }
     .pf-hogwarts{
         border: 2px solid orange;
+        margin-left: 100px;
+        margin-right: 100px;
     }
 
 }

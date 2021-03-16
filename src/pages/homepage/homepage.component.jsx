@@ -9,7 +9,7 @@ import './homepage.style.scss';
 
 const Homepage = () => (
                     
-                        <div className='container'>
+            <div className='container'>
                        <Banner />                
                        <div className='experiment'>
                             <span>Explore the world of Wizardry!</span> 
@@ -41,7 +41,7 @@ const Homepage = () => (
                             <p>The latest <a href='https://www.jkrowling.com/'>About J. K. Rowlings </a></p>
                         </div>
                         
-                    </div>
+            </div>
                     
         )  
 
