@@ -6,7 +6,7 @@ import './header.style.scss';
 const Header = () =>(
     <div className='header-container'>
         <div className='header-font'>
-        <h1><Link to='/'>Potter fans</Link></h1>
+        <h1><Link to='/'>Potter World</Link></h1>
         </div> 
 
         <div className='header-navs'>
