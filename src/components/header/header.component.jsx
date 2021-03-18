@@ -10,11 +10,11 @@ const Header = () =>(
         </div> 
 
         <div className='header-navs'>
-            <Link to='/movies'><li>Movies</li></Link>
-            <Link to='/books'><li>Books</li></Link>
-            <Link to='hogwarts'><li>Visit Hogwarts</li></Link>
-            <Link to='spells'><li>Spell Book</li></Link>
-            <Link to='sorting'><li>Sorting Hat</li></Link>
+            <Link to='/movies'><li>MOVIES</li></Link>
+            <Link to='/books'><li>BOOKS</li></Link>
+            <Link to='hogwarts'><li> HOGWARTS</li></Link>
+            <Link to='spells'><li>SPELL BOOK</li></Link>
+            <Link to='sorting'><li>SORTING HAT</li></Link>
         </div>
 
     </div>

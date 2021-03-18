@@ -22,3 +22,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'Alegreya';
+  src: local('Alegreya'), url(./fonts/Alegreya-VariableFont_wght.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'OldLondon';
+  src: local('OldLondon'), url(./fonts/OldLondon.ttf) format('truetype');
+}

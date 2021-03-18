@@ -5,22 +5,38 @@
     display: flex;
     flex-direction: column;
     
+   
 
     .header-font {
+        border-bottom: 0.1px solid silver;
         
-        a {
-            color: darkorchid;
+        h1 {
+            font-family: 'OldLondon';
+            font-stretch: condensed;
+            font-size: 3em;
+
             
+            a {
+                color: orange;
+                
+            }
         }
+        
     }
     .header-navs{
         display: flex;
         justify-content: space-around;
-        margin-left: 150px;
-        margin-right: 150px;
+        margin-left: 200px;
+        margin-right: 200px;
+        margin-top: 10px;
 
-        a {
-            color: darkorchid;
-        }
+        
+            
+            a {
+                color: orange;
+                font-family: 'Alegreya';
+                font-weight: lighter;
+            }
+        
     }
 }
