@@ -25,10 +25,10 @@ code {
 
 @font-face {
   font-family: 'Alegreya';
-  src: local('Alegreya'), url(./fonts/Alegreya-VariableFont_wght.ttf) format('truetype');
+  src: local('Alegreya'), url(./assets/Alegreya-VariableFont_wght.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'OldLondon';
-  src: local('OldLondon'), url(./fonts/OldLondon.ttf) format('truetype');
+  src: local('OldLondon'), url(./assets/OldLondon.ttf) format('truetype');
 }

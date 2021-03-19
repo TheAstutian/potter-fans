@@ -1,5 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {ReactComponent as CloseMenu} from "../../assets/x.svg";
+import {ReactComponent as MenuIcon} from "../../assets/menu.svg";
 
 import './header.style.scss';
 
@@ -10,12 +12,15 @@ const Header = () =>(
         </div> 
 
         <div className='header-navs'>
-            <Link to='/movies'><li>MOVIES</li></Link>
-            <Link to='/books'><li>BOOKS</li></Link>
-            <Link to='hogwarts'><li> HOGWARTS</li></Link>
-            <Link to='spells'><li>SPELL BOOK</li></Link>
-            <Link to='sorting'><li>SORTING HAT</li></Link>
+            <li><Link to='/movies'>MOVIES</Link></li>
+            <li><Link to='/books'>BOOKS</Link></li>
+            <li><Link to='hogwarts'> HOGWARTS</Link></li>
+            <li><Link to='spells'>SPELL BOOK</Link></li>
+            <li><Link to='sorting'>SORTING HAT</Link></li>
         </div>
+
+        <CloseMenu />
+        <MenuIcon />
 
     </div>
 )
