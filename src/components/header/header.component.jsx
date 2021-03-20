@@ -19,12 +19,20 @@ const Header = () => {
             
                     <div className='header-navs'>
                         <ul className={click? " nav-options active" : "nav-options"}>
-                            <li><Link to='/movies'>MOVIES</Link></li>
-                            <li><Link to='/books'>BOOKS</Link></li>
-                            <li><Link to='hogwarts'> HOGWARTS</Link></li>
-                            <li><Link to='spells'>SPELL BOOK</Link></li>
-                            <li><Link to='sorting'>SORTING HAT</Link></li>
+                            <li className="option" onClick={closeMobileMenu}><Link to='/movies'>MOVIES</Link></li>
+                            <li className="option" onClick={closeMobileMenu}><Link to='/books'>BOOKS</Link></li>
+                            <li className="option" onClick={closeMobileMenu}><Link to='hogwarts'> HOGWARTS</Link></li>
+                            <li className="option" onClick={closeMobileMenu}><Link to='spells'>SPELL BOOK</Link></li>
+                            <li className="option" onClick={closeMobileMenu}><Link to='sorting'>SORTING HAT</Link></li>
                         </ul>
+                    </div>
+
+                    <div className="mobile-menu" onClick={handleClick}>
+                        {cick? 
+                            (<CloseMenu className="menu-icon" />)
+                            :
+                            (<MenuIcon className="menu-icon" />)
+                            }
                     </div>
             
             
