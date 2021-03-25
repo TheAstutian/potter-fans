@@ -28,7 +28,7 @@ const Header = () => {
                     </div>
 
                     <div className="mobile-menu" onClick={handleClick}>
-                        {cick? 
+                        {click? 
                             (<CloseMenu className="menu-icon" />)
                             :
                             (<MenuIcon className="menu-icon" />)
