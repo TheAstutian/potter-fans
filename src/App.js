@@ -15,6 +15,7 @@ import SortingHat from './pages/sortinghat/sortinghat.component';
 function App() {
   return (
     <div className="App">
+      { (component={Homepage})?  <Banner /> : null }
       <Header />
       
       <Switch>
