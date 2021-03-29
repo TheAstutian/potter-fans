@@ -11,11 +11,12 @@ import BookPage from './pages/books/bookpage.component';
 import Hogwarts from './pages/hogwarts/hogwarts.component';
 import MoviePage from './pages/movies/moviespage.component';
 import SortingHat from './pages/sortinghat/sortinghat.component';
+import SocialMediaBanner from './components/SocialMediaBanner/socialmediabanner.component';
 
 function App() {
   return (
     <div className="App">
-      { (component={Homepage})?  <Banner /> : null }
+       <SocialMediaBanner /> 
       <Header />
       
       <Switch>
