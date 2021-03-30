@@ -4,7 +4,7 @@ import React from 'react';
 import './footer.style.scss'; 
 
 const Footer = () => (
-<   div className='footer'>
+< div className='footer'>
     
         <div className='links'>
                 <div>
@@ -88,9 +88,7 @@ const Footer = () => (
         
         </div>
         <div className='copyright'>
-        <div className='social-media'>
-            Twitter
-        </div>
+        
          <span>Copyright 2020, The Astutians. </span>
         </div>
     </div>
