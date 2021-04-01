@@ -22,7 +22,7 @@ const Homepage = () => (
                         <div className=" section pf-hogwarts" style ={{
                             backgroundImage: `url(${'/banner_img.jpg'})`
                             }}>
-                                
+                                <span>We’ve all got both light and dark inside us.</span><span> What matters is the part we choose to act on. </span><span>That’s who we really are.</span>                                     
                         </div>
                         
                            
