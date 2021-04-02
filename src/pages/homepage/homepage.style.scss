@@ -11,11 +11,15 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 .experiment{
     padding-top: 50px;
     padding-bottom: 50px;
-    span{
-        color: white;
-        font-size: 3em;
-        font-weight: lighter;
-        
+    .banner-text{
+        margin-left: 10%;
+        margin-right: 10%;
+        span{
+            color: white;
+            font-size: 1.5em;
+            font-weight: lighter;
+            display: block;
+        }        
         
     }
 }
@@ -26,12 +30,12 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
         margin-right: 150px;
         margin-top: 20px;
         margin-bottom: 20px;
-        border: 1px solid white;
+        
         background-color: white;
         
     }
     .pf-hogwarts{
-        border: 2px solid orange;
+        
         margin-left: 100px;
         margin-right: 100px;
         background-repeat: no-repeat;
