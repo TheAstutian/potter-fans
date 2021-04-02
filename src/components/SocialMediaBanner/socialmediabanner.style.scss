@@ -1,0 +1,15 @@
+.SM-container{
+    background-color: silver;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    
+    .icon-container{
+        margin-right: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        p{ 
+            display: inline;  
+        }
+    }
+}
