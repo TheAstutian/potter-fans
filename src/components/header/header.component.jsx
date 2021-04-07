@@ -17,22 +17,24 @@ const Header = () => {
                         <h1><Link to='/'>Potter World</Link></h1>
                     </div> 
             
-                    <div className='header-navs'>
-                        <ul className={click? " nav-options active" : "nav-options"}>
-                            <li className="option"> <Link to='sorting'>SORTING HAT</Link></li>
-                            <li className="option" > <Link to='/movies'>MOVIES</Link></li>
-                            <li className="option" > <Link to='/books'>BOOKS</Link></li>
-                            <li className="option" > <Link to='hogwarts'> HOGWARTS</Link></li>
-                            <li className="option" > <Link to='spells'>SPELL BOOK</Link></li>
-                        </ul>
-                    </div>
+                    <div className='menus'>
+                            <div className='header-navs'>
+                                <ul className={click? " nav-options active" : "nav-options"}>
+                                    <li className="option"> <Link to='sorting'>SORTING HAT</Link></li>
+                                    <li className="option" > <Link to='/movies'>MOVIES</Link></li>
+                                    <li className="option" > <Link to='/books'>BOOKS</Link></li>
+                                    <li className="option" > <Link to='hogwarts'> HOGWARTS</Link></li>
+                                    <li className="option" > <Link to='spells'>SPELL BOOK</Link></li>
+                                </ul>
+                            </div>
 
-                    <div className="mobile-menu" onClick={handleClick}>
-                        {click? 
-                            (<CloseMenu className="menu-icon" />)
-                            :
-                            (<MenuIcon className="menu-icon" />)
-                            }
+                            <div className="mobile-menu" onClick={handleClick}>
+                                {click? 
+                                    (<CloseMenu className="menu-icon" />)
+                                    :
+                                    (<MenuIcon className="menu-icon" />)
+                                    }
+                            </div>
                     </div>
             
             
