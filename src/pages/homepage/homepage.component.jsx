@@ -30,13 +30,16 @@ const Homepage = () => (
                         <div className='movie-book'>
                             <div className="pf-books section">
                                 <div>
-                                    Image 
+                                    <img src='' />
                                 </div>
-                                <div> text</div>
+                                <div> Harry Potter Books</div>
                             </div>
 
                             <div className="pf-movies section">
-                                Movies
+                                <div>
+                                    <img src=''/>
+                                </div>
+                                <div> Harry Potter Books</div>
                             </div>
                         </div>
 
