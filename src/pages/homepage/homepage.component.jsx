@@ -21,7 +21,7 @@ const Homepage = () => (
                                 <button><Link to='/sorting'>Sorting Hat</Link></button>                                   
                                 </div>
                             <div className='banner-2'>
-                                <img src='banner.jpg' />
+                                <img src='https://cdn.pixabay.com/photo/2015/03/16/04/15/sorting-hat-675364_1280.jpg' />
                             </div>
                         
                         </div> 
