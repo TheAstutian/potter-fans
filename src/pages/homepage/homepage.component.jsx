@@ -28,28 +28,33 @@ const Homepage = () => (
                                                 
  
                         <div className='movie-book'>
-                            <div className="pf-books section">
+                            <div className="pf-books">
                                 <div>
-                                    <img src='' />
+                                    <img src='https://images.pexels.com/photos/1005012/pexels-photo-1005012.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260' />
                                 </div>
-                                <div> Harry Potter Books</div>
+                                <div> <button><Link to='/books'>Harry Potter Books</Link></button></div>
                             </div>
 
-                            <div className="pf-movies section">
-                                <div>
-                                    <img src=''/>
-                                </div>
-                                <div> Harry Potter Books</div>
+                            <div className="pf-movies ">
+                                
+                                    <img src='https://images.pexels.com/photos/4488194/pexels-photo-4488194.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'/>
+                                
+                                <span><Link to='/movies'>Harry Potter Movies</Link></span>
                             </div>
                         </div>
 
-                        <div className="pf-spells section">
-                            Pandora's box of spells    
-                            <h1>SPellslsslf</h1>                        
+                        <div className="pf-spells">
+                            <h1><a href=''>The magical box of spells </a>   </h1>
+                            <img src='https://images.pexels.com/photos/5402712/pexels-photo-5402712.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260' />
                         </div>
 
-                        <div className="jk-rowling section">
-                            <p>The latest <a href='https://www.jkrowling.com/'>About J. K. Rowlings </a></p>
+                        <div className="jk-rowling ">
+                            <h1>Who is <a href='https://www.jkrowling.com/'> J. K. Rowlings? </a></h1>
+                            <img src='https://media3.s-nbcnews.com/i/newscms/2020_24/3386271/200610-jk-rowling-al-1348_c9a1eed578999b876d0ef072061a87c3.jpg' />
+                            <p>Joanne Rowling was born on 31st July 1965 at Yate General Hospital near Bristol, and grew up in Gloucestershire in England and in Chepstow, Gwent, in south-east Wales.</p>
+                            <p>The “K” stands for Kathleen, her paternal grandmother’s name. It was added at her publisher’s request, who thought a book by an obviously female author might not appeal to the target audience of young boys.</p>
+                            <p>She is the author of the much-loved series of seven Harry Potter novels, originally published between 1997 and 2007. Along with the three companion... <a href='https://www.jkrowling.com/about/'>more</a></p> 
+                            
                         </div>
                         
             </div>
