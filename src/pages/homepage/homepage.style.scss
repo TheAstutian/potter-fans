@@ -9,22 +9,37 @@ background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
 background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 
 .experiment{
-    padding-top: 50px;
+    margin-top: 200px;
     padding-bottom: 50px;
     display: flex;
     flex-direction: row;
-    border: 0.5px solid silver;
-    .banner-2{
-        margin-left: 10%;
-        margin-right: 10%;
+    border: 0.01px solid silver;
+    
+    margin: 200px 250px 100px 250px;
+    padding: 150px 80px;
+
+    .banner-1{
+        
         
         span{
             color: white;
             font-size: 1.5em;
             font-weight: lighter;
             display: block;
-        }        
+            line-height: 2.5em;
+        }    
+        button{
+            margin-top: 100px;
+        }    
         
+    }
+
+    .banner-2{
+        margin-left: 100px;
+        img{
+            width: 350px;
+            height: 500px;
+        }
     }
 }
 
@@ -35,9 +50,24 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 
     .pf-books{
         margin: 0 auto;
+        height: 700px;
+        width: 80%;
+
+        .le-button{
+            margin-top: 600px;
+            margin-left: 70%;
+
+            button{
+                padding: 15px 25px;
+                background-color: white;
+                font-size: 1.2em;
+                border-radius: 5px;
+            }
+        }
     }
 
     .pf-movies{
+        margin-top: 150px;
         display:flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -89,12 +119,16 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
     h1{
         color: silver;
     }
-    p{
-        color: silver;
-    }
+
     img{
         width: 450px;
         height: 350px;
+    }
+    .jk-text{
+        margin: 50px 300px;
+        p{
+            color: silver;
+        }
     }
 }
 
