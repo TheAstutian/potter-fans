@@ -37,15 +37,25 @@ const Homepage = () => (
 
                             <div className="pf-movies ">
                                 
+                                    <div className='mov-img'>
                                     <img src='https://images.pexels.com/photos/4488194/pexels-photo-4488194.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'/>
-                                
-                                <span><Link to='/movies'>Harry Potter Movies</Link></span>
+                                    </div>
+                                    <div className='mov-txt'>
+                                        <span> Wanna know more about Harry Potter movies?</span>
+                                        <span> Which actor starred where? </span>
+                                        <span>In the Sorcerer's Stone?</span>
+                                        <span>The Goblet of Fire?</span>
+                                        <span> The Half-blood Prince?</span>
+                                        <Link to='/movies'><button>HP Movies</button></Link>
+                                    </div>
                             </div>
                         </div>
 
                         <div className="pf-spells">
-                            <h1><a href=''>The magical box of spells </a>   </h1>
+                            <h1><Link to='/spells'>The magical box of spells </Link>   </h1>
                             <img src='https://images.pexels.com/photos/5402712/pexels-photo-5402712.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260' />
+                            <span>Do you know that other spells exist apart from expeliarmus and abracadabra?</span>
+                            <Link to='/spells'><button>HP Spells</button></Link>
                         </div>
 
                         <div className="jk-rowling ">
