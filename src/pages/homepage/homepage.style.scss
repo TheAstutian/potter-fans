@@ -15,29 +15,37 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
     flex-direction: row;
     border: 0.01px solid silver;
     
-    margin: 200px 250px 100px 250px;
-    padding: 150px 80px;
+    margin: 200px 300px 100px 300px;
+    padding: 100px 20px;
 
     .banner-1{
         
+        margin: 0 auto;
+        margin-top: 120px;
+        width: 50%;
         
         span{
             color: white;
-            font-size: 1.5em;
-            font-weight: lighter;
+            font-size: 1.2em;
+            
             display: block;
-            line-height: 2.5em;
+            line-height: 2em;
         }    
         button{
             margin-top: 100px;
+            padding: 15px 25px;
+            border-radius: 5px;
+            font-size: 1em;
         }    
         
     }
 
     .banner-2{
-        margin-left: 100px;
+        margin-left: 20px;
+        margin: 0 auto;
+        width: 50%;
         img{
-            width: 350px;
+            width: 250px;
             height: 500px;
         }
     }
