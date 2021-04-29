@@ -14,7 +14,7 @@ const Banner= ()=>(
                </div>
 
                 <div className='banner-btn'>
-                    <button><Link to='/hogwarts'>Visit Hogwarts</Link></button>
+                    <Link to='/hogwarts'><button>Visit Hogwarts</button></Link>
                 </div>
                     
                 

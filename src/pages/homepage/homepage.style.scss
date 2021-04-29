@@ -13,29 +13,30 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
     padding-bottom: 50px;
     display: flex;
     flex-direction: row;
-    border: 0.01px solid silver;
+    border: 0.01px dotted silver;
     
-    margin: 200px 300px 100px 300px;
-    padding: 100px 20px;
+    
+    margin: 100px 400px 100px 400px;
+    padding: 150px 20px;
 
     .banner-1{
         
         margin: 0 auto;
-        margin-top: 120px;
+        margin-top: 30px;
         width: 50%;
         
         span{
             color: white;
-            font-size: 1.2em;
-            
+            font-size: 0.95em;
+            font-weight: 2;
             display: block;
             line-height: 2em;
         }    
         button{
-            margin-top: 100px;
-            padding: 15px 25px;
+            margin-top: 30px;
+            padding: 10px 20px;
             border-radius: 5px;
-            font-size: 1em;
+            font-size: 0.95em;
         }    
         
     }
@@ -45,8 +46,8 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
         margin: 0 auto;
         width: 50%;
         img{
-            width: 250px;
-            height: 500px;
+            width: 200px;
+            height: 400px;
         }
     }
 }
@@ -57,36 +58,40 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
     justify-content: space-between;
 
     .pf-books{
-        margin: 0 auto;
-        height: 700px;
-        width: 80%;
-
+        background: url('https://images.pexels.com/photos/1005012/pexels-photo-1005012.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+        
+        background-position: top center;
+        background-size: 800px 500px;
+        background-repeat: no-repeat;
+     
         .le-button{
-            margin-top: 600px;
-            margin-left: 70%;
-
+            margin-top: 400px;
+            margin-bottom: 100px;
+            margin-left: 500px;
+            
             button{
-                padding: 15px 25px;
+                padding: 10px 20px;
                 background-color: white;
-                font-size: 1.2em;
+                font-size: 0.95em;
                 border-radius: 5px;
             }
         }
     }
 
     .pf-movies{
-        margin-top: 150px;
+        margin-top: 100px;
         display:flex;
         flex-direction: row;
         flex-wrap: wrap;
         padding: 50px;
         img{
-            margin-left: 200px;
+            margin-left: 350px;
+            width: 300px;
         }
         span{
-            margin-left: 100px;
-            margin-top: 200px;
-            font-size: 1.5em;
+            margin-left: 50px;
+            margin-top: 100px;
+            font-size: 1.1em;
         }
     }
 

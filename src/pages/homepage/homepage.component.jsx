@@ -18,7 +18,9 @@ const Homepage = () => (
                                 <span>We’ve all got both light and darkness inside us.</span>
                                 <span> What matters is the part we choose to act on. </span>
                                 <span>That’s who we really are.</span>  
-                                <button><Link to='/sorting'>Sorting Hat</Link></button>                                   
+                                <span> ..........</span>
+                                <span>Who are you?? In what house do you belong? Get sorted by the sorting hat!</span>
+                                <button><Link to='/sorting'>Get Sorted!</Link></button>                                   
                                 </div>
                             <div className='banner-2'>
                                 <img src='https://cdn.pixabay.com/photo/2015/03/16/04/15/sorting-hat-675364_1280.jpg' />
@@ -28,9 +30,7 @@ const Homepage = () => (
                                                 
  
                         <div className='movie-book'>
-                            <div className="pf-books"  style ={{
-                            backgroundImage: `url(${'https://images.pexels.com/photos/1005012/pexels-photo-1005012.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'})`
-                            }}>
+                            <div className="pf-books"  >
                                
                                 <div className='le-button'> <button><Link to='/books'>Harry Potter Books</Link></button></div>
                             </div>
@@ -49,7 +49,7 @@ const Homepage = () => (
                         </div>
 
                         <div className="jk-rowling ">
-                            <h1>Who is <a href='https://www.jkrowling.com/'> J. K. Rowlings? </a></h1>
+                            <h1>Who is <a href='https://www.jkrowling.com/'> J. K. Rowling? </a></h1>
                             <img src='https://media3.s-nbcnews.com/i/newscms/2020_24/3386271/200610-jk-rowling-al-1348_c9a1eed578999b876d0ef072061a87c3.jpg' />
                             <div className='jk-text'>
                                 <p>Joanne Rowling was born on 31st July 1965 at Yate General Hospital near Bristol, and grew up in Gloucestershire in England and in Chepstow, Gwent, in south-east Wales.</p>
