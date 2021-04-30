@@ -3,13 +3,41 @@
 .footer{
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 10px;
     padding-bottom: 10px;
     height: 50px;
     background-color: black;
     display: flex;
-    justify-content: space-between;
-    
+    flex-direction: column;
+
+    .links{
+        display: flex;
+        flex-direction: row;
+        margin: 100px 100px;
+        .links-1{
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            .link-entry{
+                justify-content: left;
+                span{
+                    color: white;
+                    font-size: 0.9em;
+                    
+                }
+                ul{
+                    border: 2px solid orange;
+                    margin: 0 auto;
+                    align-items: left;
+                    a{
+                        color: white;
+                        font-size: 0.85em; 
+                        align-items: left;
+                    }
+                }
+            }
+        }
+
+    }    
     .sm-icon{
         background: white;
     }

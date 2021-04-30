@@ -7,7 +7,7 @@ const Footer = () => (
 < div className='footer'>
     
         <div className='links'>
-                <div>
+                <div className='links-1'>
                         <div className="link-entry">
                             <span> Official HP Sites</span>
                             <ul>
@@ -33,7 +33,7 @@ const Footer = () => (
                         </div>
             </div>
 
-            <div>
+            <div className='links-1'>
                         <div className="link-entry">
                             <span>Forums & Communities</span>
                             <ul>
@@ -64,7 +64,7 @@ const Footer = () => (
                         </div>
             </div>
             
-            <div>
+            <div className='links-1'>
                         <div className="link-entry">
                             <span>Wiki</span>
                             <ul>
