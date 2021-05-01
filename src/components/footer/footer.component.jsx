@@ -9,7 +9,7 @@ const Footer = () => (
         <div className='links'>
                 <div className='links-1'>
                         <div className="link-entry">
-                            <span> Official HP Sites</span>
+                            <div className="f-span"><span> Official HP Sites</span></div>
                             <ul>
                                 <li><a href="https://www.jkrowling.com/"> J.K. Rowling </a></li>
                                 <li><a href="https://www.wizardingworld.com/"> Wizarding World </a></li>

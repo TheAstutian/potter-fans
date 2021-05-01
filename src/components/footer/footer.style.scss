@@ -17,22 +17,34 @@
             width: 30%;
             display: flex;
             flex-direction: column;
+            
             .link-entry{
-                justify-content: left;
-                span{
-                    color: white;
-                    font-size: 0.9em;
-                    
-                }
+                border: 2PX SOLID BLUE;
+                margin-bottom: 50px;
+               .f-span{
+                   display: flex;
+                    span{
+                        
+                        color: white;
+                        font-size: 0.9em;
+                        border: 2px solid green;
+                        
+                        
+                        
+                    }
+               }
                 ul{
                     border: 2px solid orange;
-                    margin: 0 auto;
-                    align-items: left;
-                    a{
-                        color: white;
-                        font-size: 0.85em; 
-                        align-items: left;
+                    
+                    li{
+                        text-align: left;
+                        
+                        a{
+                            color: white;
+                            font-size: 0.85em;
+                        }
                     }
+
                 }
             }
         }
