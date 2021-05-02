@@ -19,29 +19,29 @@
             flex-direction: column;
             
             .link-entry{
-                border: 2PX SOLID BLUE;
+                
                 margin-bottom: 50px;
                .f-span{
                    display: flex;
                     span{
                         
                         color: white;
-                        font-size: 0.9em;
-                        border: 2px solid green;
-                        
-                        
+                        font-size: 0.9em;            
                         
                     }
                }
                 ul{
-                    border: 2px solid orange;
+                    
+                    padding-left: 0pt;
                     
                     li{
                         text-align: left;
                         
+                        
                         a{
                             color: white;
                             font-size: 0.85em;
+                            font-weight: lighter;
                         }
                     }
 

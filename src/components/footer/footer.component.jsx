@@ -21,7 +21,7 @@ const Footer = () => (
                         </div>
 
                         <div className="link-entry">
-                            <span>Media</span>
+                        <div className="f-span"><span> Media </span></div>
                             <ul>
                                 <li><a href="https://thedailyprophet.net/">The Daily Prophet</a></li>
                                 <li><a href="https://thequibs.com/">The Quibbler</a></li>
@@ -35,7 +35,7 @@ const Footer = () => (
 
             <div className='links-1'>
                         <div className="link-entry">
-                            <span>Forums & Communities</span>
+                        <div className="f-span"><span> Forum & Communities </span></div>
                             <ul>
                                 <li><a href="https://www.hexrpg.com/">Hogwarts Extreme</a></li>
                                 <li><a href=""></a></li>
@@ -46,7 +46,7 @@ const Footer = () => (
 
                         </div>
                         <div className="link-entry">
-                            <span>Fan Fiction</span>
+                        <div className="f-span"><span> Fan Fiction </span></div>
                             <ul>
                               <li><a href=""></a></li>
                                 <li></li>
@@ -66,7 +66,7 @@ const Footer = () => (
             
             <div className='links-1'>
                         <div className="link-entry">
-                            <span>Wiki</span>
+                        <div className="f-span"><span> Wiki </span></div>
                             <ul>
                                 <li><a href='https://www.hp-lexicon.org/'> Harry Potter Lexicon</a></li>
                                 <li><a href='https://wikipotter-more.fandom.com/pt-br/wiki/Wiki_WikiPotter'>WikiPotter</a></li>    
@@ -76,7 +76,7 @@ const Footer = () => (
 
                         </div>
                         <div className="link-entry">
-                            <span>Charity</span>
+                        <div className="f-span"><span> Charity </span></div>
                             <ul>
                                 <li><a href="https://potterdome.eu/overons/potterdomeforprivacy/">Free Internet</a></li>
                                 
