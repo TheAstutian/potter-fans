@@ -1,26 +1,30 @@
 
 
 .footer{
-    padding-left: 200px;
-    padding-right: 200px;
-    padding-bottom: 10px;
-    height: 50px;
-    background-color: black;
+    
     display: flex;
     flex-direction: column;
+    border-top: 0.5px solid silver;
 
     .links{
         display: flex;
         flex-direction: row;
         margin: 100px 100px;
+        margin-bottom: 2px;
+        padding-left: 200px;
+        padding-right: 200px;
+        padding-bottom: 10px;
+        
         .links-1{
             width: 30%;
             display: flex;
             flex-direction: column;
+            margin-left: 50px;
             
             .link-entry{
                 
                 margin-bottom: 50px;
+                height: 150px;
                .f-span{
                    display: flex;
                     span{
@@ -33,6 +37,7 @@
                 ul{
                     
                     padding-left: 0pt;
+                    
                     
                     li{
                         text-align: left;
@@ -56,6 +61,10 @@
 
     .copyright{
         margin: 10px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-top: 0.5px solid silver;
+        
     }
     .copyright > span {
         color: white;

@@ -134,20 +134,50 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 
 .pf-spells{
-    margin: 0 auto;
-
-    img{
-        width: 800px;
-        height: 400px;
+    margin:0 auto;
+    margin-top: 100px;
+    margin-bottom: 150px;
+    
+    background: url('https://images.pexels.com/photos/5402712/pexels-photo-5402712.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+        
+        background-position: top center;
+        background-size: 800px 500px;
+        background-repeat: no-repeat;
+        padding-bottom: 50px;
+    h1{
+        margin-bottom: 60px;
     }
     a{
         color: silver;
+    }
+    .pf-spells-span{
+        
+        
+        width: 800px;
+        margin: 0 auto;
+        text-align: left;
+        padding-left: 150px;
+        span{
+            color: silver;
+            font-size: 1em;
+            line-height: 2em;
+        }
+    }
+    button{
+        display: block;
+        margin: 0 auto;
+        margin-top: 230px;
+        padding: 10px 20px;
+        font-size: 1em;
+        border-radius: 5px;
+        
     }
 }
 .jk-rowling{
     
     margin:0 auto;
     margin-top: 100px;
+    margin-bottom: 150px;
 
     a{
         color: silver;

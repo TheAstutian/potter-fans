@@ -12,3 +12,10 @@ HP Websites: https://harrypotter.fandom.com/wiki/List_of_Harry_Potter_fan_websit
 
 http://hogwarts-school.net/sortinghat/index.php?page=hogwarts_roster FOr Hotwarts school
 https://wallpaperaccess.com/harry-potter good source for images
+
+Games and quizzes
+
+https://newfastuff.com/courtyard-broomball/
+https://quizventure.com/harry-potter-spell-quiz/
+https://apps.apple.com/us/app/spells-quiz-for-harry-potter/id1299564850
+http://hogwarts-school.net/sortinghat/index.php?page=hogwarts_roster - hogwarts school. Plenty of image and ideas here

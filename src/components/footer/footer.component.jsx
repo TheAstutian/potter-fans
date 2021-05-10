@@ -35,7 +35,7 @@ const Footer = () => (
 
             <div className='links-1'>
                         <div className="link-entry">
-                        <div className="f-span"><span> Forum & Communities </span></div>
+                        <div className="f-span"><span> Forum and Communities </span></div>
                             <ul>
                                 <li><a href="https://www.hexrpg.com/">Hogwarts Extreme</a></li>
                                 <li><a href=""></a></li>
@@ -51,12 +51,7 @@ const Footer = () => (
                               <li><a href=""></a></li>
                                 <li></li>
                                 <li></li>
-                                Games and quizzes
-
-                                https://newfastuff.com/courtyard-broomball/
-                                https://quizventure.com/harry-potter-spell-quiz/
-                                https://apps.apple.com/us/app/spells-quiz-for-harry-potter/id1299564850
-                                http://hogwarts-school.net/sortinghat/index.php?page=hogwarts_roster - hogwarts school. Plenty of image and ideas here
+                               
 
 
                             </ul>

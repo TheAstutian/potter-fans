@@ -52,9 +52,8 @@ const Homepage = () => (
                         </div>
 
                         <div className="pf-spells">
-                            <h1><Link to='/spells'>The magical box of spells </Link>   </h1>
-                            <img src='https://images.pexels.com/photos/5402712/pexels-photo-5402712.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260' />
-                            <span>Do you know that other spells exist apart from expeliarmus and abracadabra?</span>
+                            <h1><Link to='/spells'>The magical box of spells </Link></h1>
+                            <div className='pf-spells-span'><span>Do you know any other spells <br/> apart from expeliarmus <br/> and abracadabra?</span></div>
                             <Link to='/spells'><button>HP Spells</button></Link>
                         </div>
 
