@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import FaceCollection from '../../components/FaceCollection/facecollection.component';
+import './hogwarts.style.scss'
+
 
 const Hogwarts = () => (
          <div className='hogwarts-container'>
