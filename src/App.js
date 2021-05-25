@@ -12,6 +12,7 @@ import Hogwarts from './pages/hogwarts/hogwarts.component';
 import MoviePage from './pages/movies/moviespage.component';
 import SortingHat from './pages/sortinghat/sortinghat.component';
 import SocialMediaBanner from './components/SocialMediaBanner/socialmediabanner.component';
+import NotFound from './elements/NotFound/NotFound'
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route exact path ='/hogwarts' component = {Hogwarts} />
         <Route exact path ='/movies' component ={MoviePage} />
         <Route exact path='/sorting' component ={SortingHat} />
+        <Route component={NotFound} />
       </Switch>
 
       <Footer />

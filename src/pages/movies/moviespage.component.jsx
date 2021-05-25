@@ -1,97 +1,111 @@
 import React, { Component} from 'react';
-import {API_URL, API_KEY} from '../../config.js';
-import Navigation from '../../components/elements/Navigation/Navigation.js';
-import MovieInfo from '../../components/elements/MovieInfo/MovieInfo.js';
-import MovieInfoBar from '../../components/elements/MovieInfoBar/MovieInfoBar.js';
-import FourColGrid from '../../components/elements/FourColGrid/FourColGrid.js';
-import Actor from '../../components/elements/Actor/Actor';
-import Spinner from '../../components/elements/Spinner/Spinner';
+import { API_URL, API_KEY, IMAGE_BASE_URL, BACKDROP_SIZE, POSTER_SIZE} from  '../../config.js';
+import HeroImage from '../../elements/HeroImage/HeroImage';
+import SearchBar from '../../elements/SearchBar/SearchBar';
+import FourColGrid from '../../elements/FourColGrid/FourColGrid';
+import MovieThumb from '../../elements/MovieThumb/MovieThumb';
+import LoadMoreBtn from '../../elements/LoadMoreBtn/LoadMoreBtn';
+import Spinner from '../../elements/Spinner/Spinner';
+import './movies.css';
 
-import './movies.css'; 
 
 
-class Movie extends Component {
-    state={
-        movie: null,
-        actors: null,
-        directors: [],
-        loading: false
-    }
+class Home extends Component {
+	state = {
+		movies: [], 
+		HeroImage: null, 
+		loading: false,
+		currentPage: 0,
+		totalPages: 0,
+		searchTerm: ''
+	}
 
-    componentDidMount() {
-        this.setState({loading:true})
-        //first fetch the movie...
-        const endpoint = `${API_URL}movie/${this.props.match.params.movieID}?api_key=${API_KEY}&language=en-US`;
-        this.fetchItems(endpoint);
-    }
 
-    fetchItems = (endpoint) => {
-        fetch(endpoint)
-        .then(result=> result.json())
-        .then(result => { 
-            
-                
-            if (result.status_code) {
-                this.setState({loading: false})
-            } else {
-                this.setState({ movie:result }, ()=>{
-                    //...then fetch actors in the setState callback function
-                    const endpoint = `${API_URL}movie/${this.props.match.params.movieID}/credits?api_key=${API_KEY}`;
-                    fetch (endpoint)
-                    .then(result => result.json())
-                    .then(result => {
-                        const directors = result.crew.filter((member)=> member.job ==="Director");
-                        this.setState({
-                            actors: result.cast,
-                            directors,
-                            loading: false
-                        })
-                    })
-                })
-            }
+	componentDidMount(){
+		this.setState({loading:true});
+		const endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+		this.fetchItems(endpoint);
+	}
 
-        })
-        .catch (error => console.error ('Error: ' , error)); 
-    }
+	searchItems = (searchTerm) =>{
+		let endpoint = '';
+		this.setState({
+			movies: [],
+			loading: true,
+			searchTerm
+		})
+		if (searchTerm === ''){
+			endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+		} else {
+			endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${searchTerm}`;
+		}
+		this.fetchItems(endpoint);
+	}
 
-    render(){
-        return(
-            <div className="rmdb-movie">
-                {this.state.movie ? 
-                    <div>
-                        <Navigation movie={this.props.location.moviename} />
-                        <MovieInfo movie={this.state.movie} directors={this.state.directors} />
-                        <MovieInfoBar time={this.state.movie.runtime} budget={this.state.movie.budget} revenue={this.state.movie.revenue} />
+	loadMoreItems =()=>{
+		let endpoint ='';
+		this.setState({loading: true});
+		if (this.state.searchTerm === ''){
+			endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=${this.state.currentPage + 1}`;
+		} else {
+			endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${this.state.searchTerm}&page=${this.state.currentPage +1}`;
+		}
+		this.fetchItems(endpoint);
+	}
 
-                    </div>
-                    : 
-                    null
-                }
-            
-                {this.state.actors ? 
-                    <div className="rmdb-movie-grid">
-                        <FourColGrid header={'Actors'} >
-                            
-                            {this.state.actors.map((element,i) => {
-                                return <Actor key={i} actor={element} />
-                            })} 
-                            </FourColGrid>
-                            
-                     </div>
-                     : 
-                     null
-                }
+	 fetchItems =(endpoint) =>{
+	 		fetch(endpoint)
+	 		.then(result=>result.json())
+	 		.then(result=>{
+				 console.log(result);
+	 			this.setState({
+	 				movies: [...this.state.movies, ...result.results],
+	 				heroImage: this.state.heroImage || result.results[0],
+	 				loading: false,
+	 				currentPage: result.page,
+	 				totalPages: result.total_pages
+	 			})
+	 		})
+	 }
 
-                {!this.state.actors && !this.state.loading ? 
-                    <h1>No Movie Found</h1> 
-                    : 
-                    null
-                }
-                
-                {this.state.loading ? <Spinner /> : null}
-            </div>
-        )
-    }
+	render(){
+	return (
+		<div className="rmdb-home">
+		{this.state.heroImage ?
+				<div>
+					<HeroImage 
+						image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${this.state.heroImage.backdrop_path}`}	
+						title={this.state.heroImage.original_title}
+						text={this.state.heroImage.overview}
+					/>
+					<SearchBar callback={this.searchItems}/>
+				</div> : null }
+
+			<div className="rmdb-home-grid">
+				<FourColGrid 
+				header={this.state.searchTerm ? 'Search Result' : 'Popular Movies'}
+				loading={this.state.loading}
+			 	>
+					{this.state.movies.map((element,i)=>{
+						return <MovieThumb 
+									key={i}
+									clickable={true}
+									image={element.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${element.poster_path}` : './images/no_image.jpg'}
+									movieID={element.id}
+								movieName={element.original_title}
+								/>
+					})}
+				
+				</FourColGrid>
+				{this.state.loading ? <Spinner /> : null }
+				{(this.state.currentPage <= this.state.totalPages && !this.state.loading) ? 
+				<LoadMoreBtn text="Load More" onClick={this.loadMoreItems} /> 
+				: null }
+			</div>
+			
+		</div>
+	)
+	}
 }
 
-export default Movie; 
+export default Home;
