@@ -1,5 +1,5 @@
 import React from 'react';
-import {IMAGE_BASE_URL} from '../../../config.js';
+import {IMAGE_BASE_URL} from '../../config.js';
 import './Actor.css';
 
 const Actor =(props) => {

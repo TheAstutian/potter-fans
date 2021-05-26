@@ -23,7 +23,8 @@ class Home extends Component {
 
 	componentDidMount(){
 		this.setState({loading:true});
-		const endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+		const endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${"Harry potter"}`;
+		const endpoint1 = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
 		this.fetchItems(endpoint);
 	}
 
@@ -78,7 +79,7 @@ class Home extends Component {
 						title={this.state.heroImage.original_title}
 						text={this.state.heroImage.overview}
 					/>
-					<SearchBar callback={this.searchItems}/>
+					
 				</div> : null }
 
 			<div className="rmdb-home-grid">
@@ -97,10 +98,7 @@ class Home extends Component {
 					})}
 				
 				</FourColGrid>
-				{this.state.loading ? <Spinner /> : null }
-				{(this.state.currentPage <= this.state.totalPages && !this.state.loading) ? 
-				<LoadMoreBtn text="Load More" onClick={this.loadMoreItems} /> 
-				: null }
+				
 			</div>
 			
 		</div>
