@@ -3,7 +3,17 @@ import React from 'react';
 class BookPage extends Component {
         state={
                 loading: false,
-                books: []
+                books: [],
+                books_id:[
+                        "39iYWTb6n6cC",
+                        "wHlDzHnt6x0C",
+                        "wHlDzHnt6x0C", 
+                        "KKFTfEQ8bRAC", 
+                        "jk87_y-ubE0C",
+                        "R7YsowJI9-IC",
+                        "gCtazG4ZXlQC" ,
+                        "SQZkvgAACAAJ"
+                ]
         }
 
 
@@ -11,8 +21,8 @@ class BookPage extends Component {
         componentDidMount(){
 		this.setState({loading:true});
 		const endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${"Harry potter"}`;
-		const endpointbk2= 'https://www.googleapis.com/books/v1/volumes/Wlp0nAEACAAJ';
-		this.fetchItems(endpoint);
+		const endpoints= 'https://www.googleapis.com/books/v1/volumes?q=harry+potter+and+the';
+		this.fetchItems(endpoints);
 	}
 
         fetchItems =(endpoint) =>{
@@ -21,11 +31,8 @@ class BookPage extends Component {
                 .then(result=>{
                         console.log(result);
                         this.setState({
-                                movies: [...this.state.movies, ...result.results],
-                                heroImage: this.state.heroImage || result.results[0],
-                                loading: false,
-                                currentPage: result.page,
-                                totalPages: result.total_pages
+                                books: [...this.state.books, ...result.results],
+                                loading: false,                                
                         })
                 })
         }
