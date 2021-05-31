@@ -1,10 +1,10 @@
 import React from 'react'; 
 
-class BookPage extends Component {
+class BookPage extends React.Component {
         state={
                 loading: false,
                 books: [],
-                books_id:[
+                books_id: [
                         "39iYWTb6n6cC",
                         "wHlDzHnt6x0C",
                         "wHlDzHnt6x0C", 
@@ -20,9 +20,13 @@ class BookPage extends Component {
 
         componentDidMount(){
 		this.setState({loading:true});
-		const endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${"Harry potter"}`;
-		const endpoints= 'https://www.googleapis.com/books/v1/volumes?q=harry+potter+and+the';
-		this.fetchItems(endpoints);
+		//const endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${"Harry potter"}`;
+		const endpoints= 'https://www.googleapis.com/books/v1/volumes/';
+                
+		for (var i=0; i<this.state.books_id.length; i++){
+                      this.fetchItems(endpoints+this.state.books_id[i]);
+                }
+                this.setState({loading:false})
 	}
 
         fetchItems =(endpoint) =>{
@@ -31,8 +35,8 @@ class BookPage extends Component {
                 .then(result=>{
                         console.log(result);
                         this.setState({
-                                books: [...this.state.books, ...result.results],
-                                loading: false,                                
+                                books: [...this.state.books, result],
+                                                             
                         })
                 })
         }
@@ -42,7 +46,7 @@ class BookPage extends Component {
         return(
                 <div>
                         <h2>Harry Potter Books</h2>
-
+                        {console.log("it mounted, books:"+this.state.books)}
 
                 </div>  
         )
