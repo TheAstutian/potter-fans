@@ -19,34 +19,33 @@ class BookPage extends React.Component {
 
 
         componentDidMount(){
-		this.setState({loading:true});
-		//const endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${"Harry potter"}`;
+		
+                var books_loading= [];
+               const fetchItems =(endpoint) =>{
+                        fetch(endpoint)
+                        .then(result=>result.json())
+                        .then(result=>{
+                                console.log(result);
+                            books_loading.push(result)   
+                        })
+                }
 		const endpoints= 'https://www.googleapis.com/books/v1/volumes/';
                 
 		for (var i=0; i<this.state.books_id.length; i++){
-                      this.fetchItems(endpoints+this.state.books_id[i]);
+                      fetchItems(endpoints+this.state.books_id[i]);
                 }
-                this.setState({loading:false})
+                this.setState({books: [...this.state.books, books_loading]})
+                //console.log("these are the books in component did mount"+this.state.books)
+                console.log(books_loading)
 	}
 
-        fetchItems =(endpoint) =>{
-                fetch(endpoint)
-                .then(result=>result.json())
-                .then(result=>{
-                        console.log(result);
-                        this.setState({
-                                books: [...this.state.books, result],
-                                                             
-                        })
-                })
-        }
         
 
         render(){
         return(
                 <div>
                         <h2>Harry Potter Books</h2>
-                        {console.log("it mounted, books:"+this.state.books)}
+                        {console.log("these are the books in rendering"+ this.state.books)}
 
                 </div>  
         )
