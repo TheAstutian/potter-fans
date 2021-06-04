@@ -4,17 +4,17 @@ import './banner.style.scss';
 
 
 
-const Banner= ()=>(
+const Banner= ({imagelink, content, btn_text})=>(
     <div className="banner-container">
                     <div className="container-b" style ={{
-                backgroundImage: `url(${'https://cdn.pixabay.com/photo/2015/09/20/22/38/library-948965_1280.jpg'})`
+                backgroundImage: `url(${imagelink})`
                 }}>
                <div className='banner-span'>
-               <span>Where life and death began or some other quote pertaining to hogwarts</span>
+               <span>{content}</span>
                </div>
 
                 <div className='banner-btn'>
-                    <Link to='/hogwarts'><button>Visit Hogwarts</button></Link>
+                    { btn_text ? <Link to='/hogwarts'><button>Visit Hogwarts</button></Link>: null}
                 </div>
                     
                 

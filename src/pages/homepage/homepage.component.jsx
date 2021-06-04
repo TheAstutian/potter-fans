@@ -11,7 +11,10 @@ import './homepage.style.scss';
 const Homepage = () => (
                     
             <div className='container'>
-                       <Banner />                
+                       <Banner 
+                       content='Where life and death began or some other quote pertaining to hogwarts'
+                       btn_text='Visit Hogwarts'
+                       />                
                        <div className='experiment'>
 
                             <div className='banner-1'>

@@ -1,4 +1,5 @@
 import React from 'react'; 
+import Banner from '../../components/Banner/banner.component';
 
 class BookPage extends React.Component {
         state={
@@ -46,6 +47,7 @@ class BookPage extends React.Component {
         render(){
         return(
                 <div>
+                        <Banner imagelink='https://images.pexels.com/photos/1005012/pexels-photo-1005012.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'/>
                         <h2>Harry Potter Books</h2>
                         {console.log("i loaded")}
                         {console.log(this.state.books)
