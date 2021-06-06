@@ -2,28 +2,27 @@ import react from 'react';
 
 import '../Book.style.scss'
 
-const Book = ()=>{
+const Book = (props)=>{
     return(
         <div>
             <div>
-            <p>Title</p>
-            <p>Authors:</p>
+            <p>Title: {title}</p>
+            <p>Authors:{authors}</p>
             </div>
             <div>
                 <div>
-                <p>Thumb image</p>
+                <img src={imageurl} />
                 </div>
                 <div>
-                    Description
+                    <p>{description}</p>
 
-                    Add link for preview
+                    Add button/ link for preview
                 </div>
             </div>
             <div>
-               Published by: Publisher
-               Released: Published date
-               Rating:
-                
+               <p>Publisheer: {publisher}</p>
+               <p>Released: {release_date}</p>
+               <p>Rating: {rating}</p>
 
             </div>
         </div>

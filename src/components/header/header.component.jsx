@@ -20,10 +20,10 @@ const Header = () => {
                     <div className='menus'>
                             <div className='header-navs'>
                                 <ul className={click? " nav-options active" : "nav-options"}>
-                                    <li className="option"> <Link to='sorting'>SORTING HAT</Link></li>
+                                <li className="option" > <Link to='hogwarts'> HOGWARTS</Link></li>
                                     <li className="option" > <Link to='/movies'>MOVIES</Link></li>
                                     <li className="option" > <Link to='/books'>BOOKS</Link></li>
-                                    <li className="option" > <Link to='hogwarts'> HOGWARTS</Link></li>
+                                    <li className="option"> <Link to='sorting'>SORTING HAT</Link></li>
                                     <li className="option" > <Link to='spells'>SPELL BOOK</Link></li>
                                 </ul>
                             </div>
