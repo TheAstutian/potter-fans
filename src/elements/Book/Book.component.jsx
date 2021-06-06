@@ -1,8 +1,8 @@
-import react from 'react';
+import React from 'react';
 
-import '../Book.style.scss'
+import './Book.style.scss'
 
-const Book = (props)=>{
+const Book = ({title, authors, imageurl,description,publisher,release_date,rating})=>{
     return(
         <div>
             <div>
@@ -20,7 +20,7 @@ const Book = (props)=>{
                 </div>
             </div>
             <div>
-               <p>Publisheer: {publisher}</p>
+               <p>Publisher: {publisher}</p>
                <p>Released: {release_date}</p>
                <p>Rating: {rating}</p>
 

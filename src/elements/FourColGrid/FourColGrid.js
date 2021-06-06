@@ -20,7 +20,7 @@ const FourColGrid = (props)=>{
 			<div className="rmdb-grid-content">
 				{renderElements()}
 			</div>
-		
+		 
 		</div>
 		)
 }
