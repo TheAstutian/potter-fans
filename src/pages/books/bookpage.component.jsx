@@ -22,17 +22,19 @@ class BookPage extends React.Component {
 
         
         componentDidMount(){
+                
 		const endpoints= 'https://www.googleapis.com/books/v1/volumes/';
 		
-                for (var i=0; i<this.state.books_id.length; i++){
                 var new_books=[]
+                
+                for (var i=0; i<this.state.books_id.length; i++){
+                        
                var new_book;
                new_book= this.fetchItems(endpoints+this.state.books_id[i])
                new_books.push(new_book)
+ 
                 }
-                this.setState({
-                        books: [...this.state.books, new_books]
-                })
+                console.log("component mounted")
 	}
 
         fetchItems=(endpoint)=>{
@@ -41,8 +43,9 @@ class BookPage extends React.Component {
                 .then(result=>result.json())
                 .then(result=>{
                        books_loading.push(result)
+
                 })
-               return books_loading;
+               
         }       
 
         colgrid=()=>{
@@ -73,18 +76,8 @@ class BookPage extends React.Component {
                         <h2>Harry Potter Books</h2>
                         <FourColGrid>
                                 {console.log(this.state.books)}
-                                {this.state.books = [] ? <div>Loading</div>: this.state.books[0].map((element,i)=>{
-						return <Book 
-									key={i}
-									title={element[0].volumeInfo.title}
-                                                                        authors={element[0].volumeInfo.authors[0]}
-									imageurl={element[0].imageLinks.thumbnail} 
-                                                                        description={element[0].description}
-									publisher={element[0].publisher}
-                                                                        release_date={element[0].publishedDate}
-                                                                        rating={element[0].averageRating}
-								/>
-					})}
+                                {console.log("it mounted")}
+                                {this.state.loading ? <div>Loading</div>: <div>Not loading</div>}
                         </FourColGrid>
                 </div>  
         )
