@@ -74,23 +74,24 @@ class BookPage extends React.Component {
                 <div>
                         <Banner imagelink='https://images.pexels.com/photos/1005012/pexels-photo-1005012.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'/>
                         <h2>Harry Potter Books</h2>
-                        <FourColGrid>
-                                {console.log(this.state.books)}
+                        <div>
+                                
                                 { this.state.books.map((element,i)=>{
 						return <Book 
 									key={i}
-                                                                        rating={element.averageRating}
+                                                                        
 									title={element.volumeInfo.title}
                                                                         authors={element.volumeInfo.authors[0]}
-									
-                                                                        description={element.description}
-									publisher={element.publisher}
-                                                                        release_date={element.publishedDate}
-                                                                        rating={element.averageRating}
+									imageurl={element.volumeInfo.imageLinks.thumbnail} 
+                                                                        description={element.volumeInfo.description}
+									publisher={element.volumeInfo.publisher}
+                                                                        release_date={element.volumeInfo.publishedDate}
+                                                                        rating={element.volumeInfo.averageRating}
+                                                                        link={element.volumeInfo.previewLink}
 								/>
 					})}
                                 
-                        </FourColGrid>
+                        </div>
                 </div>  
         )
         }

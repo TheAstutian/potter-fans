@@ -1,0 +1,63 @@
+.book-bgd{
+    background-color: whitesmoke;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 100px;
+
+    .top-area{
+        padding: 10px;
+        margin: 10px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        
+        
+        span{
+            font-size: 1.5rem;
+            color: #111111;
+            font-weight: bolder;
+        }
+    }
+
+    .middle-area{
+        display:flex;
+        flex-direction: row;
+        
+        padding: 10px;
+        margin: 10px;
+        margin-bottom: 0px;
+
+        .middle-area-image{
+            width: 30%;
+            
+            img{
+                margin: auto;
+                padding-top: 30px;
+            }
+        }
+
+        .middle-area-text{
+            width: 69%;
+            
+            padding: 0px 30px;
+            p{
+                font-size: 0.9em;
+                font-style: italic;
+            }
+        }
+
+    }
+
+    .bottom-area{
+        border-top: 2px solid black;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        p{
+            font-weight: bold;
+            font-size: 1em;
+        }
+    }
+}
