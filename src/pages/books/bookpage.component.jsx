@@ -48,26 +48,6 @@ class BookPage extends React.Component {
                
         }       
 
-        colgrid=()=>{
-                return (
-                        <FourColGrid>
-                                {console.log(this.state.books)}
-                                { this.state.books =[] ? <div>Loading</div> : this.state.books.map((element,i)=>{
-						return <Book 
-									key={i}
-                                                                        rating={element.averageRating}
-									title={element.volumeInfo.title}
-                                                                        authors={element.volumeInfo.authors[0]}
-									imageurl={element.imageLinks.thumbnail} 
-                                                                        description={element.description}
-									publisher={element.publisher}
-                                                                        release_date={element.publishedDate}
-                                                                        rating={element.averageRating}
-								/>
-					})}
-                        </FourColGrid>
-                )
-        }
 
         render(){
         return(
