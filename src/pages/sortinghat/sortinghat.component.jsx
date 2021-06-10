@@ -2,6 +2,8 @@ import { render } from '@testing-library/react';
 import React from 'react'; 
 import Banner from '../../components/Banner/banner.component';
 
+import './sortinghat.style.scss'
+
 class SortingHat extends React.Component {
     state={
 
