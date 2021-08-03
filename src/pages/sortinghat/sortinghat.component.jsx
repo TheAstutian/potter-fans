@@ -1,29 +1,22 @@
-import { render } from '@testing-library/react';
 import React from 'react'; 
-import Banner from '../../components/Banner/banner.component';
 
-import './sortinghat.style.scss'
 
-class SortingHat extends React.Component {
-    state={
 
-    }
-
-    componentDidMount(){
-
-    }
-    render()
-    {
-        return (
+const SortingHat =()=>{
+    return (
+        <div>
+            <h2>Sorting Hat!</h2>
             <div>
-                <Banner content='Which house do you belong to? Get Sorted!'/>
-                <h2>Sorting Hat!</h2>
+                <img />
+                <span>In which house do you belong? Get sorted!</span>
             </div>
-        )
-        
-    }
+            <div>
+                <label placeholder="What is your name, Muggle?"/>
+                <button>Get sorted</button>
+            </div>
+        </div>
+    )
 }
-
    
 
 export default SortingHat; 
