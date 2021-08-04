@@ -9,6 +9,7 @@ const MovieThumb = (props)=>{
 			<Link to={{pathname: `/${props.movieID}`, movieName: `{props.movieName}` }}>
 				<img src={props.image} alt ="moviethumb" />
 			</Link>
+			
 				: 
 			<img src={props.image} alt ="moviethumb" />
 		}

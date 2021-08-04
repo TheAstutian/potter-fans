@@ -25,8 +25,6 @@ class BookPage extends React.Component {
                 this.setState({loading: true})
 		const endpoints= 'https://www.googleapis.com/books/v1/volumes/';
 		
-                
-                
                 for (var i=0; i<this.state.books_id.length; i++){
                         
                         this.fetchItems(endpoints+this.state.books_id[i])

@@ -28,31 +28,6 @@ class Home extends Component {
 		this.fetchItems(endpoint);
 	}
 
-	searchItems = (searchTerm) =>{
-		let endpoint = '';
-		this.setState({
-			movies: [],
-			loading: true,
-			searchTerm
-		})
-		if (searchTerm === ''){
-			endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
-		} else {
-			endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${searchTerm}`;
-		}
-		this.fetchItems(endpoint);
-	}
-
-	loadMoreItems =()=>{
-		let endpoint ='';
-		this.setState({loading: true});
-		if (this.state.searchTerm === ''){
-			endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=${this.state.currentPage + 1}`;
-		} else {
-			endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${this.state.searchTerm}&page=${this.state.currentPage +1}`;
-		}
-		this.fetchItems(endpoint);
-	}
 
 	 fetchItems =(endpoint) =>{
 	 		fetch(endpoint)
@@ -93,7 +68,7 @@ class Home extends Component {
 									clickable={true}
 									image={element.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${element.poster_path}` : './images/no_image.jpg'}
 									movieID={element.id}
-								movieName={element.original_title}
+									movieName={element.original_title}
 								/>
 					})}
 				

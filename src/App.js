@@ -26,10 +26,11 @@ function App() {
         <Route exact path='/spells' component={SpellsPage} />
         <Route exact path ='/books' component={BookPage}/>
         <Route exact path ='/hogwarts' component = {Hogwarts} />
-        <Route exact path ='/movies' component ={MoviePage} />
-        <Route path="/:movieID" component={Movie} exact />
         <Route exact path='/sorting' component ={SortingHat} />
+        <Route exact path ='/movies' component ={MoviePage} />
+        
         <Route component={NotFound} />
+        <Route path="/:movieID" component={Movie} exact />
       </Switch>
 
       <Footer />
