@@ -11,6 +11,7 @@ class SortingHat extends React.Component{
     }
 
     house = (name)=>{
+        // check if name is valid first
         const randomNum = Math.floor((Math.random() * 100) + 1) // Generates number between 1 and 100
         const houseName = houses[randomNum % 4]
         return houseName;   
