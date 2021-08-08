@@ -29,7 +29,7 @@ function App() {
         <Route exact path='/sorting' component ={SortingHat} />
         <Route exact path ='/movies' component ={MoviePage} />
         <Route component={NotFound} />
-        <Route path="/:movieID" component={Movie} exact />
+        <Route path='/:movieID' component={Movie} exact />
         
         
       </Switch>
