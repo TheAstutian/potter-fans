@@ -1,5 +1,5 @@
 import React from 'react'; 
-import Button from '../../components/Button/button.component'
+import './sortinghat.style.scss'
 
 const houses = [
     "Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"
@@ -46,14 +46,11 @@ class SortingHat extends React.Component{
     }
 
     pick_greeting=()=>{
-        const randomNum = this.random()
-        const greeting = greetings[randomNum % greetings.length]
-        return greeting
+        return greetings[this.random() % greetings.length]
     }
 
     pick_message=()=>{
-        const message = messages[this.random() % messages.length]
-        return message
+        return messages[this.random() % messages.length]
     }
 
     pick_addendum=()=>{
@@ -62,20 +59,7 @@ class SortingHat extends React.Component{
 
     pick_house = ()=>{
         // check if name is valid first
-        
-        const randomNum = this.random()
-        const houseName = houses[randomNum % houses.length]
-        
-        return houseName
-    }
-
-    onSubmit =()=>{
-
-        const house = this.pick_house()
-        this.setState({sorted_house:house})
-        const greeting = this.pick_greeting()
-        const message = this.pick_message()
-        this.setState({active:true, greeting:greeting, message:this.pick_message(),addendum:this.pick_addendum()})
+        return houses[this.random() % houses.length]
     }
 
     handleChange= (e)=>{
@@ -83,6 +67,22 @@ class SortingHat extends React.Component{
         this.setState({name:user_name})
         this.setState({active:false})
     }
+
+    onSubmit =()=>{
+        this.setState({sorted_house: this.pick_house(),
+                        active:true, 
+                        greeting:this.pick_greeting(), 
+                        message:this.pick_message(),
+                        addendum:this.pick_addendum()
+                    })
+    }
+
+    handleKeyDown = (e) =>{
+        if (e.key==='Enter'){
+            this.onSubmit()
+        }
+    }
+
     reset = ()=>{
         this.setState({active:false, name:"",active:false,
         sorted_house:"",
@@ -93,8 +93,8 @@ class SortingHat extends React.Component{
 
     render(){
         return (
-            <div>
-                <h2>Sorting Hat!</h2>
+            <div className="header">
+                <h2>Sorting Hat</h2>
                 <div>
                     <img />
                     <span>In which house do you belong? Get sorted!</span>
@@ -102,16 +102,19 @@ class SortingHat extends React.Component{
                 <div>
                   <input 
                         type="text"
-                        placeholder="What is your name, Muggle?"
+                        placeholder="Your name, Muggle?"
                         onChange = {this.handleChange}
 					    value = {this.state.name}
+                        onKeyDown= {this.handleKeyDown}
                     />
-                    <button onClick={()=>this.onSubmit()}>Get sorted</button>
+                    <button onClick={()=>this.onSubmit()}>Get sorted! </button>
                 </div>
 
                 <div style={{color:"white"}}>
                    { this.state.active===true ? (<div>
-                    <p> {this.state.greeting} {this.state.name}, {this.state.message} {this.state.sorted_house}. {this.state.addendum}!</p> <button onClick={()=>this.reset()}>Reset</button>
+                    <p> {this.state.greeting} {this.state.name}, {this.state.message}</p>
+                    <span> {this.state.sorted_house}! </span>
+                    <p> {this.state.addendum}!</p> <button onClick={()=>this.reset()}>Reset</button>
                    </div>): null }
                 </div>
             </div>
