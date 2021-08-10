@@ -3,5 +3,91 @@
         color:orange;
         font-size: 2rem;
         font-weight: lighter;
+        margin-bottom: 10px;
+    }
+
+    .sorting-header{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        img{
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+        span{
+            color: orange;
+            font-size: 1.5rem;
+            font-weight: lighter;
+        }
+    }
+
+    .sorting-body{
+        padding: 10px;
+        margin-bottom: 50px;
+        input{
+            margin-right: 10px;
+            font-size: 1.1em;
+            padding: 0.5em 1em;
+            
+        }
+        button{
+            padding: 0.7em 1.2em;
+                border: 0.01px solid black;
+                border-radius: 0.3em;
+                box-sizing: border-box;
+                text-decoration: none;
+                font-family: 'OpenSans-Light';
+                
+                font-size: 1.1em;
+                
+                text-align: center;
+                transition: all 0.2s; 
+                background-color: white; 
+                cursor: pointer;
+                
+                margin: 0 auto;
+                a{
+                    color: crimson;
+                   
+                }
+            }
+            button:hover{
+                background-color: black;
+                color: white;
+                border: 0.01px solid white;
+                a{
+                    color: white;
+                   
+                }
+        }
+    }
+
+    .sorting-result{
+        min-height:300px;
+        border-top: 0.1px solid white;
+        .result{
+            margin-top:30px;
+            p{
+                color: orange;
+                font-size: 1.1em;
+            }
+            span{
+                color: purple;
+                font-size: 3rem;
+                font-weight: lighter;
+                margin-top:50px;
+            }
+        }
+        .no-result{
+            margin-top:100px;
+            span{
+                color: orange;
+                font-size:1.5em;
+                font-weight: lighter;
+            }
+        }
     }
 }

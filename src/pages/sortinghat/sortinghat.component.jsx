@@ -1,4 +1,5 @@
 import React from 'react'; 
+import {Link} from 'react-router-dom'
 import './sortinghat.style.scss'
 
 const houses = [
@@ -95,14 +96,14 @@ class SortingHat extends React.Component{
         return (
             <div className="header">
                 <h2>Sorting Hat</h2>
-                <div>
-                    <img />
-                    <span>In which house do you belong? Get sorted!</span>
+                <div className="sorting-header">
+                    <img src='https://cdn.pixabay.com/photo/2015/03/16/04/15/sorting-hat-675364_1280.jpg' />        
+                    <span>In which house do you belong? </span>
                 </div>
-                <div>
+                <div className="sorting-body">
                   <input 
                         type="text"
-                        placeholder="Your name, Muggle?"
+                        placeholder="Your name, muggle?"
                         onChange = {this.handleChange}
 					    value = {this.state.name}
                         onKeyDown= {this.handleKeyDown}
@@ -110,12 +111,18 @@ class SortingHat extends React.Component{
                     <button onClick={()=>this.onSubmit()}>Get sorted! </button>
                 </div>
 
-                <div style={{color:"white"}}>
-                   { this.state.active===true ? (<div>
+                <div className="sorting-result">
+                   { this.state.active===true ? (<div className="result">
                     <p> {this.state.greeting} {this.state.name}, {this.state.message}</p>
-                    <span> {this.state.sorted_house}! </span>
-                    <p> {this.state.addendum}!</p> <button onClick={()=>this.reset()}>Reset</button>
-                   </div>): null }
+                    <span> {this.state.sorted_house} </span>
+                    <p> {this.state.addendum}!</p> 
+                    <button ><Link to ={this.state.sorted_house}>Visit {this.state.sorted_house}</Link></button>
+                    <button onClick={()=>this.reset()}>Reset</button>
+                    
+                   </div>): 
+                        (<div className="no-result">
+                            <span>You have no place here.... You haven't been sorted</span>
+                       </div>) }
                 </div>
             </div>
         )
