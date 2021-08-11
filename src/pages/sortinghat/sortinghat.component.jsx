@@ -21,7 +21,7 @@ const messages = [
     "I see you doing wonders at",
     "your destiny lies at",
     "you are best suited for",
-    "I am certain you belong to",
+    "I am certain you belong in",
     "your path lies at",
     "your personality will fit in at",
     "people like you belong to"
