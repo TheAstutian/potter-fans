@@ -3,6 +3,8 @@ const API_URL_p= 'https://www.potterapi.com/v1/';
 const API_KEY_p= '$2a$10$GzKuSI6dT5dC1NuVyeI8eugv./Vo4BMBLOCTS4d1Gfjge.4mwp5Gi';
 const sample_request= 'Sample GET request: https://www.potterapi.com/v1/characters?key=YOURKEY';
 
+const my_request= 'https://www.potterapi.com/v1/characters?key=$2a$10$GzKuSI6dT5dC1NuVyeI8eugv./Vo4BMBLOCTS4d1Gfjge.4mwp5Gi'
+
 const API_URL_2 = 'https://hp-api.herokuapp.com/ characters, students, house, staff'
 
 // https://www.potterapi.com/v1/characters?key=Y$2a$10$GzKuSI6dT5dC1NuVyeI8eugv./Vo4BMBLOCTS4d1Gfjge.4mwp5Gi

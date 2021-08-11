@@ -24,7 +24,8 @@ const Header = () => {
                                     <li className="option" > <Link to='/movies'>MOVIES</Link></li>
                                     <li className="option" > <Link to='/books'>BOOKS</Link></li>
                                     <li className="option"> <Link to='/sorting'>SORTING HAT</Link></li>
-                                    <li className="option" > <Link to='/spells'>SPELL BOOK</Link></li>
+                                    <li className="option" > <Link to='/spells'>SPELLS</Link></li>
+                                    <li className="option" > <Link to='/potions'>POTIONS</Link></li>
                                 </ul>
                             </div>
 

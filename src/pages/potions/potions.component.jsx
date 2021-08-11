@@ -2,19 +2,20 @@ import React from 'react';
 import Banner from '../../components/Banner/banner.component'
 
 
-const url = "https://www.potterapi.com/v1/characters?key=$2a$10$GzKuSI6dT5dC1NuVyeI8eugv./Vo4BMBLOCTS4d1Gfjge.4mwp5Gi";
-const url2 = "https://www.potterapi.com/v1/sortingHat"
-class SpellsPage extends React.Component {
+const url = "https://the-harry-potter-database.herokuapp.com/api/1/potions/all"
+class PotionsPage extends React.Component {
     state = {
-
+        potions:[]
     }
 
 componentDidMount(){
-    fetch(url2)
+    fetch(url)
         .then((response)=>response.json())
         .then((data)=>{
             console.log(data)
+            this.setState({potions:data})
         })
+        
 }
    
 
@@ -22,7 +23,7 @@ componentDidMount(){
         return (
             <div>
                 <div style={{border:"2px solid white"}}>
-                <Banner  content='Abracadabra!'/>
+                <Banner  content='Potions'/>
                 </div>
                 <div>
                     <div>
@@ -37,4 +38,4 @@ componentDidMount(){
     }
 }
 
-export default SpellsPage; 
+export default PotionsPage; 
