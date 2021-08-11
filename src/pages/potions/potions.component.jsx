@@ -1,5 +1,6 @@
 import React from 'react'; 
 import Banner from '../../components/Banner/banner.component'
+import Card from '../../components/Card/card.component';
 
 
 const url = "https://the-harry-potter-database.herokuapp.com/api/1/potions/all"
@@ -17,20 +18,34 @@ componentDidMount(){
         })
         
 }
+
+
    
 
     render() { 
         return (
             <div>
-                <div style={{border:"2px solid white"}}>
-                <Banner  content='Potions'/>
+                <h2>Potions</h2>
+                <div className="sorting-header">
+                    <img />        
                 </div>
+
                 <div>
                     <div>
-                       <p> Serch and popular spells</p>
+                        <input /><button>Search potion</button>
+                       <span>Popular Potions</span> 
+
                     </div>
-                    <div>
-                        Content of spells
+                    <div style={{color:"white"}}>
+                    {this.state.potions.map((element,i)=>{
+                        return <Card 
+                                key= {i}
+                                id={this.state.potions[i].id-1}
+                                name= {this.state.potions[i].name}
+                                description ={this.state.potions[i].description}
+                                />
+                    })
+                    }
                     </div>
                 </div>
             </div>
