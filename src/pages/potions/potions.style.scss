@@ -1,0 +1,62 @@
+.potions-container{
+    h2{
+        color:orange;
+        font-size:2rem;
+        font-weight:lighter;
+    }
+    padding-top:0px;
+    padding-left:150px;
+    padding-right:150px;
+    
+    .potions-header{
+        padding: 10px;
+        display:flex;
+        flex-direction:column;
+        
+        img{
+            height:300px;
+            width:500px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+        .search{
+            margin:10px;
+            margin-bottom:20px;
+            input{
+                border-radius:5px;
+                padding: 10px 20px;
+                font-size: 13px;
+                margin-right:5px;
+            }
+            button{
+                border-radius:5px;
+                padding: 10px 20px;
+                font-size: 13px;
+                font-weight:lighter;
+                border: 0.1px solid orange;
+                color:white;
+                background: orange;
+            }
+        }
+        .toggle{
+            button{
+                border-radius:5px;
+                padding:10px 20px;
+                font-size:13px;
+                margin:0 auto;
+                border: 0.1px solid orange;
+                color:white;
+                background: orange;
+            }
+        }
+    }
+    .potions-body{
+        color:white;
+        .potions-list{
+            display:flex;
+            flex-wrap:wrap;
+
+        }
+    }
+}
