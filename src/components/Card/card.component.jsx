@@ -1,9 +1,9 @@
 import React from 'react';
 import './card.style.scss';
 
-const Card = ({name, id,description}) =>(
+const Card = ({name, description}) =>(
     <div className='card-container'>
-        <span>{id} {name}</span>
+        <span> {name}</span>
         
         <div className="description">
             <p>{description}</p>

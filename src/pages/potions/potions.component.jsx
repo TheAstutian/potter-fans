@@ -6,7 +6,8 @@ import Card from '../../components/Card/card.component';
 const url = "https://the-harry-potter-database.herokuapp.com/api/1/potions/all"
 class PotionsPage extends React.Component {
     state = {
-        potions:[]
+        potions:[],
+        searchTerm:"",
     }
 
 componentDidMount(){
@@ -20,6 +21,30 @@ componentDidMount(){
 }
 
 
+
+all_cards=(potions)=>{
+    return potions.map((element,i)=>{
+        return <Card 
+        key= {i}
+        name= {potions[i].name}
+        description ={potions[i].description}
+        />
+    })
+}
+
+
+featured_cards=(potions)=>{
+    
+    const featured = [1,2,9,11,12,15,17,26,34,37,46,51,55,61,100,104,134]
+    return potions.map((element,i)=>{
+        if (featured.includes(i,0)){
+        return <Card
+                 key={i}
+                 name={potions[i].name}
+                 description={potions[i].description}
+                 />}
+    })
+}
    
 
     render() { 
@@ -27,26 +52,26 @@ componentDidMount(){
             <div>
                 <h2>Potions</h2>
                 <div className="sorting-header">
-                    <img />        
+                    <img />    
+                    <input /><button>Search potion</button>    
                 </div>
-
+                    
                 <div>
-                    <div>
-                        <input /><button>Search potion</button>
-                       <span>Popular Potions</span> 
+                    <div style={{color:"white"}}>
+                        <h2>Search Results</h2>
+                    </div>
 
+                    <div style={{color:"white"}}>
+                       
+                       <h2>Featured Potions</h2> 
+                      
+                       {this.featured_cards(this.state.potions)}
                     </div>
                     <div style={{color:"white"}}>
-                    {this.state.potions.map((element,i)=>{
-                        return <Card 
-                                key= {i}
-                                id={this.state.potions[i].id-1}
-                                name= {this.state.potions[i].name}
-                                description ={this.state.potions[i].description}
-                                />
-                    })
-                    }
+                        <h2>All Potions</h2>
+                        {this.all_cards(this.state.potions)}
                     </div>
+
                 </div>
             </div>
         )
