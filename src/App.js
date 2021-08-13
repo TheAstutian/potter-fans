@@ -30,8 +30,10 @@ function App() {
         <Route exact path='/sorting' component ={SortingHat} />
         <Route exact path ='/potions' component ={PotionsPage} />
         <Route exact path ='/movies' component ={MoviePage} />
+        <Route exact path='/movies/:movieID' component={Movie}  />
         <Route component={NotFound} />
-        <Route path='/:movieID' component={Movie} exact />
+        
+        
         
         
       </Switch>
