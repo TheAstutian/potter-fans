@@ -13,10 +13,6 @@ const Spell = ({name, other_name, mention, prononciation, spell_type, etymology,
                     <p>{other_name}</p>
                     <p>{prononciation}</p>
                     <p>Spell type: {spell_type}</p>
-                    <p>{description}</p>
-                    <p>{mention}</p>
-                    <p>{spell_type}</p>
-                    <p>{etymology}</p>
                     <p>{note}</p>
                 </div>
             </div>

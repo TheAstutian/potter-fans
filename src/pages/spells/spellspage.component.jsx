@@ -42,18 +42,6 @@ renderSpells=(spells)=>{
     })
 }
 
-colors=(type)=>{
-    if (type==="charm"){
-        return "blue"
-    } else if (type==="jinx"){
-        return "red"
-    } else if (type=="curse"){
-        return "white"
-    } else if (type==="transportation"){
-        return "purple"
-    } else 
-    return "brown"
-}
    
 
     render() { 

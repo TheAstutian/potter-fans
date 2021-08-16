@@ -7,8 +7,8 @@
         display: flex;
         flex-direction: column;
         margin: 20px;
-        height:300px;
-        width:200px;
+        height:200px;
+        width:150px;
         
         
     #Charm{
@@ -29,14 +29,42 @@
         height:100%;
         border-radius: 10px;
     }
+    #Transfiguration{
+        background-color:orchid;
+        width:100%;
+        height:100%;
+        border-radius: 10px;
+    
+    }
+    #Transportation{
+        width:100%;
+        height:100%;
+        border-radius: 10px;
+        background-color:papayawhip;
+    }
+    #Hex{
+        width:100%;
+        height:100%;
+        border-radius: 10px;
+        background-color:powderblue;
+    }
 
     
 
         .spell{
             
+            span{
+                color: black;
+                font-weight:600;
+                font-size: 1.1em;
+                padding-left:10px;
+                padding-right:10px;
+                
+            }
             
             .description{
-                color:white;
+                color:black;
+                font-size: 0.9em;
             }
             
             
