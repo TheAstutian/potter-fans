@@ -1,0 +1,18 @@
+.spellspage-container{
+
+   
+padding-left: 100px;
+padding-right:100px;
+
+    .spell-heading{
+        border:2px solid white;
+        color: white
+    }
+
+    .spell-content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+}

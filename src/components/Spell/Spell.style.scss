@@ -7,8 +7,8 @@
         display: flex;
         flex-direction: column;
         margin: 20px;
-        height:200px;
-        width:150px;
+        height:250px;
+        width:200px;
         
         
     #Charm{
@@ -52,7 +52,7 @@
     
 
         .spell{
-            
+            padding-top: 10px;
             span{
                 color: black;
                 font-weight:600;
@@ -62,13 +62,24 @@
                 
             }
             
+            p{
+                
+            }
             .description{
                 color:black;
                 font-size: 0.9em;
+                padding-left:2px;
+                padding-right: 2px;
+                
             }
             
             
             
         }
    }
-    
+
+   .spell-container:hover{
+       border: 1px solid white;
+    opacity: 70%;
+    cursor: pointer;
+}

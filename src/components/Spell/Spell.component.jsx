@@ -12,7 +12,7 @@ const Spell = ({name, other_name, mention, prononciation, spell_type, etymology,
                 <div className="description">
                     <p>{other_name}</p>
                     <p>{prononciation}</p>
-                    <p>Spell type: {spell_type}</p>
+                    <p>{spell_type}</p>
                     <p>{note}</p>
                 </div>
             </div>
