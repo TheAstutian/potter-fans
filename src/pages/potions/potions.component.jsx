@@ -4,7 +4,7 @@ import Card from '../../components/Card/card.component';
 import './potions.style.scss'
 
 
-const url = "https://the-harry-potter-database.herokuapp.com/api/1/potions/all"
+
 class PotionsPage extends React.Component {
     state = {
         potions:[],
@@ -119,7 +119,7 @@ seeAll=()=>{
                 </div>
                     
                 <div className="potions-body">
-
+                    
                     {this.state.toggleSearch? 
                         (<div>
                              <h2>Search Results</h2> 

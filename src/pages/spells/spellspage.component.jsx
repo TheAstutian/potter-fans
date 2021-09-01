@@ -22,8 +22,11 @@ fetchSpells=(url)=>{
     fetch(url)
         .then((response)=>response.json())
         .then((data)=>{
-            
-            this.setState({spells:data, loading:false})
+            console.log(data)
+            this.setState({
+                spells:[...this.state.spells, ...data], 
+                loading:false
+            })
         })
 }
 
@@ -54,12 +57,12 @@ renderSpells=(spells)=>{
                 <div>
                     <div>
                        <p> Search and popular spells</p>
-                       <h2>Spells</h2>
+                       
                     </div>
                     
                     <div className="spell-content">
-                       
-                        {this.state.spells===[] ? (<h2 style={{color:"white"}}>Loading</h2>): this.renderSpells(this.state.spells)}
+                        {this.state.loading? (<h2 style={{color:"white"}}>Loading</h2>): null }
+                        {this.renderSpells(this.state.spells)}
                     </div>
                 </div>
             </div>
