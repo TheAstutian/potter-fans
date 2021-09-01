@@ -10,9 +10,12 @@
     margin-bottom: 100px;
     
     .potions-header{
-        padding: 10px;
+        padding-left:2px;
+        padding-right: 1px;
+        padding-top: 30px;
         display:flex;
-        flex-direction:column;
+        flex-direction:row;
+        justify-content: space-between;
         
         img{
             height:300px;
@@ -22,7 +25,7 @@
         }
 
         .search{
-            margin:10px;
+            
             margin-bottom:20px;
             input{
                 border-radius:5px;
@@ -37,7 +40,7 @@
                 font-weight:lighter;
                 border: 0.1px solid orange;
                 color:white;
-                background: orange;
+                background: purple;
             }
         }
         .toggle{

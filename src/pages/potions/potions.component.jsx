@@ -101,9 +101,11 @@ seeAll=()=>{
     render() { 
         return (
             <div className="potions-container">
-                <h2>Potions</h2>
+                
                 <div className="potions-header">
-                    <img src="https://images.pexels.com/photos/7979105/pexels-photo-7979105.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"/>    
+                    <div className="toggle">
+                            <button onClick={()=>this.seeAll()}>Toggle Featured/All Potions</button>    
+                    </div>
                     <div className="search">
                         <input 
                         placeholder="name of potion"
@@ -113,9 +115,7 @@ seeAll=()=>{
 
                         <button onClick={()=>this.onSearch()}>Search Potion</button>
                     </div> 
-                    <div className="toggle">
-                        <button onClick={()=>this.seeAll()}>Toggle Featured/All Potions</button>    
-                    </div>
+                    
                 </div>
                     
                 <div className="potions-body">
