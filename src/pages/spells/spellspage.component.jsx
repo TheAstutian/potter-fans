@@ -10,6 +10,8 @@ class SpellsPage extends React.Component {
     state = {
         spells:[],
         loading:false,
+        currentPage: 1,
+        previousPage:0,
     }
 
 componentDidMount(){
@@ -32,7 +34,8 @@ fetchSpells=(url)=>{
 
 renderSpells=(spells)=>{
     return spells.map((element,i)=>{
-        return <Spell
+        if (i>=this.state.previousPage*20 && i<this.state.currentPage*20){
+            return <Spell
                     key={i}
                     name={spells[i].name}
                     description={spells[i].description}  
@@ -43,10 +46,29 @@ renderSpells=(spells)=>{
                     etymology={spells[i].etymology}
                     note = {spells[i].note}
                 />
+        }
+        
     })
 }
 
-   
+nextPageClick=()=>{
+    this.setState(prevState=>{
+        return {
+            currentPage: prevState.currentPage+1,
+            previousPage: prevState.previousPage+1
+        }
+    })
+}
+
+previousPageClick=()=>{
+    this.setState(prevState=>{
+        return {
+            currentPage: prevState.currentPage-1,
+            previousPage: prevState.previousPage-1
+        }
+    })
+}
+  
 
     render() { 
         return (
@@ -64,6 +86,9 @@ renderSpells=(spells)=>{
                         {this.state.loading? (<h2 style={{color:"white"}}>Loading</h2>): null }
                         {this.renderSpells(this.state.spells)}
                     </div>
+                   <div className="spell-pages">
+                   {(this.state.previousPage===0)? null: (<button onClick={()=>this.previousPageClick()}>Previous page</button>)} <button onClick={()=>this.nextPageClick()}>Next page</button>
+                   </div>
                 </div>
             </div>
         )
