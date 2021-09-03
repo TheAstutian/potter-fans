@@ -3,8 +3,7 @@ import Spell from '../../components/Spell/Spell.component';
 
 import './spellspage.style.scss'
 
-const url = "https://www.potterapi.com/v1/characters?key=$2a$10$GzKuSI6dT5dC1NuVyeI8eugv./Vo4BMBLOCTS4d1Gfjge.4mwp5Gi";
-const url2 = "https://www.potterapi.com/v1/sortingHat"
+
 class SpellsPage extends React.Component {
     state = {
         spells:[],
@@ -13,7 +12,7 @@ class SpellsPage extends React.Component {
         previousPage:0,
         searchTerm:"",
         search: false,
-        searchResult_empty: false,
+        
     }
 
 componentDidMount(){
@@ -141,7 +140,7 @@ handleKeyDown = (e) =>{
                     
                     <div className="spell-content">
                         
-                        {this.state.search? (this.searchResult_empty? (<p>We couldn't find a match for {this.state.searchTerm}. Please try another term</p>): this.displaySearchItems()) : this.renderSpells() }
+                        {this.state.search? this.displaySearchItems() : this.renderSpells() }
                         
                     </div>
                    <div className="spell-pages">
