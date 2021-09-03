@@ -1,5 +1,4 @@
 import React from 'react'; 
-import Banner from '../../components/Banner/banner.component'
 import Card from '../../components/Card/card.component';
 import './potions.style.scss'
 
