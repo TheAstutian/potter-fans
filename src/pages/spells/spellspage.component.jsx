@@ -124,7 +124,7 @@ handleKeyDown = (e) =>{
                     <h2>Spells</h2>
                 </div>
                 <div>
-                    <div>
+                    <div className="spell-search">
                         <input 
                             placeholder="Search spells"
                             onChange={this.handleChange}
@@ -132,10 +132,12 @@ handleKeyDown = (e) =>{
                         />
 
                         <button onClick={()=>this.onSearch()}>Search </button>
-                        
-                       {this.state.loading? (<h2 style={{color:"white"}}>Loading . . .</h2>): null }
-                        {this.state.search? (<h2 style={{color:"white"}}> Search results </h2>): null}
                        
+                    </div>
+
+                    <div>
+                        {this.state.loading? (<h2 style={{color:"white"}}>Loading . . .</h2>): null }
+                        {this.state.search? (<h2 style={{color:"white"}}> Search results </h2>): null}
                     </div>
                     
                     <div className="spell-content">
