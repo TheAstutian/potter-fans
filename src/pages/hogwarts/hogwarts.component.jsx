@@ -3,6 +3,7 @@ import Banner from '../../components/Banner/banner.component';
 import FaceCollection from '../../components/FaceCollection/facecollection.component';
 import './hogwarts.style.scss'
 
+const houseData =[];
 
 const Hogwarts = () => (
          <div className='hogwarts-container'>
