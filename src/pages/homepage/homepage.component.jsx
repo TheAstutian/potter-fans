@@ -18,15 +18,17 @@ const Homepage = () => (
                        <div className='experiment'>
 
                             <div className='banner-1'>
-                                <span>We’ve all got both light and darkness inside us.</span>
-                                <span> What matters is the part we choose to act on. </span>
-                                <span>That’s who we really are.</span>  
+                                <span>We’ve all got both light and darkness inside us.
+                                 What matters is the part we choose to act on.
+                                That’s who we really are.</span>  
                                 <span> ..........</span>
-                                <span>Who are you?? In what house do you belong? Get sorted by the sorting hat!</span>
-                                <button><Link to='/sorting'>Get Sorted!</Link></button>                                   
-                                </div>
+                                <span>Who are you?? </span>
+                                <span>Where do you belong?</span>
+                                <button><Link to='/sorting'>Get Sorted!</Link></button>
+                            </div>
                             <div className='banner-2'>
-                                <img src='https://cdn.pixabay.com/photo/2015/03/16/04/15/sorting-hat-675364_1280.jpg' />
+                                
+                                   
                             </div>
                         
                         </div> 

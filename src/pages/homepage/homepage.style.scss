@@ -9,26 +9,26 @@ background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
 background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 
 .experiment{
-    margin-top: 200px;
+    
     padding-bottom: 50px;
     display: flex;
-    flex-direction: row;
-    border: 0.01px dotted silver;
-    
-    
-    margin: 100px 400px 100px 400px;
-    padding: 150px 20px;
+    flex-direction: column;
+    border-top: 1px solid silver;
+    background-color: silver;
+    padding: 50px 20px;
+    padding-top: 150px;
+    padding-bottom: 100px;
 
     .banner-1{
         
         margin: 0 auto;
-        margin-top: 30px;
-        width: 50%;
         
+        width: 50%;
+        padding-bottom: 50px;
         span{
-            color: white;
-            font-size: 0.95em;
-            font-weight: 2;
+            color: black;
+            font-size: 1.1em;
+            font-weight: 100%;
             display: block;
             line-height: 2em;
         }    
@@ -53,6 +53,10 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 
 .movie-book{
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+    padding-top: 150px;
+    padding-bottom: 150px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -80,6 +84,8 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 
     .pf-movies{
         margin-top: 100px;
+        padding-top: 200px;
+        
         display:flex;
         flex-direction: row;
         flex-wrap: wrap;
