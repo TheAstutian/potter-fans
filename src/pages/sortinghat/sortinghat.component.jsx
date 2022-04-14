@@ -24,7 +24,9 @@ const messages = [
     "I am certain you belong in",
     "your path lies at",
     "your personality will fit in at",
-    "people like you belong to"
+    "people like you belong to",
+    "I see you doing great thing at",
+    ""
 ]
 
 class SortingHat extends React.Component{
