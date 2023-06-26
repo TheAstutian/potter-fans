@@ -1,7 +1,7 @@
 import React from 'react';
 import './Spell.style.scss';
 
-const Spell = ({name, other_name, mention, prononciation, spell_type, etymology, note, description}) =>(
+const Spell = ({name, other_name, mention, incantation, spell_type, etymology, note, description}) =>(
     
     
     <div className="spell-container"  >
@@ -10,8 +10,8 @@ const Spell = ({name, other_name, mention, prononciation, spell_type, etymology,
                 <span> {name}</span>
                 
                 <div className="description">
-                    <p>{other_name}</p>
-                    <p>{prononciation}</p>
+                    <p>{incantation}</p>
+                    <p>{description}</p>
                     <p>{spell_type}</p>
                     <p>{note}</p>
                 </div>

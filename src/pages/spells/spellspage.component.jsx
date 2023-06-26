@@ -17,7 +17,7 @@ class SpellsPage extends React.Component {
 
 componentDidMount(){
     this.setState({loading:true})
-    const url = "https://the-harry-potter-database.herokuapp.com/api/1/spells/all"
+    const url = "https://api.potterdb.com/v1/spells"
     this.fetchSpells(url)
 }
 
@@ -27,7 +27,7 @@ fetchSpells=(url)=>{
         .then((data)=>{
             console.log(data)
             this.setState({
-                spells:[...this.state.spells, ...data], 
+                spells:[...this.state.spells, ...data.data], 
                 loading:false
             })
         })
@@ -40,14 +40,10 @@ renderSpells=()=>{
             
             return <Spell
                     key={i}
-                    name={spells[i].name}
-                    description={spells[i].description}  
-                    other_name={spells[i].other_name}
-                    prononciation={spells[i].pronunciation}
-                    spell_type={spells[i].spell_type}
-                    mention= {spells[i].mention}
-                    etymology={spells[i].etymology}
-                    note = {spells[i].note}
+                    name={spells[i].attributes.name}
+                    description={spells[i].attributes.effect}  
+                    spell_type={spells[i].attributes.category}
+                    incantation={spells[i].attributes.incantation}
                 />
         }
         
