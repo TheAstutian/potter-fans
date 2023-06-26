@@ -44,6 +44,7 @@ renderSpells=()=>{
                     description={spells[i].attributes.effect}  
                     spell_type={spells[i].attributes.category}
                     incantation={spells[i].attributes.incantation}
+                    slug={spells[i].attributes.slug}
                 />
         }
         
