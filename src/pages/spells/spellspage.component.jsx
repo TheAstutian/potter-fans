@@ -45,6 +45,8 @@ renderSpells=()=>{
                     spell_type={spells[i].attributes.category}
                     incantation={spells[i].attributes.incantation}
                     slug={spells[i].attributes.slug}
+                    image={spells[i].attributes.image}
+                    wiki={spells[i].attributes.wiki}
                 />
         }
         

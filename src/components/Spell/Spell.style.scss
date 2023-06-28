@@ -1,83 +1,85 @@
 
 
    .spell-container{
-       background-color: yellowgreen;
-       border: 0.1px solid green;
+        background-color: yellowgreen;
         border-radius: 10px;
         display: flex;
         flex-direction: column;
         margin: 20px;
-        height:250px;
-        width:200px;
-        
-        
+        height:350px;
+        width:250px;
+        opacity: 95%;
+   } 
+
+.spell-container:hover{
+ opacity: 100%;
+ border: 1px solid black;
+ cursor: pointer;
+}
+
+#Nill{
+    background-color: yellowgreen;
+}
     #Charm{
         background-color: #aaa;
-        width:100%;
-        height:100%;
-        border-radius: 10px;
+       
     }
     #Jinx{
         background-color: darkmagenta;
-        width:100%;
-        height:100%; 
-        border-radius: 10px;
-    }
+       }
     #Curse{
         background-color: darkolivegreen;
-        width:100%;
-        height:100%;
-        border-radius: 10px;
-    }
+       }
     #Transfiguration{
         background-color:orchid;
-        width:100%;
-        height:100%;
-        border-radius: 10px;
-    
     }
     #Transportation{
-        width:100%;
-        height:100%;
-        border-radius: 10px;
         background-color:papayawhip;
     }
     #Hex{
-        width:100%;
-        height:100%;
-        border-radius: 10px;
+
         background-color:powderblue;
     }
 
-    
 
-        .spell{
-            padding-top: 10px;
-            span{
-                color: black;
-                font-weight:600;
-                font-size: 1.1em;
-                padding-left:10px;
-                padding-right:10px;
-                
-            }
-            
-  
-            .description{
-                color:black;
-                font-size: 0.9em;
-                padding-left:2px;
-                padding-right: 2px;
-                
-            }
-            
-            
-            
-        }
-   }
+.spell{
+        padding-top: 25px;
+        width:100%;
+        height:100%;
+        border-radius: 10px;
+}
 
-   .spell-container:hover{
-       border: 1px solid white;
-    opacity: 70%;
-    cursor: pointer;
+.spell-name{
+    max-height:90px;
+    padding-left:15px;
+    padding-right:15px;
+}
+.spell-name  span{
+    color: black;
+    font-weight:600;
+    font-size: 1.1em;
+}
+
+.spell-name p{
+    font-size:0.8em;
+    font-style: italic;
+}
+                        
+
+.image-area{
+    padding:3px;
+}
+.image-area img{
+    padding:1px;
+    max-height:150px;
+}
+
+.description{
+   max-height:110px;  
+   padding-left:15px;  
+   padding-right:15px;         
+}
+.description p{
+    color:black;
+    font-size: 0.85em;
 }
