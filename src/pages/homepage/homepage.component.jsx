@@ -12,7 +12,7 @@ const Homepage = () => (
                     
             <div className='container'>
                        <Banner 
-                       content='Where life and death began or some other quote pertaining to hogwarts'
+                       content='"It is our choices, Harry, that show what we truly are, far more than our abilities" - Albus Dumbledore'
                        btn_text='Visit Hogwarts'
                        />                
                        <div className='experiment'>
