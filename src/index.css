@@ -29,6 +29,11 @@ code {
 }
 
 @font-face {
+  font-family: 'Crows';
+  src: local('Crows'), url(./assets/Crows.ttf) format('truetype');
+}
+
+@font-face {
   font-family: 'OldLondon';
   src: local('OldLondon'), url(./assets/OldLondon.ttf) format('truetype');
 }

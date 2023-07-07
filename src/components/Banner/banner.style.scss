@@ -8,7 +8,7 @@
             margin: 0 auto;
             padding-top: 150px;
             span{
-                font-family: 'Alegreya';
+                font-family: 'Crows';
                 font-stretch: condensed;
                 color: #dcdcde;
                 color: #7f5af0;
@@ -17,6 +17,21 @@
                 display: block;
             }            
         }
+        .sub-content{
+            padding-top:100px;
+            width:30%;
+            margin: 0 auto;
+            span{
+                color: #7f5af0;
+                font-size: 1.2em;
+                font-family: 'Alegreya';
+                font-style: italic;
+                display: block;
+                text-align: left;
+                line-height: 1.5;
+                 }
+        }
+
         .banner-btn{
             margin-top: 80px;
             button{
