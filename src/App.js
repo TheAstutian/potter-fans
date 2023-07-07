@@ -11,7 +11,6 @@ import BookPage from './pages/books/bookpage.component';
 import Hogwarts from './pages/hogwarts/hogwarts.component';
 import MoviePage from './pages/movies/moviespage.component';
 import SortingHat from './pages/sortinghat/sortinghat.component';
-import SocialMediaBanner from './components/SocialMediaBanner/socialmediabanner.component';
 import Movie from './pages/Movie/Movie';
 import NotFound from './elements/NotFound/NotFound'
 import PotionsPage from './pages/potions/potions.component';
@@ -19,7 +18,6 @@ import PotionsPage from './pages/potions/potions.component';
 function App() {
   return (
     <div className="App">
-       <SocialMediaBanner /> 
       <Header />
       
       <Switch>

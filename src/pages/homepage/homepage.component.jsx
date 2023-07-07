@@ -12,9 +12,9 @@ const Homepage = () => (
                     
             <div className='container'>
                        <Banner 
-                       content='"It is our choices, Harry, that show what we truly are, far more than our abilities" - Albus Dumbledore'
-                       btn_text='Visit Hogwarts'
-                       />                
+                       main_content="WELCOME TO THE WORLD OF MAGIC!"
+                       subcontent='"It is our choices, Harry, that show what we truly are, far more than our abilities" - Albus Dumbledore'
+                        />                
                        <div className='experiment'>
 
                             <div className='banner-1'>
