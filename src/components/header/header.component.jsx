@@ -14,13 +14,13 @@ const Header = () => {
     return (
                 <div className='header-container'>
                     <div className='header-font'>
-                        <h1><Link to='/'>Harry Potter Corner</Link></h1>
+                        <h1><Link className='arr' to='/'>Harry Potter Corner</Link></h1>
                     </div> 
             
                     <div className='menus'>
                             <div className='header-navs'>
                                 <ul className={click? " nav-options active" : "nav-options"}>
-                                <li className="option" > <Link to='hogwarts'> HOGWARTS</Link></li>
+                                <li className="option" > <Link  to='hogwarts'> HOGWARTS</Link></li>
                                     <li className="option" > <Link to='/movies'>MOVIES</Link></li>
                                     <li className="option" > <Link to='/books'>BOOKS</Link></li>
                                     <li className="option"> <Link to='/sorting'>SORTING HAT</Link></li>

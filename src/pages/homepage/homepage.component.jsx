@@ -19,15 +19,24 @@ const Homepage = () => (
                        <div className='experiment'>
 
                             <div className='banner-1'>
-                                <span>We’ve all got both light and darkness inside us.
-                                 What matters is the part we choose to act on.
-                                That’s who we really are.</span>  
-                                <span> ..........</span>
-                                <span>Who are you?? </span>
-                                <span>Where do you belong?</span>
-                                <button><Link to='/sorting'>Get Sorted!</Link></button>
+                                <h2>CHOOSE YOUR DESTINY !</h2>
+                                    <div className='content'>
+                                        <div className='content-image'>
+                                        <img className= 'img' src='https://media.tenor.com/4vuIoALDXNwAAAAC/sorting-hat-harry-potter.gif' />  
+                                        </div>
+                                        <div className='content-body'>
+                                            <span>We’ve all got both light and darkness inside us.
+                                            What matters is the part we choose to act on.
+                                            That’s who we really are.</span>  
+                                            <span> ..........</span>
+                                            <span>Who are you?? </span>
+                                            <span>Where do you belong?</span>
+                                            <span>Let the Sorting Hat sort you</span>
+                                            <button className='butn'><Link to='/sorting'>Get Sorted!</Link></button>
+                                        </div>
+                                 </div>
                             </div>
-                            <div className='banner-2'>
+                            <div className='banner2'>
                                 
                                    
                             </div>
