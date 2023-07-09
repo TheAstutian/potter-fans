@@ -42,9 +42,14 @@ const Homepage = () => (
                             </div>
                         
                         </div> 
-                                                
- 
-                        <div className='movie-book'>
+
+
+                        <h1>Explore the world of Magic.</h1>
+
+                        <div className='mid-content'>
+
+
+                       
                             <div className="pf-books"  >
                                
                                 <div className='le-button'> <button><Link to='/books'>Harry Potter Books</Link></button></div>
@@ -64,13 +69,19 @@ const Homepage = () => (
                                         <Link to='/movies'><button>HP Movies</button></Link>
                                     </div>
                             </div>
-                        </div>
+                        
 
                         <div className="pf-spells">
                             <h1><Link to='/spells'>The magical box of spells </Link></h1>
                             <div className='pf-spells-span'><span>Do you know any other spells <br/> apart from expeliarmus <br/> and abracadabra?</span></div>
                             <Link to='/spells'><button>HP Spells</button></Link>
                         </div>
+                        </div>
+                        <Link>Visit Hogwarts</Link>
+
+
+
+
 
                         <div className="jk-rowling ">
                             <h1>About <a href='https://www.jkrowling.com/'> J. K. Rowling </a></h1>

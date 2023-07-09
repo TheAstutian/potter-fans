@@ -48,7 +48,7 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
                  padding: 50px 250px ;  
         }    
         .content-body span{
-            color: #7f5af0;
+            color: gray;
             font-size: 1.1em;
             font-weight: 100%;
             display: block;
@@ -65,15 +65,16 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
     border-radius: 5px;
     font-size: 16px;
     background-color: transparent;
-    border: 1px solid white;
+    border: 2px solid #7f5af0;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     transition-duration:0.4s;
+    color: white;
 }
 
 .content-body .butn:hover{
-    background-color: #7f5af0;
+    background-color: purple;
     
 }
 
@@ -89,8 +90,36 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
     }
 }
 
+.mid-content{
+    display:flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
 
-.movie-book{
+.pf-books{
+width:30%;
+margin:10px;
+border: 1px solid white;
+}
+
+.pf-movies{
+    width:30%;
+    margin:10px;
+    border: 1px solid white;
+}
+
+.pf-spells{
+    width:30%;
+    margin:10px;
+    border: 1px solid white;
+}
+
+
+
+
+
+
+/* .movie-book{
     border-top: 1px solid silver;
     border-bottom: 1px solid silver;
     padding-top: 150px;
@@ -216,6 +245,8 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
         
     }
 }
+
+*/
 .jk-rowling{
     
     margin:0 auto;
