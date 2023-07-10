@@ -9,22 +9,18 @@ background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
 background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 
 .experiment{
-    
-    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
-    padding: 50px 20px;
     padding-top: 150px;
-    padding-bottom: 100px;
     background-color: black;
 }
     .banner-1{
         margin: 0 auto;
         width: 75%;
-        margin-bottom: 50px;
+   
         h2{
             color: #7f5af0;
-            font-family: 'Alegreya';
+            font-family: 'Crows';
             font-size: 2.5em;
             font-weight: lighter;
         }
@@ -48,11 +44,12 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
                  padding: 50px 250px ;  
         }    
         .content-body span{
-            color: gray;
+            color: white;
             font-size: 1.1em;
             font-weight: 100%;
             display: block;
             line-height: 2em;
+            font-family:'Alegreya';
         }   
     }
 
@@ -62,7 +59,7 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 .content-body .butn{
     margin-top: 30px;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 16px;
     background-color: transparent;
     border: 2px solid #7f5af0;
@@ -70,53 +67,154 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
     text-decoration: none;
     display: inline-block;
     transition-duration:0.4s;
+}
+
+.butn a{
     color: white;
+    font-family:'Alegreya';
 }
 
 .content-body .butn:hover{
-    background-color: purple;
-    
+    background-color: #7f5af0;
+    border: 2px solid white;
+    cursor: pointer;
 }
 
+.butn a:hover{
+    color: white;
+}
 
+.explore{
+    color: #7f5af0;
+    font-family: 'Crows';
+    font-size: 3em;
+    font-weight: lighter;
+}
+.hogwarts{
+    padding-bottom:20px;
+}
 
-.banner-2{
-    margin-left: 20px;
-    margin: 0 auto;
-    width: 50%;
-    img{
-        width: 200px;
-        height: 400px;
-    }
+.hogwarts button{
+    margin-top: 30px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: transparent;
+    background: url('https://cdn.pixabay.com/photo/2015/09/20/22/38/library-948965_1280.jpg');
+    border: 2px solid #7f5af0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration:0.4s;
+}
+.hogwarts button a{
+    color: white;
+    font-family:'Alegreya';
+}
+.hogwarts button:hover{
+    border: 2px solid white;
+    cursor: pointer;
+    opacity:80%;
+}
+
+.hogwarts button a:hover{
+    color: white;
 }
 
 .mid-content{
     display:flex;
     flex-direction: row;
+    justify-content: space-between;
     margin: 0 auto;
+    padding-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .pf-books{
-width:30%;
-margin:10px;
-border: 1px solid white;
+
+    background: url('https://images.pexels.com/photos/1005012/pexels-photo-1005012.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+    width:350px;
+    margin:5px;
+    border: 1px solid #7f5af0;
+    border-radius: 5px;
+    height:500px;
+}
+
+.pf-books:hover{    
+    border: 1px solid white;
+    opacity:80%;
 }
 
 .pf-movies{
-    width:30%;
-    margin:10px;
+    background: url('https://images.pexels.com/photos/4488194/pexels-photo-4488194.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+    width:350px;
+    margin:5px;
+    border: 1px solid #7f5af0;
+    border-radius: 5px;
+    height:500px;
+}
+
+.pf-movies:hover{    
     border: 1px solid white;
+    opacity:80%;
 }
 
 .pf-spells{
-    width:30%;
-    margin:10px;
-    border: 1px solid white;
+    background: url('https://images.pexels.com/photos/10180210/pexels-photo-10180210.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    width:350px;
+    margin:5px;
+    border: 1px solid #7f5af0;
+    border-radius: 5px;
+    height:500px;
 }
 
+.pf-spells:hover{    
+    border: 1px solid white;
+    opacity:80%;
+}
 
+.pf-potions{
+    background: url('https://images.pexels.com/photos/7979084/pexels-photo-7979084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    width: 350px;
+    margin:5px;
+    border: 1px solid #7f5af0;
+    border-radius: 5px;
+    height:500px;
+}
 
+.pf-potions:hover{    
+    border: 1px solid white; 
+    opacity:80%;
+}
 
+.p-button{
+    margin-top: 350px;
+}
+
+.p-button button{
+    margin-top: 30px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: transparent;
+    border: 2px solid #7f5af0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration:0.4s;
+    cursor: pointer;
+}
+
+.p-button a{
+    color: white;
+    font-family:'Alegreya';
+}
+
+.p-button button:hover{
+    background-color: #7f5af0;
+    border: 2px solid white;
+}
 
 
 /* .movie-book{
