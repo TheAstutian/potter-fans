@@ -346,28 +346,39 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 
 */
 .jk-rowling{
-    
     margin:0 auto;
     margin-top: 100px;
     margin-bottom: 150px;
+    width: 75%;
+    border: 1px solid #7f5af0;
 
     a{
-        color: silver;
+        color: white;
+        
     }
+    
     h1{
-        color: silver;
+        color: #7f5af0;
+        font-family: 'Crows';
+        font-size: 2.5em;
+        font-weight: lighter;
     }
 
     img{
-        width: 450px;
-        height: 350px;
+        height: 300px;
     }
     .jk-text{
-        margin: 50px 300px;
+        margin: 50px 200px;
         text-align:left;
-        p{
-            
+        span{
             color: silver;
+            font-size: 1.2em;
+            font-family: 'Alegreya';
+            font-style: italic;
+            display: block;
+            text-align: left;
+            line-height: 2;
+            margin-bottom: 5px;
         }
     }
 }
