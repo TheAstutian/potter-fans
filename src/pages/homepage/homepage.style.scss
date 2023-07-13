@@ -23,23 +23,28 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
             font-family: 'Crows';
             font-size: 2.5em;
             font-weight: lighter;
-        }
+        } 
+        
+        @media (max-width: 800px) {
+            h2 {
+             font-size: 1.5em;
+            }
+          }
 
         .content{
             display: flex;
             flex-direction: column;
         }
-        @media (max-width: 800px) {
-            .content {
-              flex-direction: column;
-            }
-          }
+       
         .content-image{
             padding: 5px;
             .img{
                 height:250px;
             }
         }
+
+      
+
         .content-body{
                  padding: 50px 250px ;  
         }    
@@ -51,9 +56,25 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
             line-height: 2em;
             font-family:'Alegreya';
         }   
+
+        
+
+    @media (max-width: 800px) {
+        .content-image {
+          padding: 2px;
+          .img{
+            height:150px;
+          }
+        }
+
+        .content-body{
+            padding: 20px 100px;
+        }
+        .content-body span{
+            font-size: 1em;
+        }
+      }
     }
-
-
 
  
 .content-body .butn{
@@ -90,6 +111,14 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
     font-size: 3em;
     font-weight: lighter;
 }
+
+@media (max-width: 800px){
+    .explore{
+        font-size: 2em;
+    }
+}
+
+
 .hogwarts{
     padding-bottom:20px;
 }
@@ -130,6 +159,11 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
     margin-left: 100px;
     margin-right: 100px;
 }
+@media (max-width: 800px){
+    .mid-content{
+        flex-direction: column;
+    }
+}
 
 .pf-books{
 
@@ -139,6 +173,10 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
     border: 1px solid #7f5af0;
     border-radius: 5px;
     height:500px;
+    @media (max-width: 800px){
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
 }
 
 .pf-books:hover{    
@@ -153,6 +191,12 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
     border: 1px solid #7f5af0;
     border-radius: 5px;
     height:500px;
+
+    @media (max-width: 800px){
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
 }
 
 .pf-movies:hover{    
@@ -167,6 +211,12 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
     border: 1px solid #7f5af0;
     border-radius: 5px;
     height:500px;
+
+    @media (max-width: 800px){
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
 }
 
 .pf-spells:hover{    
@@ -181,6 +231,12 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
     border: 1px solid #7f5af0;
     border-radius: 5px;
     height:500px;
+
+    @media (max-width: 800px){
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
 }
 
 .pf-potions:hover{    
@@ -217,134 +273,6 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 
 
-/* .movie-book{
-    border-top: 1px solid silver;
-    border-bottom: 1px solid silver;
-    padding-top: 150px;
-    padding-bottom: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    .pf-books{
-        background: url('https://images.pexels.com/photos/1005012/pexels-photo-1005012.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
-        
-        background-position: top center;
-        background-size: 800px 500px;
-        background-repeat: no-repeat;
-     
-        .le-button{
-            margin-top: 400px;
-            margin-bottom: 100px;
-            margin-left: 500px;
-            
-            button{
-                padding: 10px 20px;
-                background-color: white;
-                font-size: 0.95em;
-                border-radius: 5px;
-            }
-        }
-    }
-
-    .pf-movies{
-        margin-top: 100px;
-        padding-top: 200px;
-        
-        display:flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding: 50px;
-        margin-left: 300px;
-        margin-right: 300px;
-        
-        .mov-img{
-            width: 49%;
-            
-            img{
-                
-                width: 300px;
-            }
-        }
-        .mov-txt{
-            padding-top: 100px;
-            width: 49%;
-            
-            span{
-                margin: 0 auto;
-                font-size: 1.1em;
-                color: silver;
-                display: block;
-                line-height: 2.0em;
-            }
-
-            button{
-                margin: 0 auto;
-                margin-top: 50px;
-                padding: 10px 20px;
-                font-size: 1em;
-                border-radius: 5px;
-
-            }
-        }
-    }
-
-
-    .section {
-        height: 300px;
-        background-color: #000011;
-        margin-left: 150px;
-        margin-right: 150px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        
-        background-color: white;
-        
-    }
-
-}
-
-.pf-spells{
-    margin:0 auto;
-    margin-top: 100px;
-    margin-bottom: 150px;
-    
-    background: url('https://images.pexels.com/photos/5402712/pexels-photo-5402712.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
-        
-        background-position: top center;
-        background-size: 800px 500px;
-        background-repeat: no-repeat;
-        padding-bottom: 50px;
-    h1{
-        margin-bottom: 60px;
-    }
-    a{
-        color: silver;
-    }
-    .pf-spells-span{
-        
-        width: 800px;
-        margin: 0 auto;
-        text-align: left;
-        padding-left: 150px;
-        span{
-            color: silver;
-            font-size: 1em;
-            line-height: 2em;
-        }
-    }
-    button{
-        display: block;
-        margin: 0 auto;
-        margin-top: 230px;
-        padding: 10px 20px;
-        font-size: 1em;
-        border-radius: 5px;
-        
-    }
-}
-
-*/
 .jk-rowling{
     margin:0 auto;
     margin-top: 100px;
@@ -366,10 +294,16 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 
     img{
         height: 300px;
+        @media (max-width: 800px){
+            height: 200px;
+        }
     }
     .jk-text{
         margin: 50px 200px;
         text-align:left;
+        @media (max-width: 800px){
+            margin: 20px 30px;
+        }
         span{
             color: silver;
             font-size: 1.2em;
