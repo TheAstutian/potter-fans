@@ -1,11 +1,7 @@
 
 
 .footer{
-    
-    display: flex;
-    flex-direction: column;
-    border-top: 0.5px solid silver;
-
+   
     .links{
         display: flex;
         flex-direction: row;
@@ -14,12 +10,21 @@
         padding-left: 200px;
         padding-right: 200px;
         padding-bottom: 10px;
-        
+        @media (max-width: 800px){
+            
+            margin: 0 auto;
+            flex-direction: column;
+        } 
         .links-1{
             width: 30%;
             display: flex;
             flex-direction: column;
             margin-left: 50px;
+            @media (max-width: 800px){
+                width: 100%;
+                padding: 20px;
+                margin: 0 auto;
+            }
             
             .link-entry{
                 
@@ -31,7 +36,9 @@
                         
                         color: white;
                         font-size: 0.9em;            
-                        
+                        @media (max-width: 800px){
+                            font-size:1.3em;
+                        }
                     }
                }
                 ul{
@@ -47,6 +54,11 @@
                             color: white;
                             font-size: 0.85em;
                             font-weight: lighter;
+
+                            @media (max-width: 800px){
+                                font-size:1em;
+                                line-height: 1.5;
+                            }
                         }
                     }
 
