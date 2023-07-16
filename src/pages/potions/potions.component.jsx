@@ -12,10 +12,10 @@ class PotionsPage extends React.Component {
         loading:false,
         all:false
     }
-
+  
 componentDidMount(){
     this.setState({loading:true})
-    const url = "https://the-harry-potter-database.herokuapp.com/api/1/potions/all"
+    const url = "https://api.potterdb.com/v1/potions"
     this.fetchItems(url)
     this.setState({loading:false})
 }
@@ -25,16 +25,16 @@ fetchItems=(url)=>{
         .then((response)=>response.json())
         .then((data)=>{
             console.log(data)
-            this.setState({potions:data})
+            this.setState({potions:data.data})
         })
 }
 
 all_cards=(potions)=>{
     return potions.map((element,i)=>{
         return <Card 
-        key= {i}
-        name= {potions[i].name}
-        description ={potions[i].description}
+        key= {i.id}
+        name= {potions[i].attributes.name}
+        description ={potions[i].attributes.description}
         />
     })
 }
@@ -47,8 +47,8 @@ featured_cards=(potions)=>{
         if (featured.includes(i,0)){
         return <Card
                  key={i}
-                 name={potions[i].name}
-                 description={potions[i].description}
+                 name={potions[i].attributes.name}
+                 description={potions[i].attributes.description}
                  />}
     })
 }
@@ -70,7 +70,7 @@ onSearch = () =>{
     
     let url = '';
     if (this.state.searchTerm){
-        url = `https://the-harry-potter-database.herokuapp.com/api/1/potions?search=${this.state.searchTerm}`
+        url = `https://api.potterdb.com/v1/potions?search=${this.state.searchTerm}`
         this.fetchItems(url)
         this.setState({loading:true, toggleSearch:true})
     } 
@@ -78,7 +78,7 @@ onSearch = () =>{
 }
 
 reset=()=>{
-    const url = `https://the-harry-potter-database.herokuapp.com/api/1/potions/all`
+    const url = `https://api.potterdb.com/v1/potions/all`
     this.fetchItems(url)
     this.setState({toggleSearch:false})
 }
