@@ -32,7 +32,7 @@ fetchItems=(url)=>{
 all_cards=(potions)=>{
     return potions.map((element,i)=>{
         return <Card 
-        key= {i.id}
+        key= {i}
         name= {potions[i].attributes.name}
         description ={potions[i].attributes.description}
         />

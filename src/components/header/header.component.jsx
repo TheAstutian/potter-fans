@@ -14,7 +14,7 @@ const Header = () => {
     return (
                 <div className='header-container'>
                     <div className='header-font'>
-                        <h1><Link className='arr' to='/'>Harry Potter Corner</Link></h1>
+                        <h1><Link className='arr' to='/'>Harry Potter Corner </Link></h1>
                     </div> 
             
                     <div className='menus'>

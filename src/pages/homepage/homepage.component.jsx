@@ -12,7 +12,7 @@ const Homepage = () => (
                     
             <div className='container'>
                        <Banner 
-                       main_content="WelcOmE  To The WoRlD Of MAGIC!"
+                       main_content="WELCOME To The WoRlD Of MAGIC!"
                        subcontent='"It is our choices that show what we truly are, far more than our abilities" '
                        subcontent2="- Albus Dumbledore"
                         />                
