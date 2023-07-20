@@ -12,14 +12,14 @@ const Homepage = () => (
                     
             <div className='container'>
                        <Banner 
-                       main_content="WELCOME To The WoRlD Of MAGIC!"
+                       main_content="Welcome  To The World Of Magic!"
                        subcontent='"It is our choices that show what we truly are, far more than our abilities" '
                        subcontent2="- Albus Dumbledore"
                         />                
                        <div className='experiment'>
 
                             <div className='banner-1'>
-                                <h2>CHOOSE YOuR DESTiNY !</h2>
+                                <h2>Choose Your Destiny</h2>
                                     <div className='content'>
                                         <div className='content-image'>
                                         <img className= 'img' src='https://media.tenor.com/4vuIoALDXNwAAAAC/sorting-hat-harry-potter.gif' alt='2'/>  
@@ -45,7 +45,7 @@ const Homepage = () => (
                         </div> 
 
 
-                        <h1 className='explore'> EXPLORE THE MAGIC WORLD</h1>
+                        <h1 className='explore'> Explore The Magic World</h1>
                     
 
                         <div className='mid-content'>

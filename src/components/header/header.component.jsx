@@ -9,7 +9,7 @@ const Header = () => {
 
             const [click, setClick] = useState(false);
             const handleClick =() => setClick(!click);
-            const closeMobileMenu = () => setClick(false);
+            const closeMobileMenu = () => setClick(false); 
 
     return (
                 <div className='header-container'>
@@ -19,7 +19,7 @@ const Header = () => {
             
                     <div className='menus'>
                             <div className='header-navs'>
-                                <ul className={click? " nav-options active" : "nav-options"}>
+                                <ul className={click? " nav-options active" : "inactive"} onMouseLeave={handleClick}>
                                 <li className="option" > <Link  to='hogwarts'> HOGWARTS</Link></li>
                                     <li className="option" > <Link to='/movies'>MOVIES</Link></li>
                                     <li className="option" > <Link to='/books'>BOOKS</Link></li>
