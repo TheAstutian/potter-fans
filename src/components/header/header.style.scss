@@ -71,11 +71,23 @@
         
     }
 
+    .inactive{
+        display: flex;
+        justify-content: space-around;
+        margin-left: 200px;
+        margin-right: 200px;
+        margin-top: 10px;
+    
     @media screen and (max-width:800px) {
-
-        .inactive{
+      
             display:none;
-        }
+      }
+
+      a {
+        color: gray;
+        font-family: 'Alegreya';
+        font-weight: lighter;
+      }
         
     }
 
