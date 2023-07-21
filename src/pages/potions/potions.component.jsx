@@ -34,7 +34,7 @@ all_cards=(potions)=>{
         return <Card 
         key= {i}
         name= {potions[i].attributes.name}
-        description ={potions[i].attributes.description}
+        description ={potions[i].attributes.effect}
         />
     })
 }
@@ -48,7 +48,7 @@ featured_cards=(potions)=>{
         return <Card
                  key={i}
                  name={potions[i].attributes.name}
-                 description={potions[i].attributes.description}
+                 description={potions[i].attributes.effect}
                  />}
     })
 }
@@ -78,7 +78,7 @@ onSearch = () =>{
 }
 
 reset=()=>{
-    const url = `https://api.potterdb.com/v1/potions/all`
+    const url = `https://api.potterdb.com/v1/potions`
     this.fetchItems(url)
     this.setState({toggleSearch:false})
 }
