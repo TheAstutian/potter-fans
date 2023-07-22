@@ -34,7 +34,8 @@ all_cards=(potions)=>{
         return <Card 
         key= {i}
         name= {potions[i].attributes.name}
-        description ={potions[i].attributes.effect}
+        effect ={potions[i].attributes.effect}
+        image={potions[i].attributes.image}
         />
     })
 }
@@ -48,7 +49,8 @@ featured_cards=(potions)=>{
         return <Card
                  key={i}
                  name={potions[i].attributes.name}
-                 description={potions[i].attributes.effect}
+                 effect={potions[i].attributes.effect}
+                 image={potions[i].attributes.image}
                  />}
     })
 }

@@ -8,10 +8,12 @@ const Card = ({name, effect, image}) =>(
             <img src={image? `${image}`:no_image}/>
         </div>
         
-        <div>
+        <div className='name'>
             <span> {name}</span>
-            <span> {effect}</span>
         </div>        
+        <div className='effect'>
+            <span> {effect}</span>
+        </div>
         
     </div>
 );
