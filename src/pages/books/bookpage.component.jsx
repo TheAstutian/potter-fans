@@ -41,6 +41,7 @@ class BookPage extends React.Component {
                      this.setState({
                              books: [...this.state.books, result]
                      })
+                     console.log(this.state.books)
                         
                 })
                
@@ -50,7 +51,7 @@ class BookPage extends React.Component {
         render(){
         return(
                 <div>
-                        <Banner imagelink='https://images.pexels.com/photos/1005012/pexels-photo-1005012.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'/>
+                        <Banner imagelink='https://images.pexels.com/photos/5710/books-colorful-harry-potter.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'/>
                         <h2>Harry Potter Books</h2>
                         <div>
                                 
@@ -66,6 +67,7 @@ class BookPage extends React.Component {
                                                                         release_date={element.volumeInfo.publishedDate}
                                                                         rating={element.volumeInfo.averageRating}
                                                                         link={element.volumeInfo.previewLink}
+                                                                        pages={element.volumeInfo.printedPageCount}
 								/>
 					})}
                                 

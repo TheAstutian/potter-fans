@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Book.style.scss'
 
-const Book = ({title, link, authors, imageurl,description,publisher,release_date,rating})=>{
+const Book = ({title, link, authors,pages, imageurl,description,publisher,release_date,rating})=>{
     return(
         <div className='book-bgd'>
             <div className='top-area'>
@@ -19,10 +19,12 @@ const Book = ({title, link, authors, imageurl,description,publisher,release_date
                 </div>
             </div>
             <div className='bottom-area'>
-                <p>Author: {authors}</p>
-               <p>Publisher: {publisher}</p>
-               <p>Released: {release_date}</p>
-               <p>Rating: {rating}</p>
+
+               <div className="footnote"><p>Author:</p> <span>{authors}</span></div>
+               <div className='footnote'><p>Publisher:</p><span>{publisher}</span></div>
+               <div className="footnote"><p>Release:</p> <span>{release_date}</span></div>
+               <div className="footnote"><p>Pages:</p> <span>{pages}</span></div>
+               <div className="footnote"><p>Rating:</p> <span>{rating}</span></div>
 
             </div>
         </div>

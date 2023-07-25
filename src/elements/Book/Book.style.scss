@@ -2,10 +2,13 @@
     background-color: whitesmoke;
     border: 2px solid black;
     border-radius: 10px;
-    width: 70%;
+    width: 700px;
     margin: auto;
     margin-bottom: 100px;
 
+    @media (max-width: 800px){
+        width:350px
+    }
     .top-area{
         padding: 10px;
         margin: 10px;
@@ -14,23 +17,25 @@
         
         
         span{
-            font-size: 1.5rem;
-            color: #111111;
+            font-size: 2.0rem;
+            color: #7f5af0;
             font-weight: bolder;
+            font-family: 'OldLondon';
         }
     }
 
     .middle-area{
         display:flex;
         flex-direction: row;
-        
         padding: 10px;
         margin: 10px;
-        margin-bottom: 0px;
-
+        margin-bottom: 20px;
+        @media (max-width: 800px){
+            flex-direction: column;
+        }
         .middle-area-image{
             width: 30%;
-            
+            @media (max-width: 800px){width:100%;}
             img{
                 margin: auto;
                 padding-top: 30px;
@@ -39,25 +44,58 @@
 
         .middle-area-text{
             width: 69%;
-            
+            text-align: left;
             padding: 0px 30px;
+            @media (max-width: 800px){
+                width:100%;
+                padding:5px;
+            }
+        
             p{
                 font-size: 0.9em;
-                font-style: italic;
+                color: gray;
+                font-family:'Alegreya';
+              
             }
         }
 
     }
 
     .bottom-area{
-        border-top: 2px solid black;
+        border-top: 2px solid #7f5af0;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
-        p{
+        @media (max-width: 800px){
+            flex-direction: column;
+
+        }
+       .footnote p{
             font-weight: bold;
-            font-size: 1em;
+            font-size: 0.8em;
+            color:  gray;
+            font-family:'Alegreya';
+            font-style: italic;
+            margin-bottom:0px;
+            @media (max-width: 800px){
+                width:100%;
+            }
+           
+        }
+        .footnote span{
+            font-weight: bold;
+            font-size:0.8em;
+            margin:0;
+            color: gray;
+            font-style:italic;
+            font-family:'Alegreya'
+        }
+        @media (max-width: 800px){
+            .footnote{
+                display: flex;
+                flex-wrap:wrap;
+            }
         }
     }
 }
