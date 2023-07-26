@@ -8,14 +8,15 @@ class BookPage extends React.Component {
                 loading: false,
                 books: [],
                 books_id: [
+                       
                         "39iYWTb6n6cC",
                         "wHlDzHnt6x0C",
-                        "wHlDzHnt6x0C", 
                         "KKFTfEQ8bRAC", 
                         "jk87_y-ubE0C",
-                        "R7YsowJI9-IC",
                         "gCtazG4ZXlQC" ,
-                        "SQZkvgAACAAJ"
+                        "SQZkvgAACAAJ",
+                        "Q-shDAAAQBAJ",
+                        "R7YsowJI9-IC",
                 ]
         }
 

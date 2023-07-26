@@ -7,14 +7,13 @@
     margin-bottom: 100px;
 
     @media (max-width: 800px){
-        width:350px
+        width:400px
     }
     .top-area{
         padding: 10px;
         margin: 10px;
         margin-bottom: 0px;
         padding-bottom: 0px;
-        
         
         span{
             font-size: 2.0rem;
@@ -32,6 +31,7 @@
         margin-bottom: 20px;
         @media (max-width: 800px){
             flex-direction: column;
+            padding: 50px 20px; 
         }
         .middle-area-image{
             width: 30%;
@@ -57,6 +57,14 @@
                 font-family:'Alegreya';
               
             }
+
+            button{
+                padding: 10px 20px;
+            }
+
+           button:hover{
+            cursor: pointer;
+           }
         }
 
     }
@@ -67,35 +75,36 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
+        padding-bottom: 20px;
         @media (max-width: 800px){
             flex-direction: column;
-
+            padding-top:20px;
         }
-       .footnote p{
-            font-weight: bold;
-            font-size: 0.8em;
-            color:  gray;
-            font-family:'Alegreya';
-            font-style: italic;
-            margin-bottom:0px;
+        .footnote{
+            padding-top:10px;
             @media (max-width: 800px){
-                width:100%;
+                display: flex;
+                flex-direction: row;
+                  margin-left:20px;
+                  padding-top:2px;
+             }
+            p{
+                font-weight: bold;
+                font-size: 0.8em;
+                color:  gray;
+                font-family:'Alegreya';
+                font-style: italic;
+                margin-bottom:0px;
+                margin-top:0;
+                @media (max-width: 800px){
+                    margin-right: 10px;
+                   padding:0;
+                   margin-top:0;
+                }
+               
             }
            
         }
-        .footnote span{
-            font-weight: bold;
-            font-size:0.8em;
-            margin:0;
-            color: gray;
-            font-style:italic;
-            font-family:'Alegreya'
-        }
-        @media (max-width: 800px){
-            .footnote{
-                display: flex;
-                flex-wrap:wrap;
-            }
-        }
+     
     }
 }
