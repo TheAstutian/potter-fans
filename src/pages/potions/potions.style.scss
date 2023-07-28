@@ -1,8 +1,9 @@
 .potions-container{
     h2{
-        color:orange;
-        font-size:2rem;
+        color:#7f5af0;
+        font-size:3rem;
         font-weight:lighter;
+        font-family:'OldLondon';
     }
     padding-top:0px;
     padding-left:150px;
@@ -30,28 +31,41 @@
             input{
                 border-radius:5px;
                 padding: 10px 20px;
-                font-size: 13px;
+                font-size: 1em;
                 margin-right:5px;
+                font-family: 'Alegreya';
             }
             button{
                 border-radius:5px;
                 padding: 10px 20px;
-                font-size: 13px;
                 font-weight:lighter;
-                border: 0.1px solid orange;
+                border: 0.1px solid #7f5af0;
                 color:white;
-                background: purple;
+                background: transparent;
+                font-family:'Alegreya';
+                font-size:1em;
+            }
+            button:hover{
+                cursor:pointer;
+                background:#7f5af0;
+                color:white;
             }
         }
         .toggle{
             button{
                 border-radius:5px;
                 padding:10px 20px;
-                font-size:13px;
+                font-size:1em;
                 margin:0 auto;
-                border: 0.1px solid orange;
+                border: 0.1px solid #7f5af0;
                 color:white;
-                background: orange;
+                background: transparent;
+                font-family:'Alegreya';
+            }
+            button:hover{
+                cursor:pointer;
+                background:#7f5af0;
+                color:white;
             }
         }
     }
