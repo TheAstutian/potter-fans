@@ -1,5 +1,6 @@
 import React from 'react'; 
 import Card from '../../components/Card/card.component';
+import PotionInfo from '../../components/PotionInfo/PotionInfo';
 import './potions.style.scss'
 
 
@@ -10,7 +11,8 @@ class PotionsPage extends React.Component {
         searchTerm:"",
         toggleSearch:false,
         loading:false,
-        all:false
+        all:false,
+        show:false,
     }
   
 componentDidMount(){
@@ -46,12 +48,29 @@ featured_cards=(potions)=>{
     const featured = [1,2,9,11,12,15,17,26,34,37,46,51,55,61,100,104,134]
     return potions.map((element,i)=>{
         if (featured.includes(i,0)){
-        return <Card
+        return (<>
+                <Card
                  key={i}
                  name={potions[i].attributes.name}
                  effect={potions[i].attributes.effect}
                  image={potions[i].attributes.image}
-                 />}
+                 handleShow={this.showPotionInfo}
+                 />
+                <PotionInfo 
+                 key={100000000+i}
+                show={this.state.show}
+                handleClose={this.hidePotionInfo}
+                name={potions[i].attributes.name}
+                image={potions[i].attributes.image}
+                effect={potions[i].attributes.effect}
+                difficulty={potions[i].attributes.difficulty}
+                ingredients={potions[i].attributes.ingredients}
+                characteristics={potions[i].attributes.characteristics}
+                wiki={potions[i].attributes.wiki}
+                />
+                </>
+        )
+                }
     })
 }
 
@@ -97,7 +116,14 @@ seeAll=()=>{
     this.reset()
     this.setState({all:!this.state.all})
 }
-   
+
+showPotionInfo=()=>{
+    this.setState({show:true})
+}
+
+hidePotionInfo=()=>{
+    this.setState({show:false})
+}
 
     render() { 
         return (

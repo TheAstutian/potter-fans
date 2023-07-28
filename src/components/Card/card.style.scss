@@ -3,6 +3,7 @@
     flex-direction: column;
     margin: 20px;
     padding:5px;
+    padding-top:10px;
     border: 1px solid white;
     border-radius: 10px;
     height:300px;
@@ -19,7 +20,7 @@
 
     .name{
         margin-top:10px ;
-        margin-bottom:30px;
+        margin-bottom:20px;
         span{
             color: #7f5af0;
             margin-top: 20px;
@@ -28,7 +29,6 @@
             padding-right:10px;
             font-size:1.2em;
             font-family: 'Alegreya';
-            font-weight:bold;
         }
     
     }
