@@ -3,174 +3,174 @@ import Card from '../../components/Card/card.component';
 import PotionInfo from '../../components/PotionInfo/PotionInfo';
 import './potions.style.scss'
 
-
-
-class PotionsPage extends React.Component {
-    state = {
-        potions:[],
-        searchTerm:"",
-        toggleSearch:false,
-        loading:false,
-        all:false,
-        show:false,
-    }
-  
-componentDidMount(){
-    this.setState({loading:true})
-    const url = "https://api.potterdb.com/v1/potions"
-    this.fetchItems(url)
-    this.setState({loading:false})
+const init=  {
+    potions:[],
+    searchTerm:"This is working",
+    toggleSearch:false,
+    loading:false,
+    all:false,
+    show:false,
 }
 
-fetchItems=(url)=>{
-    fetch(url)
-        .then((response)=>response.json())
-        .then((data)=>{
-            console.log(data)
-            this.setState({potions:data.data})
+class  PotionsPage extends React.Component {
+    state = init; 
+
+    componentDidMount(){
+        this.setState({loading:false})
+        fetch("https://api.potterdb.com/v1/potions")
+        .then(response=>response.json())
+        .then(res=>{
+            if(res){
+                console.log("1",res)
+                this.setState({potions:res.data})
+                console.log("2",this.state.potions)
+                this.setState({loading:true})
+            }
         })
+    }
+
+featured_cards= ()=>{
+    const {potions,show} = this.state;
+    const featured = [1,2,9,11,12,15,17,26,34,37,46,51,55,61,100,104,134]
+    const cards = potions.map((element,i)=>{
+        if (featured.includes(i,0)){
+        return  <Card
+                        key={i}
+                        name={potions[i].attributes.name}
+                       image={potions[i].attributes.image}
+                        effect={potions[i].attributes.effect}
+                        difficulty={potions[i].attributes.difficulty}
+                        ingredients={potions[i].attributes.ingredients}
+                        characteristics={potions[i].attributes.characteristics}
+                        wiki={potions[i].attributes.wiki}
+                        handleShow={this.showPotionInfo}
+                        show={show}
+                        handleClose={this.hidePotionInfo}
+                       /> 
+                        
+                }
+    })
+    
+    return cards;
 }
 
-all_cards=(potions)=>{
-    return potions.map((element,i)=>{
+ showPotionInfo=()=>{
+    this.setState({ show:true})
+}
+
+ hidePotionInfo=()=>{
+    this.setState({show:false})
+}
+
+/*
+const all_cards=()=>{
+    const [potions]=state.potions;
+    const cards = potions.map((element,i)=>{
         return <Card 
         key= {i}
         name= {potions[i].attributes.name}
         effect ={potions[i].attributes.effect}
         image={potions[i].attributes.image}
+        handleShow={showPotionInfo}
+        show={state.show}
+        handleClose={hidePotionInfo}
         />
     })
+
+    return cards;
 }
 
 
-featured_cards=(potions)=>{
-    
-    const featured = [1,2,9,11,12,15,17,26,34,37,46,51,55,61,100,104,134]
-    return potions.map((element,i)=>{
-        if (featured.includes(i,0)){
-        return (<>
-                <Card
-                 key={i}
-                 name={potions[i].attributes.name}
-                 effect={potions[i].attributes.effect}
-                 image={potions[i].attributes.image}
-                 handleShow={this.showPotionInfo}
-                 />
-                <PotionInfo 
-                 key={100000000+i}
-                show={this.state.show}
-                handleClose={this.hidePotionInfo}
-                name={potions[i].attributes.name}
-                image={potions[i].attributes.image}
-                effect={potions[i].attributes.effect}
-                difficulty={potions[i].attributes.difficulty}
-                ingredients={potions[i].attributes.ingredients}
-                characteristics={potions[i].attributes.characteristics}
-                wiki={potions[i].attributes.wiki}
-                />
-                </>
-        )
-                }
-    })
-}
-
-feat=()=>{
-    const featured = [1,2,9,11,12,15,17,26,34,37,46,51,55,61,100,104,134]
-    const featured_array= this.state.potions.filter((element,i)=>{
-        return featured.includes(i,0)
-    })
-    this.setState({potions:featured})
-}
-
-handleChange= (e)=>{
+const handleChange= (e)=>{
     const search_term = e.target.value;
-    this.setState({searchTerm: search_term})
+    setState({...state, searchTerm: search_term})
 }
 
-onSearch = () =>{
+const onSearch = () =>{
     
     let url = '';
-    if (this.state.searchTerm){
-        url = `https://api.potterdb.com/v1/potions?search=${this.state.searchTerm}`
-        this.fetchItems(url)
-        this.setState({loading:true, toggleSearch:true})
+    if (state.searchTerm){
+        setState({...state, loading:true, toggleSearch:true})
     } 
     
 }
 
-reset=()=>{
-    const url = `https://api.potterdb.com/v1/potions`
-    this.fetchItems(url)
-    this.setState({toggleSearch:false})
+const reset=()=>{
+    setState({...state, toggleSearch:false})
 }
 
-
-
-handleKeyDown = (e) =>{
+const handleKeyDown = (e) =>{
     if (e.key==='Enter'){
-        this.onSearch()
+        onSearch()
     }
 }
 
-seeAll=()=>{
-    this.reset()
-    this.setState({all:!this.state.all})
+const seeAll=()=>{
+    reset()
+    setState({...state, all:!this.state.all})
 }
 
-showPotionInfo=()=>{
-    this.setState({show:true})
+const showPotionInfo=()=>{
+    setState({...state, show:true})
 }
 
-hidePotionInfo=()=>{
-    this.setState({show:false})
+const hidePotionInfo=()=>{
+    setState({...state, show:false})
 }
+*/
+render(){
+    return (
+        <div className="potions-container">
+            
+            <div className="potions-header">
+                <div className="toggle">
+                        <button onClick={()=>console.log("")}>Toggle Featured/All Potions</button>    
+                </div>
+                <div className="search">
+                    <input 
+                    placeholder="name of potion"
+                    /*onChange={handleChange}
+                    onKeyDown={handleKeyDown}*/
+                    />
 
-    render() { 
-        return (
-            <div className="potions-container">
+                    <button onClick={()=>/*onSearch()*/console.log('')}>Search Potion</button>
+                </div> 
                 
-                <div className="potions-header">
-                    <div className="toggle">
-                            <button onClick={()=>this.seeAll()}>Toggle Featured/All Potions</button>    
-                    </div>
-                    <div className="search">
-                        <input 
-                        placeholder="name of potion"
-                        onChange={this.handleChange}
-                        onKeyDown={this.handleKeyDown}
-                        />
-
-                        <button onClick={()=>this.onSearch()}>Search Potion</button>
-                    </div> 
-                    
-                </div>
-                    
-                <div className="potions-body">
-                    
-                    {this.state.toggleSearch? 
-                        (<div>
-                             <h2>Search Results</h2> 
-
-                             <div className="potions-list">{this.all_cards(this.state.potions)}</div>
-                        </div>)
-                        : 
-                       this.state.all ?
-                       (<div>
-                        <h2>All Potions</h2>
-                        <div className="potions-list">{this.all_cards(this.state.potions)}</div>
-                         </div>) :
-                         (<div>
-                            <h2>Featured Potions</h2>
-                            <div className="potions-list">{this.featured_cards(this.state.potions)}</div>
-                        </div>) 
-
-                       }
-                    
-
-                </div>
             </div>
-        )
-    }
+                
+            <div className="potions-body">
+                
+                {!this.state.loading? (
+                    <div>
+                        <h2>Loading</h2>
+                    </div>
+                ):
+                
+               /* state.toggleSearch? 
+                    (<div>
+                         <h2>Search Results</h2> 
+
+                         <div className="potions-list">{all_cards()}</div>
+                    </div>)
+                    : 
+                   state.all ?
+                   (<div>
+                    <h2>All Potions</h2>
+                    <div className="potions-list">{all_cards()}</div>
+                     </div>) :*/
+                     (<div>
+                        <h2>Featured Potions</h2>
+                        <div className="potions-list">{this.featured_cards()}</div>
+                    </div>) 
+
+                   }
+                
+
+            </div>
+        </div>
+    )
 }
+}
+        
 
 export default PotionsPage; 

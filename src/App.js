@@ -30,10 +30,6 @@ function App() {
         <Route exact path ='/movies' component ={MoviePage} />
         <Route exact path='/movies/:movieID' component={Movie}  />
         <Route component={NotFound} />
-        
-        
-        
-        
       </Switch>
 
       <Footer />
