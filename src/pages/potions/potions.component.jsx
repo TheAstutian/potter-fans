@@ -10,6 +10,7 @@ const init=  {
     loading:false,
     all:false,
     show:false,
+    selectedPotion:{}
 }
 
 class  PotionsPage extends React.Component {
@@ -21,66 +22,32 @@ class  PotionsPage extends React.Component {
         .then(response=>response.json())
         .then(res=>{
             if(res){
-                console.log("1",res)
                 this.setState({potions:res.data})
-                console.log("2",this.state.potions)
                 this.setState({loading:true})
             }
         })
     }
 
-featured_cards= ()=>{
-    const {potions,show} = this.state;
-    const featured = [1,2,9,11,12,15,17,26,34,37,46,51,55,61,100,104,134]
-    const cards = potions.map((element,i)=>{
-        if (featured.includes(i,0)){
-        return  <Card
-                        key={i}
-                        name={potions[i].attributes.name}
-                       image={potions[i].attributes.image}
-                        effect={potions[i].attributes.effect}
-                        difficulty={potions[i].attributes.difficulty}
-                        ingredients={potions[i].attributes.ingredients}
-                        characteristics={potions[i].attributes.characteristics}
-                        wiki={potions[i].attributes.wiki}
-                        handleShow={this.showPotionInfo}
-                        show={show}
-                        handleClose={this.hidePotionInfo}
-                       /> 
-                        
-                }
-    })
-    
-    return cards;
-}
 
  showPotionInfo=()=>{
     this.setState({ show:true})
+    const featured = [1,2,9,11,12,15,17,26,34,37,46,51,55,61,100,104,134]
 }
 
  hidePotionInfo=()=>{
     this.setState({show:false})
 }
 
-/*
-const all_cards=()=>{
-    const [potions]=state.potions;
-    const cards = potions.map((element,i)=>{
-        return <Card 
-        key= {i}
-        name= {potions[i].attributes.name}
-        effect ={potions[i].attributes.effect}
-        image={potions[i].attributes.image}
-        handleShow={showPotionInfo}
-        show={state.show}
-        handleClose={hidePotionInfo}
-        />
-    })
+getProps=(item)=>{
+    
+    console.log(item)
+    this.showPotionInfo()
+    this.setState({selectedPotion:item})
+    console.log(this.state.show)
 
-    return cards;
 }
 
-
+/*
 const handleChange= (e)=>{
     const search_term = e.target.value;
     setState({...state, searchTerm: search_term})
@@ -160,7 +127,26 @@ render(){
                      </div>) :*/
                      (<div>
                         <h2>Featured Potions</h2>
-                        <div className="potions-list">{this.featured_cards()}</div>
+                        <div className="potions-list">{
+                            this.state.potions.map(item=>(
+                                <Card 
+                                    key={item.attributes.name}
+                                    data={item.attributes}
+                                    handleClose={this.handleClose}
+                                    handleShow={this.handleShow}
+                                    show={this.state.show}
+                                    test={this.getProps}
+                                    />
+                            ))
+                        }
+                        </div>
+                        <div>
+                            <PotionInfo 
+                            data={this.state.selectedPotion}
+                            show={this.state.show}
+                            handleClose={this.hidePotionInfo}
+                            />
+                        </div>
                     </div>) 
 
                    }
