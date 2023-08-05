@@ -140,7 +140,7 @@ render(){
                             ))
                         }
                         </div>
-                        <div>
+                        <div className="potions-list">
                             <PotionInfo 
                             data={this.state.selectedPotion}
                             show={this.state.show}
