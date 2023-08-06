@@ -7,16 +7,11 @@
     background: black;
     opacity:90%;
     padding-top:10px;
-    padding-bottom:100%;
-}
-h3{
-    font-family:'OldLondon';
-    font-size:2em;
-    color:#7f5af0;
+    
 }
 
 .potion-content{
-    width:400px;
+    width:450px;
     border:1px solid white;
     border-radius:10px;
     margin:0 auto;
@@ -34,6 +29,73 @@ h3{
 }
 .x:hover{
     cursor:pointer;
+}
+
+.top h3{
+    font-family:'OldLondon';
+    font-size:2em;
+    color:#7f5af0;
+    padding:0;
+    margin-top:10px;
+    margin-bottom:15px;
+}
+
+.top img{
+    max-height:200px;
+    max-width:250px;
+}
+
+.top p{
+    font-family:'Alegreya';
+    font-size:1em;
+    font-style:italic;
+    margin-left: 50px;
+    margin-right:50px;
+    margin-bottom:5px;
+}
+
+.bottom{
+    margin:0;
+    padding:5px;
+}
+.bottom h3{
+    
+    font-size: 1em;
+    margin:0;
+    padding:0;
+    font-family:'Allegreya';
+    margin-bottom:5px;
+}
+
+.ppt {
+text-align:left;
+margin-left:30px;
+margin-right:30px;
+display: flex;
+flex-direction: row;
+}
+
+.ppt span{
+    font-family:'Alegreya';
+    font-size:0.9em;
+    
+}
+.que{
+    color:white;
+    width:30%;
+}
+.ans {
+    color: #7f5af0;
+    width:79%;
+}
+
+.wiki{
+padding-top:50px;
+padding-bottom:20px;
+}
+
+.wiki-btn{
+    padding:5px 10px;
 }
 
 .display-block{
