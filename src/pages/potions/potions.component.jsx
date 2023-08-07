@@ -8,9 +8,10 @@ const init=  {
     searchTerm:"This is working",
     toggleSearch:false,
     loading:false,
-    all:false,
+    featured:true,
     show:false,
-    selectedPotion:{}
+    selectedPotion:[],
+    featuredPotions:[1,2,9,11,12,15,17,26,34,37,46,51,55,61]
 }
 
 class  PotionsPage extends React.Component {
@@ -24,14 +25,43 @@ class  PotionsPage extends React.Component {
             if(res){
                 this.setState({potions:res.data})
                 this.setState({loading:true})
+                
             }
         })
     }
 
+showAllPotions=(potiondata)=>{
+    potiondata.map(item=>(
+        <Card 
+            key={item.attributes.name}
+            data={item.attributes}
+            handleClose={this.handleClose}
+            handleShow={this.handleShow}
+            show={this.state.show}
+            test={this.getProps}
+            />
+    ))
+}
+
+showFeaturedPotions=()=>{
+    const featured = [1,2,9,11,12,15,5,26,34,37,51,55,61,75,85,92]
+   const featP=[]
+   
+   for (let i=0; i<featured.length; i++){
+    featP.push(this.state.potions[featured[i]])
+   }
+return featP
+
+}
+
+
+
+toggleAllPotions=()=>{
+    this.setState({featured:!this.state.featured})
+}
 
  showPotionInfo=()=>{
     this.setState({ show:true})
-    const featured = [1,2,9,11,12,15,17,26,34,37,46,51,55,61,100,104,134]
 }
 
  hidePotionInfo=()=>{
@@ -76,14 +106,6 @@ const seeAll=()=>{
     reset()
     setState({...state, all:!this.state.all})
 }
-
-const showPotionInfo=()=>{
-    setState({...state, show:true})
-}
-
-const hidePotionInfo=()=>{
-    setState({...state, show:false})
-}
 */
 render(){
     return (
@@ -91,7 +113,7 @@ render(){
             
             <div className="potions-header">
                 <div className="toggle">
-                        <button onClick={()=>console.log("")}>Toggle Featured/All Potions</button>    
+                        <button onClick={()=>{this.toggleAllPotions()}}>{!this.state.featured? "Featured Potions": "All Potions"}</button>    
                 </div>
                 <div className="search">
                     <input 
@@ -112,6 +134,33 @@ render(){
                         <h2>Loading</h2>
                     </div>
                 ):
+
+                this.state.toggleSearch? (
+                    <div>
+                        <h2>Search Results</h2>
+                        <div className="potions-list">
+
+                        </div>
+                    </div>
+                ):
+
+                this.state.featured? (
+                    <div>
+                        <h2>Featured Potions</h2>
+                        <div className='potions-list'>
+                        {this.showFeaturedPotions().map(item=>(
+                                <Card 
+                                        key={item.attributes.name}
+                                        data={item.attributes}
+                                        handleClose={this.handleClose}
+                                        handleShow={this.handleShow}
+                                        show={this.state.show}
+                                        test={this.getProps}
+                                        />
+                               )) }
+                        </div>
+                    </div>
+                ) :
                 
                /* state.toggleSearch? 
                     (<div>
@@ -126,7 +175,7 @@ render(){
                     <div className="potions-list">{all_cards()}</div>
                      </div>) :*/
                      (<div>
-                        <h2>Featured Potions</h2>
+                        <h2>All Potions</h2>
                         <div className="potions-list">{
                             this.state.potions.map(item=>(
                                 <Card 
@@ -140,17 +189,17 @@ render(){
                             ))
                         }
                         </div>
-                        <div className="potions-list">
+        
+                    </div>) 
+
+                   }
+                  <div className="potions-list">
                             <PotionInfo 
                             data={this.state.selectedPotion}
                             show={this.state.show}
                             handleClose={this.hidePotionInfo}
                             />
                         </div>
-                    </div>) 
-
-                   }
-                
 
             </div>
         </div>
