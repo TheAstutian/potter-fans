@@ -11,7 +11,8 @@ const init=  {
     featured:true,
     show:false,
     selectedPotion:[],
-    featuredPotions:[1,2,9,11,12,15,17,26,34,37,46,51,55,61]
+    featuredPotions:[1,2,9,11,12,15,17,26,34,37,46,51,55,61],
+    searchedPotions:[]
 }
 
 class  PotionsPage extends React.Component {
@@ -57,7 +58,10 @@ return featP
 
 
 toggleAllPotions=()=>{
+    this.setState({toggleSearch: false})
     this.setState({featured:!this.state.featured})
+    this.setState({searchedPotions:[]})
+    
 }
 
  showPotionInfo=()=>{
@@ -77,36 +81,45 @@ getProps=(item)=>{
 
 }
 
-/*
-const handleChange= (e)=>{
-    const search_term = e.target.value;
-    setState({...state, searchTerm: search_term})
+
+ handleChange= (e)=>{
+    
+    this.setState({...this.state, searchTerm: e.target.value})
+    if(e.target.value===""){
+        this.setState({searchedPotions:[]})
+    }
+
 }
 
-const onSearch = () =>{
-    
-    let url = '';
+onSearch = () =>{
+    const search =[];
+    this.state.potions.map(item=>{
+            if(item.attributes.name.toLowerCase().includes(this.state.searchTerm.toLowerCase())){
+                search.push(item)
+            }
+
+    })
+
+
+    this.setState({...this.state, searchedPotions:search})
+this.setState({featured:false})
+this.setState({toggleSearch: true})
+console.log("search,", this.state.searchedPotions)
+ /*   let url = '';
     if (state.searchTerm){
         setState({...state, loading:true, toggleSearch:true})
-    } 
+    } */
+    
     
 }
 
-const reset=()=>{
-    setState({...state, toggleSearch:false})
-}
 
-const handleKeyDown = (e) =>{
+ handleKeyDown = (e) =>{
     if (e.key==='Enter'){
-        onSearch()
+        this.onSearch()
     }
 }
 
-const seeAll=()=>{
-    reset()
-    setState({...state, all:!this.state.all})
-}
-*/
 render(){
     return (
         <div className="potions-container">
@@ -117,12 +130,12 @@ render(){
                 </div>
                 <div className="search">
                     <input 
-                    placeholder="name of potion"
-                    /*onChange={handleChange}
-                    onKeyDown={handleKeyDown}*/
+                    placeholder="Potion name"
+                    onChange={this.handleChange}
+                    onKeyDown={this.handleKeyDown}
                     />
 
-                    <button onClick={()=>/*onSearch()*/console.log('')}>Search Potion</button>
+                    <button onClick={()=>this.onSearch()}>Search</button>
                 </div> 
                 
             </div>
@@ -139,8 +152,21 @@ render(){
                     <div>
                         <h2>Search Results</h2>
                         <div className="potions-list">
-
-                        </div>
+                        {(this.state.searchedPotions.length===0)? 
+                        <p>No results</p>
+                        : 
+                       <>{this.state.searchedPotions.map(item=>(
+                            <Card 
+                                    key={item.attributes.name}
+                                    data={item.attributes}
+                                    handleClose={this.handleClose}
+                                    handleShow={this.handleShow}
+                                    show={this.state.show}
+                                    test={this.getProps}
+                                    />
+                           ))}
+                        </>}
+                    </div>
                     </div>
                 ):
 

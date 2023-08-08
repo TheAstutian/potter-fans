@@ -1,14 +1,23 @@
 .potions-container{
+    padding-top:0px;
+    padding-left:150px;
+    padding-right:150px;
+    margin-bottom: 100px;
+    @media screen and (max-width: 800px){
+        padding-left:10px;
+        padding-right:10px;
+    }
     h2{
         color:#7f5af0;
         font-size:3rem;
         font-weight:lighter;
         font-family:'OldLondon';
+        @media screen and (max-width: 800px){
+            font-size:2em;
+            padding-top:30px;
+            padding-bottom:30px;
+        }
     }
-    padding-top:0px;
-    padding-left:150px;
-    padding-right:150px;
-    margin-bottom: 100px;
     
     .potions-header{
         padding-left:2px;
@@ -73,10 +82,14 @@
     }
     .potions-body{
         color:white;
+         @media screen and (max-width: 800px){
+            margin: 0 auto;
+         }
         .potions-list{
             display:flex;
-            flex-wrap:wrap;
-
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-evenly;
         }
     }
 }
