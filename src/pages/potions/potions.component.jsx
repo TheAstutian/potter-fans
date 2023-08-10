@@ -94,17 +94,22 @@ getProps=(item)=>{
 onSearch = () =>{
     const search =[];
     this.state.potions.map(item=>{
-            if(item.attributes.name.toLowerCase().includes(this.state.searchTerm.toLowerCase())){
+            if(item.attributes.name.toLowerCase().includes(this.state.searchTerm.toLowerCase()) 
+            || 
+            ( item.attributes.effect!==null && item.attributes.effect.toLowerCase().includes(this.state.searchTerm.toLowerCase()))){
                 search.push(item)
             }
 
     })
 
-
     this.setState({...this.state, searchedPotions:search})
-this.setState({featured:false})
-this.setState({toggleSearch: true})
-console.log("search,", this.state.searchedPotions)
+    this.setState({featured:false})
+    this.setState({toggleSearch: true})
+
+    
+    console.log("search,", this.state.searchedPotions)
+
+
  /*   let url = '';
     if (state.searchTerm){
         setState({...state, loading:true, toggleSearch:true})
@@ -130,7 +135,7 @@ render(){
                 </div>
                 <div className="search">
                     <input 
-                    placeholder="Potion name"
+                    placeholder="Search for potion"
                     onChange={this.handleChange}
                     onKeyDown={this.handleKeyDown}
                     />
@@ -153,7 +158,7 @@ render(){
                         <h2>Search Results</h2>
                         <div className="potions-list">
                         {(this.state.searchedPotions.length===0)? 
-                        <p>No results</p>
+                        <div><p> Please enter a search query.<br/> <br/>You can search for potions by their names or their effects. </p></div>
                         : 
                        <>{this.state.searchedPotions.map(item=>(
                             <Card 
