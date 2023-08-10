@@ -49,7 +49,7 @@ renderSpells=()=>{
                     wiki={spells[i].attributes.wiki}
                 />
         }
-        
+         
     })
 }
 

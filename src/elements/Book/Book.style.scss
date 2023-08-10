@@ -1,6 +1,6 @@
 .book-bgd{
-    background-color: whitesmoke;
-    border: 2px solid black;
+    background-color: black;
+    border: 2px solid gray;
     border-radius: 10px;
     width: 700px;
     margin: auto;
@@ -70,7 +70,7 @@
     }
 
     .bottom-area{
-        border-top: 2px solid #7f5af0;
+        border-top: 2px solid gray;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -91,7 +91,7 @@
             p{
                 font-weight: bold;
                 font-size: 0.8em;
-                color:  gray;
+                color:  #7f5af0;
                 font-family:'Alegreya';
                 font-style: italic;
                 margin-bottom:0px;

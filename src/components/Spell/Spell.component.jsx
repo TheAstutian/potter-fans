@@ -9,8 +9,8 @@ const Spell = ({name, slug, image, incantation, spell_type, wiki, note, descript
         <div id={spell_type? `${spell_type}`:"Nill"} className='spell'>
           
                 <div className='spell-name'>
-                    <span> {name}</span>
-                    <p>{incantation ? `${incantation}`: "Not available"}</p>
+                    <span> {name}</span> 
+                    <p>Incantation: {incantation ? `${incantation}`: "Not available"}</p>
                 </div>
                 
                 <div className="image-area">

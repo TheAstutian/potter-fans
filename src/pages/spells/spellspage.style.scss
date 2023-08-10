@@ -6,31 +6,44 @@ padding-right:100px;
 
     .spell-heading{
         
-        color: orange;
         padding-bottom: 20px;
+        h2{
+            color: #7f5af0;
+            font-family: 'OldLondon';
+            font-size:2em;
         
+        }
     }
     .spell-search{
+        margin:0 auto;
         margin-bottom: 50px;
         display: flex;
         flex-flow: row wrap;
         justify-content: flex-end;
         padding-right: 50px;
         
-        input{
+        input{            
             border-radius:5px;
             padding: 10px 20px;
-            font-size: 13px;
+            font-size: 1em;
             margin-right:5px;
+            font-family: 'Alegreya';
         }
         button{
             border-radius:5px;
             padding: 10px 20px;
-            font-size: 13px;
             font-weight:lighter;
-            border: 0.1px solid orange;
+            border: 0.1px solid #7f5af0;
             color:white;
-            background: orange;
+            background: transparent;
+            font-family:'Alegreya';
+            font-size:1em;
+        }
+        button:hover{
+            cursor:pointer;
+            background:#7f5af0;
+            color:white;
+            border: 0.1px solid gray;
         }
     }
     .spell-content{
@@ -47,14 +60,21 @@ padding-right:100px;
         margin-top: 20px;
         margin-bottom: 50px;
         button{
+            margin-right: 5px;
             border-radius:5px;
             padding: 10px 20px;
-            font-size: 13px;
             font-weight:lighter;
-            border: 0.1px solid orange;
+            border: 0.1px solid #7f5af0;
             color:white;
-            background: orange;
-            margin-right: 5px;
+            background: transparent;
+            font-family:'Alegreya';
+            font-size:1em;
+        }
+        button:hover{
+            cursor:pointer;
+            background:#7f5af0;
+            color:white;
+            border: 0.1px solid gray;
         }
     }
     

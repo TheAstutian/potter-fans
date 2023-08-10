@@ -1,20 +1,21 @@
 
 
    .spell-container{
-        background-color: yellowgreen;
+        background-color:#112;
         border-radius: 10px;
         display: flex;
         flex-direction: column;
         margin: 20px;
         height:350px;
         width:250px;
-        opacity: 95%;
-   } 
+        border: 0.1px solid #7f5af0;
+   }
+   
 
 .spell-container:hover{
  opacity: 100%;
- border: 1px solid black;
  cursor: pointer;
+ box-shadow: 0 0 20px white;
 }
 
 #Nill{
@@ -55,14 +56,16 @@
     padding-right:15px;
 }
 .spell-name  span{
-    color: black;
+    font-family:'OldLondon';
+    color:#7f5af0;
     font-weight:600;
-    font-size: 1.1em;
+    font-size: 1.5em;
 }
 
 .spell-name p{
     font-size:0.8em;
     font-style: italic;
+    color: gray;
 }
                         
 
