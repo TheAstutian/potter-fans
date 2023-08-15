@@ -12,7 +12,8 @@ class SpellsPage extends React.Component {
         previousPage:0,
         searchTerm:"",
         search: false,
-        
+        searchItems:[],
+        popular:false,
     }
 
 componentDidMount(){
@@ -40,13 +41,7 @@ renderSpells=()=>{
             
             return <Spell
                     key={i}
-                    name={spells[i].attributes.name}
-                    description={spells[i].attributes.effect}  
-                    spell_type={spells[i].attributes.category}
-                    incantation={spells[i].attributes.incantation}
-                    slug={spells[i].attributes.slug}
-                    image={spells[i].attributes.image}
-                    wiki={spells[i].attributes.wiki}
+                    data = {spells[i]}
                 />
         }
          
@@ -71,21 +66,29 @@ previousPageClick=()=>{
     })
 }
 
-onSearch = (word)=>{
-    this.setState({
-        currentPage: 1,
-        previousPage:0,
-        search: true})
-        this.displaySearchItems()
-}
+onSearch = ()=>{
+   console.log('search fired')
+   const searchResults=[];
 
-displaySearchItems = ()=>{
-    const {spells,searchTerm, search} = this.state; 
+   this.state.spells.map((item,i)=>{
+    if (item.attributes.name.toLowerCase().includes(this.state.searchTerm.toLowerCase()) 
+    ||
+    ( item.attributes.effect!==null && item.attributes.effect.toLowerCase().includes(this.state.searchTerm.toLowerCase())) ){
+        searchResults.push(item)
+    }
+   })
+
+   this.setState({...this.state, searchItems:searchResults})
+   
+   this.setState({search:true})
+
+
+   /* const {spells,searchTerm, search} = this.state; 
     if (searchTerm===""){
         this.setState({search:false})
     }
-    else if (searchTerm!= ""&search){
-        return spells.map((element,i, spell)=>{
+    else {
+        return this.state.spells.map((element,i, spell)=>{
             if (spell[i].name.toLowerCase().includes(searchTerm.toLowerCase()) ){
                 return <Spell
                     key={i}
@@ -101,13 +104,12 @@ displaySearchItems = ()=>{
     
             } 
         })
-    } 
+    } */
 
 }
 
 handleChange= (e)=>{
-    const search_term = e.target.value;
-    this.setState({searchTerm: search_term})
+    this.setState({searchTerm: e.target.value})
 }
 
 handleKeyDown = (e) =>{
@@ -120,7 +122,7 @@ handleKeyDown = (e) =>{
         return (
             <div className="spellspage-container">
                 <div className="spell-heading">
-                    <h2>Spells</h2>
+                    <h2>{this.state.popular? "Popular Spells":"All Spells"}</h2>
                 </div>
                 <div>
                     <div className="spell-search">
@@ -141,7 +143,18 @@ handleKeyDown = (e) =>{
                     
                     <div className="spell-content">
                         
-                        {this.state.search? this.displaySearchItems() : this.renderSpells() }
+                        {this.state.search? this.onSearch : this.state.popular? 
+                        
+                            this.state.searchItems.map(item=>{
+                                <Spell
+                                    key={item.name}
+                                    data = {item}
+                                />
+                            })
+                        
+                        :
+                        
+                        this.renderSpells() }
                         
                     </div>
                    <div className="spell-pages">
