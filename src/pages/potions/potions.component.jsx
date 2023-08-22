@@ -183,8 +183,6 @@ render(){
                                 <Card 
                                         key={item.attributes.name}
                                         data={item.attributes}
-                                        handleClose={this.handleClose}
-                                        handleShow={this.handleShow}
                                         show={this.state.show}
                                         test={this.getProps}
                                         />

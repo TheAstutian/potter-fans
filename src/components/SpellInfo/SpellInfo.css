@@ -1,0 +1,110 @@
+.modal{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: black;
+    opacity:90%;
+    padding-top:10px;
+    
+}
+
+.potion-content{
+    width:450px;
+    border:1px solid white;
+    border-radius:10px;
+    margin:0 auto;
+    background: black;
+    opacity:100%;
+}
+
+.x{
+    padding:3px;
+    display:inline;
+   margin-right:0;
+   margin-bottom:10px;
+   border-radius:5px;
+   background:white;
+}
+.x:hover{
+    cursor:pointer;
+}
+
+.topp h3{
+    font-family:'OldLondon';
+    font-size:2em;
+    color:#7f5af0;
+    padding:0;
+    margin-top:10px;
+    margin-bottom:15px;
+}
+
+.topp img{
+    max-height:400px;
+    max-width:300px;
+}
+
+.topp p{
+    font-family:'Alegreya';
+    font-size:1em;
+    font-style:italic;
+    margin-left: 50px;
+    margin-right:50px;
+    margin-bottom:5px;
+    color:white;
+}
+
+.bottom{
+    margin:0;
+    margin-top:50px;
+    padding:5px;
+}
+.bottom h3{
+    
+    font-size: 1em;
+    margin:0;
+    padding:0;
+    font-family:'Allegreya';
+    margin-bottom:5px;
+    
+}
+
+.ppt {
+text-align:left;
+margin-left:30px;
+margin-right:30px;
+display: flex;
+flex-direction: row;
+}
+
+.ppt span{
+    font-family:'Alegreya';
+    font-size:0.9em;
+    
+}
+.que{
+    color:white;
+    width:30%;
+}
+.ans {
+    color: white;
+    width:79%;
+}
+
+.wiki{
+padding-top:50px;
+padding-bottom:20px;
+}
+
+.wiki-btn{
+    padding:5px 10px;
+}
+
+.display-block{
+    display:block;
+}
+
+.display-none{
+    display:none;
+}

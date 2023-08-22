@@ -2,6 +2,7 @@ import React from 'react';
 import Spell from '../../components/Spell/Spell.component';
 
 import './spellspage.style.scss'
+import SpellInfo from '../../components/SpellInfo/SpellInfo';
 
 
 class SpellsPage extends React.Component {
@@ -14,6 +15,8 @@ class SpellsPage extends React.Component {
         search: false,
         searchItems:[],
         popular:false,
+        selectedSpell:[],
+        show:false,
     }
 
 componentDidMount(){
@@ -42,6 +45,7 @@ renderSpells=()=>{
             return <Spell
                     key={i}
                     data = {spells[i]}
+                    test={this.getProps}
                 />
         }
          
@@ -118,6 +122,20 @@ handleKeyDown = (e) =>{
     }
 }
 
+showSpell=()=>{
+    this.setState({ show:true})
+}
+
+ hideSpell=()=>{
+    this.setState({show:false})
+}
+getProps=(item)=>{
+    
+    this.showSpell()
+    this.setState({selectedSpell:item})
+    console.log("selected Potion: ", this.state.selectedSpell)
+}
+
     render() { 
         return (
             <div className="spellspage-container">
@@ -149,6 +167,7 @@ handleKeyDown = (e) =>{
                                 <Spell
                                     key={item.name}
                                     data = {item}
+                                    test={this.getProps}
                                 />
                             })
                         
@@ -161,6 +180,13 @@ handleKeyDown = (e) =>{
                    {(this.state.previousPage===0)? null: (<button onClick={()=>this.previousPageClick()}>Previous page</button>)} <button onClick={()=>this.nextPageClick()}>Next page</button>
                    </div>
                 </div>
+                <div className="potions-list">
+                            <SpellInfo 
+                            data={this.state.selectedSpell}
+                            show={this.state.show}
+                            handleClose={this.hideSpell}
+                            />
+                        </div>
             </div>
         )
     }
