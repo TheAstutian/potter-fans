@@ -7,7 +7,7 @@ const SpellInfo=({show, data, handleClose})=>{
 
 
     const showHide= show? "modal display-block" :"modal display-none";
-    const {category, effect,hand,image,incantation,light,name,wiki} = data.attributes; 
+    const {category, effect,hand,image,incantation,light,name,wiki} = data;
 
     return(
     

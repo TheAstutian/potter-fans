@@ -4,27 +4,39 @@ import Spell from '../../components/Spell/Spell.component';
 import './spellspage.style.scss'
 import SpellInfo from '../../components/SpellInfo/SpellInfo';
 
+const init = {
+    spells:[],
+    searchTerm:"",
+    search: false,
+    loading:false,
+    popular:false,
+    show:false,
+    searchItems:[],
+    selectedSpell:[],
+    currentPage: 1,
+    previousPage:0,
+    
+}
+
+
 
 class SpellsPage extends React.Component {
-    state = {
-        spells:[],
-        loading:false,
-        currentPage: 1,
-        previousPage:0,
-        searchTerm:"",
-        search: false,
-        searchItems:[],
-        popular:false,
-        selectedSpell:[],
-        show:false,
-    }
+    state = init;
 
 componentDidMount(){
     this.setState({loading:true})
-    const url = "https://api.potterdb.com/v1/spells"
-    this.fetchSpells(url)
-}
+    fetch("https://api.potterdb.com/v1/spells")
+    .then(response=>response.json())
+    .then(res=>{
+        console.log(res)
+        if(res){
+            this.setState({spells:res.data})
+            this.setState({loading:false})
+        }
 
+    })
+}
+/*
 fetchSpells=(url)=>{
     fetch(url)
         .then((response)=>response.json())
@@ -36,6 +48,23 @@ fetchSpells=(url)=>{
             })
         })
 }
+
+/*
+
+this.setState({loading:false})
+
+fetch("https://api.potterdb.com/v1/potions")
+.then(response=>response.json())
+.then(res=>{
+    if(res){
+        this.setState({potions:res.data})
+        this.setState({loading:true})
+        
+    }
+})*/
+
+
+
 
 renderSpells=()=>{
     const {spells} = this.state; 
@@ -128,9 +157,10 @@ showSpell=()=>{
 
  hideSpell=()=>{
     this.setState({show:false})
+    
 }
 getProps=(item)=>{
-    
+    console.log('item is', item)
     this.showSpell()
     this.setState({selectedSpell:item})
     console.log("selected Potion: ", this.state.selectedSpell)
@@ -180,7 +210,8 @@ getProps=(item)=>{
                    {(this.state.previousPage===0)? null: (<button onClick={()=>this.previousPageClick()}>Previous page</button>)} <button onClick={()=>this.nextPageClick()}>Next page</button>
                    </div>
                 </div>
-                <div className="potions-list">
+              
+               <div className="potions-list">
                             <SpellInfo 
                             data={this.state.selectedSpell}
                             show={this.state.show}
