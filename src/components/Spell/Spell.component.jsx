@@ -9,7 +9,7 @@ const Spell = (props) => {
     return (
     
 
-        <div className="spell-container"  onClick={()=>props.test(props.data)}>
+        <div className="spell-container"  onClick={()=>props.test(props.data.attributes)}>
             <div id={category? `${category}`:"Nill"} className='spell'>
               
                     <div className='spell-name'>

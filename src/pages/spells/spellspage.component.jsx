@@ -28,52 +28,22 @@ componentDidMount(){
     fetch("https://api.potterdb.com/v1/spells")
     .then(response=>response.json())
     .then(res=>{
-        console.log(res)
+        
         if(res){
             this.setState({spells:res.data})
             this.setState({loading:false})
-        }
-
+        }else{console.log('No response from server')}
     })
 }
-/*
-fetchSpells=(url)=>{
-    fetch(url)
-        .then((response)=>response.json())
-        .then((data)=>{
-            console.log(data)
-            this.setState({
-                spells:[...this.state.spells, ...data.data], 
-                loading:false
-            })
-        })
-}
-
-/*
-
-this.setState({loading:false})
-
-fetch("https://api.potterdb.com/v1/potions")
-.then(response=>response.json())
-.then(res=>{
-    if(res){
-        this.setState({potions:res.data})
-        this.setState({loading:true})
-        
-    }
-})*/
-
-
-
 
 renderSpells=()=>{
     const {spells} = this.state; 
-    return spells.map((element,i)=>{
+    return spells.map((item,i)=>{
         if (i>=this.state.previousPage*20 && i<this.state.currentPage*20){
             
             return <Spell
-                    key={i}
-                    data = {spells[i]}
+                    key={item.id}
+                    data = {item}
                     test={this.getProps}
                 />
         }
@@ -160,10 +130,8 @@ showSpell=()=>{
     
 }
 getProps=(item)=>{
-    console.log('item is', item)
     this.showSpell()
     this.setState({selectedSpell:item})
-    console.log("selected Potion: ", this.state.selectedSpell)
 }
 
     render() { 
