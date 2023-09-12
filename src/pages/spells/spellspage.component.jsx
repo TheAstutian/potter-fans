@@ -15,6 +15,7 @@ const init = {
     selectedSpell:[],
     currentPage: 1,
     previousPage:0,
+    popular:false,
     
 }
 
@@ -42,7 +43,7 @@ renderSpells=()=>{
         if (i>=this.state.previousPage*20 && i<this.state.currentPage*20){
             
             return <Spell
-                    key={item.id}
+                    key={i}
                     data = {item}
                     test={this.getProps}
                 />
@@ -84,30 +85,6 @@ onSearch = ()=>{
    this.setState({...this.state, searchItems:searchResults})
    
    this.setState({search:true})
-
-
-   /* const {spells,searchTerm, search} = this.state; 
-    if (searchTerm===""){
-        this.setState({search:false})
-    }
-    else {
-        return this.state.spells.map((element,i, spell)=>{
-            if (spell[i].name.toLowerCase().includes(searchTerm.toLowerCase()) ){
-                return <Spell
-                    key={i}
-                    name={spells[i].name}
-                    description={spells[i].description}  
-                    other_name={spells[i].other_name}
-                    prononciation={spells[i].pronunciation}
-                    spell_type={spells[i].spell_type}
-                    mention= {spells[i].mention}
-                    etymology={spells[i].etymology}
-                    note = {spells[i].note}
-            />
-    
-            } 
-        })
-    } */
 
 }
 
@@ -155,6 +132,7 @@ getProps=(item)=>{
                     <div>
                         {this.state.loading? (<h2 style={{color:"white"}}>Loading . . .</h2>): null }
                         {this.state.search? (<h2 style={{color:"white"}}> Search results </h2>): null}
+                        {this.state.popular? (<h2 style={{color:"white"}}> Popular Spells </h2>): null}
                     </div>
                     
                     <div className="spell-content">

@@ -15,12 +15,12 @@ class Card extends React.Component{
     render(){
         const {image,effect,name}=this.props.data;
         return(
-            <div className='card-container'>
+            <div className='card-container' onClick={()=>this.props.test(this.props.data)}>
             <div className="image">
                 <img src={image? `${image}`:no_image}/>
             </div>
             
-            <div className='name' onClick={()=>this.props.test(this.props.data)}>
+            <div className='name' >
                 <span> {name}</span>
             </div>        
             <div className='effect'>
