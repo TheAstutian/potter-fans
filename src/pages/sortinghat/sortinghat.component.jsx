@@ -6,9 +6,7 @@ const houses = [
     "Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"
 ]
 
-const greetings = [
-    "Hey", "Hello", "Hmmmm......", "Hi"
-]
+const greetings = ["Hey", "Hello", "Hmmmm......", "Hi"]
 
 const addendum = [
     "Congratulations",
@@ -99,13 +97,13 @@ class SortingHat extends React.Component{
             <div className="header">
                 <h2>Sorting Hat</h2>
                 <div className="sorting-header">
-                    <img src='https://cdn.pixabay.com/photo/2015/03/16/04/15/sorting-hat-675364_1280.jpg' />        
+                    <img src='https://pbs.twimg.com/media/COEVD1dXAAAbhed?format=png&name=900x900' />        
                     <span>In which house do you belong? </span>
                 </div>
                 <div className="sorting-body">
                   <input 
                         type="text"
-                        placeholder="Your name, muggle?"
+                        placeholder="What is your name?"
                         onChange = {this.handleChange}
 					    value = {this.state.name}
                         onKeyDown= {this.handleKeyDown}
@@ -116,14 +114,14 @@ class SortingHat extends React.Component{
                 <div className="sorting-result">
                    { this.state.active===true ? (<div className="result">
                     <p> {this.state.greeting} {this.state.name}, {this.state.message}</p>
-                    <span> {this.state.sorted_house} </span>
+                    <span> {this.state.sorted_house}! </span>
                     <p> {this.state.addendum}!</p> 
                     <button ><Link to ={this.state.sorted_house}>Visit {this.state.sorted_house}</Link></button>
                     <button onClick={()=>this.reset()}>Reset</button>
                     
                    </div>): 
                         (<div className="no-result">
-                            <span>You have no place here.... You haven't been sorted</span>
+                            <span> You haven't been sorted...  </span>
                        </div>) }
                 </div>
             </div>

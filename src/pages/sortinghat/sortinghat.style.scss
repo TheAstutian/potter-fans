@@ -1,9 +1,10 @@
 .header{
     h2{
-        color:orange;
-        font-size: 2rem;
+        color: #7f5af0;
+        font-size: 3rem;
         font-weight: lighter;
         margin-bottom: 10px;
+        font-family: 'OldLondon'; 
     }
 
     .sorting-header{
@@ -12,15 +13,17 @@
         flex-direction: column;
         margin-bottom: 20px;
         img{
-            width: 300px;
-            height: 300px;
+            
+            height: 350px;
             margin: 0 auto;
             margin-bottom: 30px;
+            margin-top: 20px;
         }
         span{
-            color: orange;
+            color:#7f5af0;
             font-size: 1.5rem;
             font-weight: lighter;
+            font-family: 'Alegreya';
         }
     }
 
@@ -29,35 +32,30 @@
         margin-bottom: 50px;
         input{
             margin-right: 10px;
-            font-size: 1.1em;
-            padding: 0.5em 1em;
-            
+            font-size: 15px;
+            padding: 12px 20px;
+           
         }
         button{
-            padding: 0.7em 1.2em;
-                border: 0.01px solid black;
+            padding: 10px 20px;
+                border: 1px solid #7f5af0;
                 border-radius: 0.3em;
                 box-sizing: border-box;
                 text-decoration: none;
                 font-family: 'OpenSans-Light';
-                
-                font-size: 1.1em;
-                
-                text-align: center;
-                transition: all 0.2s; 
-                background-color: white; 
+                font-size: 15px;
+                color:white;
+                font-family:'Alegreya';
+                background-color: black; 
                 cursor: pointer;
-                
-                margin: 0 auto;
-                a{
-                    color: crimson;
-                   
+                a span{
+                   color:white;
                 }
             }
             button:hover{
-                background-color: black;
+                background-color: #7f5af0;
                 color: white;
-                border: 0.01px solid white;
+                border: 1px solid #7f5af0;
                 a{
                     color: white;
                    
@@ -66,12 +64,12 @@
     }
 
     .sorting-result{
-        min-height:300px;
+        min-height: 300px;
         border-top: 0.1px solid white;
         .result{
             margin-top:30px;
             p{
-                color: orange;
+                color: #7f5af0;
                 font-size: 1.1em;
             }
             span{
@@ -79,12 +77,13 @@
                 font-size: 3rem;
                 font-weight: lighter;
                 margin-top:50px;
+                font-family:'OldLondon';
             }
         }
         .no-result{
             margin-top:100px;
             span{
-                color: orange;
+                color: #7f5af0;
                 font-size:1.5em;
                 font-weight: lighter;
             }
