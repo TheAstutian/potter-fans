@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Banner from '../../components/Banner/banner.component';
 import FaceCollection from '../../components/FaceCollection/facecollection.component';
 import './hogwarts.style.scss'
+import SortingHat from '../sortinghat/sortinghat.component';
 
 const houseData =[];
 
@@ -32,6 +33,7 @@ const Hogwarts = () => (
 
              <h2>Hogwart Staff</h2>
                 <FaceCollection />
+                <SortingHat/>
             </div>
             <div>
                <span>

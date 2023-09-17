@@ -14,6 +14,12 @@ import SortingHat from './pages/sortinghat/sortinghat.component';
 import Movie from './pages/Movie/Movie';
 import NotFound from './elements/NotFound/NotFound'
 import PotionsPage from './pages/potions/potions.component';
+import Hufflepuff from './pages/hogwarts/hufflepuff';
+import Gryffindor from './pages/hogwarts/gryffindor';
+import Slytherin from './pages/hogwarts/slytherin';
+import Ravenclaw from './pages/hogwarts/ravenclaw';
+
+
 
 function App() {
   return (
@@ -25,6 +31,10 @@ function App() {
         <Route exact path='/spells' component={SpellsPage} />
         <Route exact path ='/books' component={BookPage}/>
         <Route exact path ='/hogwarts' component = {Hogwarts} />
+        <Route exact path ='/gryffindor' component = {Gryffindor} />
+        <Route exact path ='/slytherin' component = {Slytherin} />
+        <Route exact path ='/ravenclaw' component = {Ravenclaw} />
+        <Route exact path ='/hufflepuff' component = {Hufflepuff} />
         <Route exact path='/sorting' component ={SortingHat} />
         <Route exact path ='/potions' component ={PotionsPage} />
         <Route exact path ='/movies' component ={MoviePage} />
