@@ -85,6 +85,8 @@ onSearch = ()=>{
    this.setState({...this.state, searchItems:searchResults})
    
    this.setState({search:true})
+   console.log('search items array: ')
+   console.log( this.state.searchItems)
 
 }
 

@@ -47,7 +47,10 @@ class BookPage extends React.Component {
                 })
                
         }       
-
+        getText=(html)=>{
+                const doc = new DOMParser().parseFromString(html, "text/html")
+                return doc.body.textContent
+        }
 
         render(){
         return(
@@ -63,7 +66,7 @@ class BookPage extends React.Component {
 									title={element.volumeInfo.title}
                                                                         authors={element.volumeInfo.authors[0]}
 									imageurl={element.volumeInfo.imageLinks.thumbnail} 
-                                                                        description={element.volumeInfo.description}
+                                                                        description={this.getText(element.volumeInfo.description)}
 									publisher={element.volumeInfo.publisher}
                                                                         release_date={element.volumeInfo.publishedDate}
                                                                         rating={element.volumeInfo.averageRating}
