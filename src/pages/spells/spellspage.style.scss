@@ -14,13 +14,17 @@ padding-right:100px;
         
         }
     }
+    .lilnav{
+        display: flex;
+        flex-direction: space-between;
+    }
     .spell-search{
         margin:0 auto;
         margin-bottom: 50px;
         display: flex;
         flex-flow: row wrap;
         justify-content: flex-end;
-        padding-right: 50px;
+        
         
         input{            
             border-radius:5px;

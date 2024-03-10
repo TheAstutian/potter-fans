@@ -82,16 +82,17 @@ onSearch = ()=>{
     }
    })
 
-   this.setState({...this.state, searchItems:searchResults})
+   this.setState({...this.state, search:true, searchItems:searchResults})
    
-   this.setState({search:true})
+   
    console.log('search items array: ')
+   console.log(searchResults, this.state.search)
    console.log( this.state.searchItems)
-
 }
 
 handleChange= (e)=>{
     this.setState({searchTerm: e.target.value})
+    
 }
 
 handleKeyDown = (e) =>{
@@ -112,6 +113,9 @@ getProps=(item)=>{
     this.showSpell()
     this.setState({selectedSpell:item})
 }
+all=()=>{
+    this.setState({search:false})
+}
 
     render() { 
         return (
@@ -120,35 +124,44 @@ getProps=(item)=>{
                     <h2>{this.state.popular? "Popular Spells":"All Spells"}</h2>
                 </div>
                 <div>
-                    <div className="spell-search">
-                        <input 
+                    <div className="lilnav">
+                        <div className='spell-search'><button onClick={()=>this.all()}>Show all spells</button></div>
+                       <div className="spell-search">
+                         <input 
                             placeholder="Search spells"
                             onChange={this.handleChange}
                             onKeyDown={this.handleKeyDown}
                         />
 
-                        <button onClick={()=>this.onSearch()}>Search </button>
-                       
+                        <button onClick={()=>this.onSearch}>Search </button>
+                        </div>
                     </div>
 
                     <div>
-                        {this.state.loading? (<h2 style={{color:"white"}}>Loading . . .</h2>): null }
-                        {this.state.search? (<h2 style={{color:"white"}}> Search results </h2>): null}
-                        {this.state.popular? (<h2 style={{color:"white"}}> Popular Spells </h2>): null}
+                        <h2 style={{color:"white"}}>
+                            {this.state.search? "Search Results": null}
+                        </h2>
+
+                        {this.state.search? (<h2 style={{color:"white", paddingTop:"50px", paddingBottom:"30px", marginTop:"20px",fontSize:"14px"}}>Showing results for "{this.state.searchTerm}"</h2>): null}
                     </div>
                     
                     <div className="spell-content">
                         
-                        {this.state.search? this.onSearch : this.state.popular? 
+                        {this.state.search? (
                         
-                            this.state.searchItems.map(item=>{
-                                <Spell
+                          <>  
+                          {this.state.searchItems.map(item=>{
+                               
+                               return <Spell
                                     key={item.name}
                                     data = {item}
                                     test={this.getProps}
                                 />
-                            })
-                        
+                                
+                            })}
+                            
+                            </>
+                        )
                         :
                         
                         this.renderSpells() }
