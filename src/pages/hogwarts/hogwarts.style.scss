@@ -1,3 +1,129 @@
 .hogwarts-container{
-    background-color: white;
+    p{
+        color:white;
+    }
+    .text-area{
+        h1{
+            color: #7f5af0;
+            font-family: 'OldLondon';
+            font-size:3em;
+            margin-bottom: 2px;
+        }
+        h3{
+            color: #7f5af0;
+            font-family: 'Allegreya';
+            font-size:1.2em;
+            font-weight:100;
+            margin-top: 0;
+        }
+        .hogwarts-story{
+            margin:0 auto;
+            padding-left:350px;
+            padding-right:350px;
+            
+            p{
+                font-family: 'Allegreya';
+                font-weight:lighter;
+                color: gray;
+            }
+        }
+    }
+
+    .houses{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding-top: 20px;
+        margin-left: 100px;
+        margin-right: 100px;
+
+        
+        #one{
+            background: url('https://www.theshopthatmustnotbenamed.co.uk/img/product/ravenclaw-replica-house-scarf-crest-detail-12008235-600.jpg');
+            background-size: cover;
+        }
+        #two{
+            background: url('https://images.pexels.com/photos/3151954/pexels-photo-3151954.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+        }
+        #three{
+            
+            background: url('https://images.unsplash.com/photo-1533462392871-5a6c02e7132d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+        }
+        #four{
+            background: url('https://static1.funidelia.com/474289-f6_big2/hufflepuff-scarf-official-collectors-replica-harry-potter.jpg');
+            background-size: cover;
+        }
+        .house{
+            width:300px;
+            margin:5px;
+            border: 1px solid #7f5af0;
+            border-radius: 5px;
+            height:400px;
+            background-size: contain;
+            
+            .h-button{
+                margin-top: 300px;
+                button{
+                    margin-top: 30px;
+                    padding: 15px 20px;
+                    border-radius: 10px;
+                    font-size: 16px;
+                    background-color: transparent;
+                    border: 2px solid #7f5af0;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    transition-duration:0.4s;
+                    cursor: pointer;
+                }
+                button:hover{
+                    background-color: #7f5af0;
+                    border: 2px solid white;
+                }
+                a{
+                    color: white;
+                    font-family:'Alegreya';
+                }
+            }
+        }
+        .house:hover{
+            
+            opacity:80%;
+        }
+    }
+    .house-text{
+        margin:0 auto;
+        padding-top:50px;
+        padding-left:350px;
+        padding-right:350px;
+        p{
+            font-family: 'Alegreya';
+            font-weight:lighter;
+            color: gray;
+            
+        }
+    }
+
+    .others{
+        margin:0 auto;
+        padding-top:50px;
+        padding-left:350px;
+        padding-right:350px;
+        
+        h2{
+            color: #7f5af0;
+            font-family: 'OldLondon';
+            font-size:3em;
+            margin-bottom: 2px;
+        }
+        p{
+            font-family: 'Allegreya';
+            font-weight:lighter;
+            color: gray;
+            text-align: left;
+        }
+    }
 }
