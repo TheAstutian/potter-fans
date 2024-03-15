@@ -1,16 +1,19 @@
 import React from 'react';
-import './face.style.scss';
+import './face.style.scss'; 
 
-const Face = ({name, ancestry, img, key,house,wand}) =>(
+const Face = (props) =>{
+    const {name, ancestry, image, key,house,wand} = props.data
+    console.log(props.data)
+     
+    return(
     <div className='face-container'>
         <span>{name}</span>
-        <img alt={key} src={img} />
-        <p>{house}</p>
+        <img alt={key} src={image? image : 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/2048px-No_image_available.svg.png'} />
         <p>{ancestry}</p>
-        <p>Wand: {wand.toUpperCase()}</p>
+        
         
         
     </div>
-);
+)};
 
 export default Face;

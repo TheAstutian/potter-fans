@@ -21,12 +21,28 @@
             
         }
     }
-    #gryffindor{
-        color:black;
+    .motto{
+        padding-top:10px;
+        h3{
+            font-weight:lighter;
+            font-style:italic;
+            
+        }
     }
-    #ravenclaw{
-        
-            color:black;
-        
+    .mid-content{        
+        padding-left:100px;
+        padding-right:100px;
+        padding-top:20px;
+        padding-bottom:10px;
+        h2{
+            color:gray;
+            font-family:'OldLondon';
+            font-weight: lighter;
+        }
+        .staff{
+            display:flex;
+            flex-direction: row;
+            flex-wrap:wrap;
+        }
     }
 }
