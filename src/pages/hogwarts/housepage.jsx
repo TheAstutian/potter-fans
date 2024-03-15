@@ -4,7 +4,7 @@ import Face from '../../components/Face/face.component';
 
 const HousePage =(props)=>{
 
-    const {name, color, badgeImg, commonRoomImg,motto} = props.data;
+    const {name, color, badgeImg, aboutText, commonRoomImg,motto} = props.data;
     console.log(props.houseMembers)
 return(<div className='housepage'>
         <div className='house-header' id={` ${name}`} style ={{
@@ -19,31 +19,24 @@ return(<div className='housepage'>
         </div>
 
         <div className={`mid-content ${name}`}>
-            <h2 style={{color:`${color}`}}>House Members </h2>
+            <h2 style={{color:`${color}`}}>Notable House Members </h2>
             <div className='staff'>
             {
-                props.houseMembers.map(item=>{
-                    return <Face  key={item.id} 
+                props.houseMembers.map((item, i)=>{ 
+                    if (i<11){
+                        return <Face  key={item.id} 
                                  data={item}   
-                    />
+                    />}
+                    
                 })
             }
             </div>
-
-            <div className='students'>
-
-            </div>
-            
-
-
-
-
-            Staff and students
-            Past members. 
         </div>            
 
-        <div>
-            Information
+        <div className='about-house'>
+            <h2 style={{color:`${color}`}}>About {name}</h2>
+
+          <span style={{color:`${color}`}}>{aboutText}</span>  
         </div>
 
 

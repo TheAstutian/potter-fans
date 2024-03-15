@@ -9,10 +9,7 @@ const Face = (props) =>{
     <div className='face-container'>
         <span>{name}</span>
         <img alt={key} src={image? image : 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/2048px-No_image_available.svg.png'} />
-        <p>{ancestry}</p>
-        
-        
-        
+         <p>{ancestry}</p>       
     </div>
 )};
 
