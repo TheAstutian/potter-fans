@@ -8,6 +8,7 @@ const Ravenclaw = () => {
       commonRoomImg: "https://wallpapercave.com/wp/wp11685557.jpg",
       color: "#3da9fc",
       motto:"Wit beyond measure is man's greatest treasure",
+      aboutText:"<p>Ravenclaw House was founded by the medieval witch Rowena Ravenclaw. Members of this house were characterised by their wit, learning, and wisdom. </p><p>Ravenclaw corresponded roughly to the element of air, and it was for that reason that the house colours were chosen; blue and bronze represented the sky and eagle feathers respectively, both having much to do with air. The Ravenclaw points hourglass contained blue sapphires.</p><p>The House’s emblematic animal symbol was an eagle, Filius Flitwick was House Head,  and the house’s ghost was the Grey Lady, whose real name was Helena Ravenclaw, daughter of Rowena.</p>",
     }
 
     const [houseMembers, setHouseMembers] = useState([]);
