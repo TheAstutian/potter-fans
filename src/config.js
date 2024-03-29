@@ -1,35 +1,9 @@
 
-const API_URL_p= 'https://www.potterapi.com/v1/';
-const API_KEY_p= '$2a$10$GzKuSI6dT5dC1NuVyeI8eugv./Vo4BMBLOCTS4d1Gfjge.4mwp5Gi';
-const sample_request= 'Sample GET request: https://www.potterapi.com/v1/characters?key=YOURKEY';
-
-const my_request= 'https://www.potterapi.com/v1/characters?key=$2a$10$GzKuSI6dT5dC1NuVyeI8eugv./Vo4BMBLOCTS4d1Gfjge.4mwp5Gi'
-
-const API_URL_2 = 'https://hp-api.herokuapp.com/ characters, students, house, staff'
-
-// https://www.potterapi.com/v1/characters?key=Y$2a$10$GzKuSI6dT5dC1NuVyeI8eugv./Vo4BMBLOCTS4d1Gfjge.4mwp5Gi
-// https://dev.to/peritract/harry-potter-and-the-accessing-of-apis-1i0i
-
-// const_HP_Websites = https://harrypotter.fandom.com/wiki/List_of_Harry_Potter_fan_websites
-
-// http://hogwarts-school.net/sortinghat/index.php?page=hogwarts_roster FOr Hotwarts school
-// https://wallpaperaccess.com/harry-potter good source for images
-
-// Games_and_quizzes:
-
-// https://newfastuff.com/courtyard-broomball/
-// https://quizventure.com/harry-potter-spell-quiz/
-// https://apps.apple.com/us/app/spells-quiz-for-harry-potter/id1299564850
-// http://hogwarts-school.net/sortinghat/index.php?page=hogwarts_roster - hogwarts school. Plenty of image and ideas here
-
-
-
-
 // Configuration for TMDB
 // To se the latest configuration fetch it from https://api.themoviedb.org/3/configuration?api_key=019e8f375549e0bbd4a4191862ebc88f
 
 const API_URL = 'https://api.themoviedb.org/3/';
-const API_KEY = '844dba0bfd8f3a4f3799f6130ef9e335';
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 // Images
 // An image URL looks like this example:

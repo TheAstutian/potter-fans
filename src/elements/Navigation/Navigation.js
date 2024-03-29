@@ -14,7 +14,7 @@ const Navigation =(props) =>{
                 <p>{props.movie}</p>
 
             </div>
-            Navigation
+            
         </div>
     )
 }

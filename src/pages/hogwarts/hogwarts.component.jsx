@@ -58,6 +58,30 @@ const Hogwarts = () => (
                         riddle answer (Ravenclaw) or ritual (Hufflepuff) in order to gain entrance. 
                         Inside is the common room, which contains armchairs and sofas for the pupils a
                         nd tables for studying and homework. </p>
+                        <p>Gryffindors and Slytherins had shared a fierce house rivalry since their 
+                        founders, Godric Gryffindor and Salazar Slytherin, respectively, had a severe 
+                        falling out over Slytherin's emphasis on blood purity. There might also be an 
+                        element of feeling wronged, as Harry and his fellow Gryffindors tended to win 
+                        in a lot of circumstances which, when viewed from a neutral point of view, may
+                         be considered unfair.</p>
+
+                        <p>Overall, however, the houses of Ravenclaw and Hufflepuff tended to side with
+                         Gryffindor in its rivalry with Slytherin. This was particularly notable during 
+                         the Second Wizarding War — the members of Dumbledore's Army were from Gryffindor,
+                          Hufflepuff, and Ravenclaw, but the Army lacked any Slytherins.
+                           (This, however, could also have been because news of Dumbledore's Army was 
+                           passed by word of mouth, and Harry, who had initially raised it, did not associate 
+                           with any Slytherins.)</p>
+
+                        <p>During the Battle of Hogwarts, the Slytherin students left, while senior students 
+                        from the other three houses remained behind to fight against Lord Voldemort and his 
+                        army — however, it is also worth noting that while Head of House Professor Slughorn 
+                        left with his students, he then returned to the castle with reinforcements (possibly 
+                        including senior students) and with Professor McGonagall and Auror Kingsley Shacklebolt, 
+                        personally dueled Lord Voldemort. Most of the known Death Eaters (besides Peter Pettigrew,
+                         Quirinus Quirrell, and possibly others) had been Slytherin House members, and that might 
+                         have been another reason as to why the other two houses sided with Gryffindor over Slytherin.</p>
+
                 </div>
 
         <div className='sorting-hat'>
